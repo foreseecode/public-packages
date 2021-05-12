@@ -1,0 +1,3 @@
+com.foresee.sdk.common.configuration
+com.foresee.sdk.common.instrumentation
+com.foresee.sdk.cxMeasure.tracker.listeners
