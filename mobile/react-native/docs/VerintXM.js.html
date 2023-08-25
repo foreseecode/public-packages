@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: VerintXM.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: VerintXM.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const VerintXM = require('react-native').NativeModules.VerintXM;
+
+function registerPlatform() {
+  VerintXM.setCPP("sdk-platform", "react-native");
+}
+
+/**
+ * @namespace VerintXM
+ */
+module.exports = {
+
+  /**
+   * Exposes the underlying Native Module.
+   *
+   * Useful for getting an object that NativeEventEmitter can wrap.
+   * @memberof VerintXM
+   */
+nativeModule: VerintXM,
+
+  /**
+   * Starts the Verint SDK. Accepts an optional config object (which must
+   * represent a valid Verint config, including a clientId). If no config
+   * is provided, then the native module will look for the config in a file called
+   * exp_configuration.json (which must be available to the native modules).
+   * @memberof VerintXM
+   */
+  start(config) {
+    if (config) {
+      VerintXM.startWithConfigurationJson(JSON.stringify(config));
+    } else {
+      VerintXM.start();
+    }
+
+    registerPlatform();
+  },
+
+  /**
+   * Starts the SDK with the given configuration file in your native module.
+   * @memberof VerintXM
+   */
+  startWithConfigurationFile(fileName) {
+    VerintXM.startWithConfigurationFile(fileName);
+
+    registerPlatform();
+  },
+
+  /**
+   * Starts the SDK with the given configuration JSON string.
+   * @memberof VerintXM
+   */
+  startWithConfigurationJson(jsonString) {
+    VerintXM.startWithConfigurationJson(jsonString);
+
+    registerPlatform();
+  },
+
+  /**
+   * Resets the SDK.
+   * @memberof VerintXM
+   */
+  resetState() {
+    VerintXM.resetState();
+  },
+
+  /**
+   * Check to see if the user is eligible for a survey.
+   * If the user meets trigger criteria *and* are in the sampling pool, the invitation is presented.
+   * Implementers must explicitly check for eligibility (the SDK does not do this automatically).
+   * @memberof VerintXM
+   */
+  checkEligibility() {
+    VerintXM.checkEligibility();
+  },
+
+  /**
+   * Programmatically present the invitation for a given survey ID (sid).
+   * @memberof VerintXM
+   */
+  showInvite(surveyId) {
+    VerintXM.showInvite(surveyId);
+  },
+
+  /**
+   * Programmatically present the survey for a given survey ID (sid).
+   * @memberof VerintXM
+   */
+  showSurvey(surveyId) {
+    VerintXM.showSurvey(surveyId);
+  },
+
+  /**
+   * Sets a Custom Passed Parameter (CPP) for the given key/value pair.
+   * CPPs are transmitted along with surveys upon submission.
+   * @memberof VerintXM
+   */
+  setCPP(key, value) {
+    VerintXM.setCPP(key, value);
+  },
+
+  /**
+   * Gets the value of the Custom Passed Parameter (CPP) with the given key.
+   * @memberof VerintXM
+   */
+  getCPP(key) {
+    return Promise.resolve(VerintXM.getCPP(key));
+  },
+
+  /**
+   * Removes the Custom Passed Parameter (CPP) with the given key.
+   * @memberof VerintXM
+   */
+  removeCPP(key) {
+    VerintXM.removeCPP(key);
+  },
+
+  /**
+   * Gets an object containing all available Custom Passed Parameters (CPP) key/value pairs.
+   * @memberof VerintXM
+   */
+  getAllCPPs() {
+    return Promise.resolve(VerintXM.getAllCPPs());
+  },
+
+  /**
+   * Manually increment the number of page views criteria counted by the Verint SDK.
+   * This can be useful when the user expected a new page to have been shown.
+   * @memberof VerintXM
+   */
+  incrementPageViews() {
+    VerintXM.incrementPageViews();
+  },
+
+  /**
+   * Increments the count for the significant event with the given key.
+   * @memberof VerintXM
+   */
+  incrementSignificantEvent(key) {
+    VerintXM.incrementSignificantEvent(key);
+  },
+
+  /**
+   * Set the significant event count for a given key.
+   * @memberof VerintXM
+   */
+  setSignificantEventCount(count, key) {
+    VerintXM.setSignificantEventCount(count, key);
+  },
+
+  /**
+   * Reset the significant event count for a given key.
+   * @memberof VerintXM
+   */
+  resetSignificantEventCount(key) {
+    VerintXM.resetSignificantEventCount(key);
+  },
+
+  /**
+   * Resets all significant events.
+   * @memberof VerintXM
+   */
+  resetSignificantEvents() {
+    VerintXM.resetSignificantEvents();
+  },
+
+  /**
+   * Programmatically cancel any pending invites for the user when the type is EXIT_INVITE or EXIT_SURVEY.
+   * @memberof VerintXM
+   */
+  cancelPendingInvites() {
+    VerintXM.cancelPendingInvites();
+  },
+
+  /**
+   * Sets whether or not to enable debug logging.
+   * Debug logging prints useful state information to the console for inspection. By default, debug logging is disabled.
+   * @memberof VerintXM
+   */
+  setDebugLogEnabled(enabled) {
+    VerintXM.setDebugLogEnabled(enabled);
+  },
+
+  /**
+   * Returns whether or not debug logging is enabled.
+   * @memberof VerintXM
+   */
+  isDebugLogEnabled() {
+    return Promise.resolve(VerintXM.isDebugLogEnabled());
+  },
+
+  /**
+   * Returns the version of the SDK.
+   * @memberof VerintXM
+   */
+  getVersion() {
+    return Promise.resolve(VerintXM.getVersion());
+  },
+
+  /**
+   * Toggles the pooling check.
+   * When debugging your implementation of the Verint SDK, it may be useful to disable the pooling check.
+   * This ensures that the invitation will always shows if the loyalty criteria has been fulfilled.
+   * @memberof VerintXM
+   */
+  setSkipPoolingCheck(shouldSkip) {
+    VerintXM.setSkipPoolingCheck(shouldSkip);
+  },
+
+  /**
+   * Notifies the SDK that a custom invite has been accepted.
+   * You should call this method whenever a user accepts a custom invitation that you’ve presented.
+   * @memberof VerintXM
+   */
+  customInviteAccepted() {
+    VerintXM.customInviteAccepted();
+  },
+
+  /**
+   * Notifies the SDK that a custom invite has been declined.
+   * You should call this method whenever a user declines a custom invitation that you’ve presented.
+   * @memberof VerintXM
+   */
+  customInviteDeclined() {
+    VerintXM.customInviteDeclined();
+  },
+
+  /**
+   * Returns the user's contact details for the CONTACT invites.
+   * @memberof VerintXM
+   */
+  getContactDetails(type) {
+    return Promise.resolve(VerintXM.getContactDetails(type));
+  },
+
+  /**
+   * Sets the user's contact details for the CONTACT invites. This method can be used to provide a user’s contact information, so that they do not need to enter it manually.
+   * When provided, the default invite skips the user input screen.
+   * @memberof VerintXM
+   */
+  setContactDetails(details, type) {
+    VerintXM.setContactDetails(details, type);
+  },
+
+  /**
+   * Sets the preferred contact type for the CONTACT invites.
+   * @memberof VerintXM
+   */
+  setPreferredContactType(type) {
+    VerintXM.setPreferredContactType(type);
+  },
+
+  /**
+   * Returns the preferred contact type for the CONTACT invites.
+   * @memberof VerintXM
+   */
+  getPreferredContactType() {
+    return Promise.resolve(VerintXM.getPreferredContactType());
+  },
+
+  /**
+   * Returns all key/value pairs of the configured contact details for the CONTACT invites.
+   * @memberof VerintXM
+   */
+  getAllContactDetails() {
+    return Promise.resolve(VerintXM.getAllContactDetails());
+  },
+
+  /**
+   * Programmatically present the default Digital survey (the first one in the configuration json).
+   * @memberof VerintXM
+   */
+  showDigitalSurvey() {
+    VerintXM.showDigitalSurvey();
+  },
+
+  /**
+   * Programmatically present the Digital survey for a given name.
+   * @memberof VerintXM
+   */
+  showDigitalSurveyForName(surveyName) {
+    VerintXM.showDigitalSurveyForName(surveyName);
+  },
+
+  /**
+   * Check if the default Digital Survey is enabled.
+   * @memberof VerintXM
+   */
+  checkIfDigitalSurveyEnabled() {
+    VerintXM.checkIfDigitalSurveyEnabled();
+  },
+  
+  /**
+   * Check if a Digital survey is enabled for a given name.
+   * @memberof VerintXM
+   */
+  checkIfDigitalSurveyEnabledForName(surveyName) {
+    VerintXM.checkIfDigitalSurveyEnabledForName(surveyName);
+  },
+
+  /**
+   * Returns all available Digital Survey names defined in the Configuration.
+   * @memberof VerintXM
+   */
+  getAvailableDigitalSurveyNames() {
+    return Promise.resolve(VerintXM.getAvailableDigitalSurveyNames());
+  }
+
+};
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="VerintXM.html">VerintXM</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Fri Aug 18 2023 17:27:45 GMT-0700 (Pacific Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
