@@ -1,0 +1,1207 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]TrackingContext</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            Verint XM SDK
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":sdk:predictive:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="predictive::com.verint.xm.sdk.predictive.tracker/TrackingContext///PointingToDeclaration//514231956">
+  <div class="breadcrumbs"><a href="../../index.html">predictive</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk.predictive.tracker</a><span class="delimiter">/</span><span class="current">[androidJvm]TrackingContext</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Tracking</span><wbr><span><span>Context</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">TrackingContext</a> : <span data-unresolved-link="com.verint.xm.sdk.common.provider/TrackingContextServiceProvider///PointingToDeclaration/">TrackingContextServiceProvider</span>, <span data-unresolved-link="com.verint.xm.sdk.common.storyEngine.state/PersistenceProvider///PointingToDeclaration/">PersistenceProvider</span>, <a href="../[android-jvm]-tracker-event-listener/index.html">TrackerEventListener</a>, <span data-unresolved-link="com.verint.xm.sdk.common.storyEngine.webSdkInterface.interfaces/WebSdkInterfaceListener///PointingToDeclaration/">WebSdkInterfaceListener</span></div><p class="paragraph">This class is used to access most of the Tracking API. It must be initialize by calling <a href="prepare.html">prepare</a> and <a href="start.html">start</a> before use.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-tracking-context-stub/index.html">TrackingContextStub</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="532267693%2FConstructors%2F514231956" anchor-label="TrackingContext" id="532267693%2FConstructors%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tracking-context.html"><span>Tracking</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="532267693%2FConstructors%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a><span class="token punctuation">, </span></span><span class="parameter ">configuration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span><span class="token punctuation">, </span></span><span class="parameter ">stringsProvider<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.utils/StringsProvider///PointingToDeclaration/">StringsProvider</span></span></span><span class="token punctuation">)</span></div><div class="brief ">General-use constructor</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-879635791%2FClasslikes%2F514231956" anchor-label="NetworkAction" id="-879635791%2FClasslikes%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-network-action/index.html"><span>Network</span><wbr><span><span>Action</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-879635791%2FClasslikes%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-network-action/index.html">NetworkAction</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="2029865971%2FProperties%2F514231956" anchor-label="apiKey" id="2029865971%2FProperties%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="api-key.html"><span>api</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2029865971%2FProperties%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="api-key.html">apiKey</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1896412332%2FProperties%2F514231956" anchor-label="configuration" id="1896412332%2FProperties%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configuration.html"><span><span>configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1896412332%2FProperties%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="configuration.html">configuration</a><span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1835354886%2FProperties%2F514231956" anchor-label="currentActivity" id="-1835354886%2FProperties%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-activity.html"><span>current</span><wbr><span><span>Activity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1835354886%2FProperties%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="current-activity.html">currentActivity</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1231411206%2FProperties%2F514231956" anchor-label="exitSurveyServiceClient" id="-1231411206%2FProperties%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-survey-service-client.html"><span>exit</span><wbr><span>Survey</span><wbr><span>Service</span><wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1231411206%2FProperties%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="exit-survey-service-client.html">exitSurveyServiceClient</a><span class="token operator">: </span><a href="../../com.verint.xm.sdk.predictive.tracker.service/[android-jvm]-exit-survey-service-client/index.html">ExitSurveyServiceClient</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-131258237%2FProperties%2F514231956" anchor-label="instance" id="-131258237%2FProperties%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="instance.html"><span><span>instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-131258237%2FProperties%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="instance.html">instance</a><span class="token operator">: </span><a href="index.html">TrackingContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1486480495%2FProperties%2F514231956" anchor-label="stringsProvider" id="1486480495%2FProperties%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="strings-provider.html"><span>strings</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1486480495%2FProperties%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="strings-provider.html">stringsProvider</a><span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.utils/StringsProvider///PointingToDeclaration/">StringsProvider</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1373905992%2FProperties%2F514231956" anchor-label="userSamplingSelection" id="1373905992%2FProperties%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="user-sampling-selection.html"><span>user</span><wbr><span>Sampling</span><wbr><span><span>Selection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1373905992%2FProperties%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="user-sampling-selection.html">userSamplingSelection</a><span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.utils/UserSamplingSelection///PointingToDeclaration/">UserSamplingSelection</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="280227512%2FFunctions%2F514231956" anchor-label="abortSurvey" id="280227512%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="abort-survey.html"><span>abort</span><wbr><span><span>Survey</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="280227512%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="abort-survey.html"><span class="token function">abortSurvey</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1734262477%2FFunctions%2F514231956" anchor-label="acceptedLocalNotification" id="-1734262477%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accepted-local-notification.html"><span>accepted</span><wbr><span>Local</span><wbr><span><span>Notification</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1734262477%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="accepted-local-notification.html"><span class="token function">acceptedLocalNotification</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the local notification associated with the invitation has been accepted</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1305805609%2FFunctions%2F514231956" anchor-label="acceptInvitation" id="-1305805609%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept-invitation.html"><span>accept</span><wbr><span><span>Invitation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1305805609%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="accept-invitation.html"><span class="token function">acceptInvitation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the survey invitation has been accepted</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="476924169%2FFunctions%2F514231956" anchor-label="addObserver" id="476924169%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-observer.html"><span>add</span><wbr><span><span>Observer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="476924169%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="add-observer.html"><span class="token function">addObserver</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">observer<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.events/TriggerEventObserver///PointingToDeclaration/">TriggerEventObserver</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1290063701%2FFunctions%2F514231956" anchor-label="applicationExited" id="1290063701%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="application-exited.html"><span>application</span><wbr><span><span>Exited</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1290063701%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="application-exited.html"><span class="token function">applicationExited</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1338345888%2FFunctions%2F514231956" anchor-label="applicationLaunched" id="-1338345888%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="application-launched.html"><span>application</span><wbr><span><span>Launched</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1338345888%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="application-launched.html"><span class="token function">applicationLaunched</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the application has launched</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-680862325%2FFunctions%2F514231956" anchor-label="cancelPendingInvites" id="-680862325%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cancel-pending-invites.html"><span>cancel</span><wbr><span>Pending</span><wbr><span><span>Invites</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-680862325%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="cancel-pending-invites.html"><span class="token function">cancelPendingInvites</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1634770031%2FFunctions%2F514231956" anchor-label="checkState" id="1634770031%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="check-state.html"><span>check</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1634770031%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="check-state.html"><span class="token function">checkState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Checks the state of the tracker.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1386833314%2FFunctions%2F514231956" anchor-label="cleanUp" id="-1386833314%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clean-up.html"><span>clean</span><wbr><span><span>Up</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1386833314%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="clean-up.html"><span class="token function">cleanUp</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1023986523%2FFunctions%2F514231956" anchor-label="completeSurvey" id="-1023986523%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="complete-survey.html"><span>complete</span><wbr><span><span>Survey</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1023986523%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="complete-survey.html"><span class="token function">completeSurvey</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the survey has been completed</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-360833020%2FFunctions%2F514231956" anchor-label="currentConfigurationFromJson" id="-360833020%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-configuration-from-json.html"><span>current</span><wbr><span>Configuration</span><wbr><span>From</span><wbr><span><span>Json</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-360833020%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="current-configuration-from-json.html"><span class="token function">currentConfigurationFromJson</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a>&nbsp;</span>jsonString<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-811440552%2FFunctions%2F514231956" anchor-label="currentConfigurationToJson" id="-811440552%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-configuration-to-json.html"><span>current</span><wbr><span>Configuration</span><wbr><span>To</span><wbr><span><span>Json</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-811440552%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="current-configuration-to-json.html"><span class="token function">currentConfigurationToJson</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="783034999%2FFunctions%2F514231956" anchor-label="customInviteAccepted" id="783034999%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="custom-invite-accepted.html"><span>custom</span><wbr><span>Invite</span><wbr><span><span>Accepted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="783034999%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="custom-invite-accepted.html"><span class="token function">customInviteAccepted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-866085357%2FFunctions%2F514231956" anchor-label="declineInvitation" id="-866085357%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="decline-invitation.html"><span>decline</span><wbr><span><span>Invitation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-866085357%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="decline-invitation.html"><span class="token function">declineInvitation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the survey invitation has been declined</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-919744161%2FFunctions%2F514231956" anchor-label="getContext" id="-919744161%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-context.html"><span>get</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-919744161%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-context.html"><span class="token function">getContext</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1140843919%2FFunctions%2F514231956" anchor-label="getCurrentConfiguration" id="1140843919%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-current-configuration.html"><span>get</span><wbr><span>Current</span><wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1140843919%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-current-configuration.html"><span class="token function">getCurrentConfiguration</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="602652899%2FFunctions%2F514231956" anchor-label="getCurrentStateRespondentId" id="602652899%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-current-state-respondent-id.html"><span>get</span><wbr><span>Current</span><wbr><span>State</span><wbr><span>Respondent</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="602652899%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-current-state-respondent-id.html"><span class="token function">getCurrentStateRespondentId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="179488239%2FFunctions%2F514231956" anchor-label="getInviteListener" id="179488239%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-invite-listener.html"><span>get</span><wbr><span>Invite</span><wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="179488239%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-invite-listener.html"><span class="token function">getInviteListener</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.verint.xm.sdk.predictive.tracker.listeners/[android-jvm]-base-invite-listener/index.html">BaseInviteListener</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1525738217%2FFunctions%2F514231956" anchor-label="getIsEnabled" id="-1525738217%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-is-enabled.html"><span>get</span><wbr><span>Is</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1525738217%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-is-enabled.html"><span class="token function">getIsEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-702231299%2FFunctions%2F514231956" anchor-label="getState" id="-702231299%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-state.html"><span>get</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-702231299%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-state.html"><span class="token function">getState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.storyEngine.state/PersistedState///PointingToDeclaration/">PersistedState</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2049527660%2FFunctions%2F514231956" anchor-label="getSurveyUrlBase" id="-2049527660%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-survey-url-base.html"><span>get</span><wbr><span>Survey</span><wbr><span>Url</span><wbr><span><span>Base</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2049527660%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-survey-url-base.html"><span class="token function">getSurveyUrlBase</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">style<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/SurveyStyle///PointingToDeclaration/">SurveyStyle</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1202659503%2FFunctions%2F514231956" anchor-label="getURLEncodedCID" id="1202659503%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-u-r-l-encoded-c-i-d.html"><span>get</span><wbr><span>URLEncoded</span><wbr><span><span>CID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1202659503%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-u-r-l-encoded-c-i-d.html"><span class="token function">getURLEncodedCID</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Getter for the API key</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2069479096%2FFunctions%2F514231956" anchor-label="incrementPageViews" id="-2069479096%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="increment-page-views.html"><span>increment</span><wbr><span>Page</span><wbr><span><span>Views</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2069479096%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="increment-page-views.html"><span class="token function">incrementPageViews</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="522784076%2FFunctions%2F514231956" anchor-label="incrementSignificantEventsCountWithKey" id="522784076%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="increment-significant-events-count-with-key.html"><span>increment</span><wbr><span>Significant</span><wbr><span>Events</span><wbr><span>Count</span><wbr><span>With</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="522784076%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="increment-significant-events-count-with-key.html"><span class="token function">incrementSignificantEventsCountWithKey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Increment the significant event count for a given event key</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-516328149%2FFunctions%2F514231956" anchor-label="initLogging" id="-516328149%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="init-logging.html"><span>init</span><wbr><span><span>Logging</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-516328149%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="init-logging.html"><span class="token function">initLogging</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">application<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1002626010%2FFunctions%2F514231956" anchor-label="intitializeState" id="-1002626010%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="intitialize-state.html"><span>intitialize</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1002626010%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="intitialize-state.html"><span class="token function">intitializeState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="303977409%2FFunctions%2F514231956" anchor-label="onActivityPaused" id="303977409%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-activity-paused.html"><span>on</span><wbr><span>Activity</span><wbr><span><span>Paused</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="303977409%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-activity-paused.html"><span class="token function">onActivityPaused</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1656082754%2FFunctions%2F514231956" anchor-label="onActivityResumed" id="-1656082754%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-activity-resumed.html"><span>on</span><wbr><span>Activity</span><wbr><span><span>Resumed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1656082754%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-activity-resumed.html"><span class="token function">onActivityResumed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1481209940%2FFunctions%2F514231956" anchor-label="onActivityStarted" id="1481209940%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-activity-started.html"><span>on</span><wbr><span>Activity</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1481209940%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-activity-started.html"><span class="token function">onActivityStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1454189944%2FFunctions%2F514231956" anchor-label="onActivityStopped" id="-1454189944%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-activity-stopped.html"><span>on</span><wbr><span>Activity</span><wbr><span><span>Stopped</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1454189944%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-activity-stopped.html"><span class="token function">onActivityStopped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="781817953%2FFunctions%2F514231956" anchor-label="onInviteAccepted" id="781817953%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-invite-accepted.html"><span>on</span><wbr><span>Invite</span><wbr><span><span>Accepted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="781817953%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-invite-accepted.html"><span class="token function">onInviteAccepted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the invitation is accepted</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-830161816%2FFunctions%2F514231956" anchor-label="onInviteDeclined" id="-830161816%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-invite-declined.html"><span>on</span><wbr><span>Invite</span><wbr><span><span>Declined</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-830161816%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-invite-declined.html"><span class="token function">onInviteDeclined</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the invitation is declined</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1394043866%2FFunctions%2F514231956" anchor-label="onInvitePresented" id="1394043866%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-invite-presented.html"><span>on</span><wbr><span>Invite</span><wbr><span><span>Presented</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1394043866%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-invite-presented.html"><span class="token function">onInvitePresented</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the invitation is presented</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1872888384%2FFunctions%2F514231956" anchor-label="onLocalNotificationReceived" id="1872888384%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-local-notification-received.html"><span>on</span><wbr><span>Local</span><wbr><span>Notification</span><wbr><span><span>Received</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1872888384%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-local-notification-received.html"><span class="token function">onLocalNotificationReceived</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1614145983%2FFunctions%2F514231956" anchor-label="onNetworkDisconnected" id="-1614145983%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-network-disconnected.html"><span>on</span><wbr><span>Network</span><wbr><span><span>Disconnected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1614145983%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-network-disconnected.html"><span class="token function">onNetworkDisconnected</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">action<span class="token operator">: </span><a href="-network-action/index.html">TrackingContext.NetworkAction</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1320109021%2FFunctions%2F514231956" anchor-label="onReactivated" id="-1320109021%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-reactivated.html"><span>on</span><wbr><span><span>Reactivated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1320109021%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-reactivated.html"><span class="token function">onReactivated</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="214586166%2FFunctions%2F514231956" anchor-label="onSamplingCheckCompleted" id="214586166%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-sampling-check-completed.html"><span>on</span><wbr><span>Sampling</span><wbr><span>Check</span><wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="214586166%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-sampling-check-completed.html"><span class="token function">onSamplingCheckCompleted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span><span class="token punctuation">, </span></span><span class="parameter ">isInPool<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by Tracker when the sampling pool check is completed on a given measure</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1287338467%2FFunctions%2F514231956" anchor-label="onStateChangeRequested" id="1287338467%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-state-change-requested.html"><span>on</span><wbr><span>State</span><wbr><span>Change</span><wbr><span><span>Requested</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1287338467%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-state-change-requested.html"><span class="token function">onStateChangeRequested</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">eventType<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.storyEngine.webSdkInterface.enums/SdkEventType///PointingToDeclaration/">SdkEventType</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1920651870%2FFunctions%2F514231956" anchor-label="onSurveyAborted" id="1920651870%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-aborted.html"><span>on</span><wbr><span>Survey</span><wbr><span><span>Aborted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1920651870%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-survey-aborted.html"><span class="token function">onSurveyAborted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the survey is aborted</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-306728358%2FFunctions%2F514231956" anchor-label="onSurveyCompleted" id="-306728358%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-completed.html"><span>on</span><wbr><span>Survey</span><wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-306728358%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-survey-completed.html"><span class="token function">onSurveyCompleted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the survey is completed</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2137535004%2FFunctions%2F514231956" anchor-label="onSurveyFailsToShow" id="2137535004%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-fails-to-show.html"><span>on</span><wbr><span>Survey</span><wbr><span>Fails</span><wbr><span>To</span><wbr><span><span>Show</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2137535004%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-survey-fails-to-show.html"><span class="token function">onSurveyFailsToShow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the survey fails to show</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="895939639%2FFunctions%2F514231956" anchor-label="onSurveyFailsToSubmit" id="895939639%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-fails-to-submit.html"><span>on</span><wbr><span>Survey</span><wbr><span>Fails</span><wbr><span>To</span><wbr><span><span>Submit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="895939639%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-survey-fails-to-submit.html"><span class="token function">onSurveyFailsToSubmit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the survey fails to submit</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1204648189%2FFunctions%2F514231956" anchor-label="onSurveyRequested" id="1204648189%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-requested.html"><span>on</span><wbr><span>Survey</span><wbr><span><span>Requested</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1204648189%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-survey-requested.html"><span class="token function">onSurveyRequested</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when a survey is requested</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1550085408%2FFunctions%2F514231956" anchor-label="onSurveyShown" id="1550085408%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-shown.html"><span>on</span><wbr><span>Survey</span><wbr><span><span>Shown</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1550085408%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-survey-shown.html"><span class="token function">onSurveyShown</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">measureConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when a survey is shown</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1440123203%2FFunctions%2F514231956" anchor-label="onWebSDKEventReceived" id="1440123203%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-web-s-d-k-event-received.html"><span>on</span><wbr><span>Web</span><wbr><span>SDKEvent</span><wbr><span><span>Received</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1440123203%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-web-s-d-k-event-received.html"><span class="token function">onWebSDKEventReceived</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">newEvent<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.storyEngine.webSdkInterface.enums/SdkEventType///PointingToDeclaration/">SdkEventType</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="535307466%2FFunctions%2F514231956" anchor-label="persistState" id="535307466%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="persist-state.html"><span>persist</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="535307466%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="persist-state.html"><span class="token function">persistState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">persistedState<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.storyEngine.state/PersistedState///PointingToDeclaration/">PersistedState</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Persist the PersistedState to SharedPreferences</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-848065930%2FFunctions%2F514231956" anchor-label="prepare" id="-848065930%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prepare.html"><span><span>prepare</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-848065930%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="prepare.html"><span class="token function">prepare</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">application<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a><span class="token punctuation">, </span></span><span class="parameter ">stopgapConfig<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief ">The start method has been divided into two parts to improve start-up time - this is the part that must be done before control is handed back to the application</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1027951062%2FFunctions%2F514231956" anchor-label="refreshPendingIntents" id="1027951062%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="refresh-pending-intents.html"><span>refresh</span><wbr><span>Pending</span><wbr><span><span>Intents</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1027951062%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="refresh-pending-intents.html"><span class="token function">refreshPendingIntents</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">targetState<span class="token operator">: </span><a href="../../com.verint.xm.sdk.predictive.tracker.state/[android-jvm]-abstract-tracker-state/index.html">AbstractTrackerState</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-73779468%2FFunctions%2F514231956" anchor-label="refreshPendingInvites" id="-73779468%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="refresh-pending-invites.html"><span>refresh</span><wbr><span>Pending</span><wbr><span><span>Invites</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-73779468%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="refresh-pending-invites.html"><span class="token function">refreshPendingInvites</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="425513756%2FFunctions%2F514231956" anchor-label="removeObserver" id="425513756%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-observer.html"><span>remove</span><wbr><span><span>Observer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="425513756%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="remove-observer.html"><span class="token function">removeObserver</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">observer<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.events/TriggerEventObserver///PointingToDeclaration/">TriggerEventObserver</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1575812582%2FFunctions%2F514231956" anchor-label="resetAll" id="1575812582%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-all.html"><span>reset</span><wbr><span><span>All</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1575812582%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="reset-all.html"><span class="token function">resetAll</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Resets all persisted state.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-463770438%2FFunctions%2F514231956" anchor-label="resetSignificantEventCount" id="-463770438%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-significant-event-count.html"><span>reset</span><wbr><span>Significant</span><wbr><span>Event</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-463770438%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="reset-significant-event-count.html"><span class="token function">resetSignificantEventCount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-773951941%2FFunctions%2F514231956" anchor-label="resetSignificantEvents" id="-773951941%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-significant-events.html"><span>reset</span><wbr><span>Significant</span><wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-773951941%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="reset-significant-events.html"><span class="token function">resetSignificantEvents</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1788316040%2FFunctions%2F514231956" anchor-label="setDeclineDate" id="1788316040%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-decline-date.html"><span>set</span><wbr><span>Decline</span><wbr><span><span>Date</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1788316040%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-decline-date.html"><span class="token function">setDeclineDate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">declineDate<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="364181621%2FFunctions%2F514231956" anchor-label="setInviteListener" id="364181621%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-invite-listener.html"><span>set</span><wbr><span>Invite</span><wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="364181621%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-invite-listener.html"><span class="token function">setInviteListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">inviteListener<span class="token operator">: </span><a href="../../com.verint.xm.sdk.predictive.tracker.listeners/[android-jvm]-base-invite-listener/index.html">BaseInviteListener</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1685542189%2FFunctions%2F514231956" anchor-label="setNotificationServiceImpl" id="-1685542189%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-notification-service-impl.html"><span>set</span><wbr><span>Notification</span><wbr><span>Service</span><wbr><span><span>Impl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1685542189%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-notification-service-impl.html"><span class="token function">setNotificationServiceImpl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">notificationService<span class="token operator">: </span><a href="../[android-jvm]-notification-service/index.html">NotificationService</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1898491510%2FFunctions%2F514231956" anchor-label="setRespondentId" id="-1898491510%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-respondent-id.html"><span>set</span><wbr><span>Respondent</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1898491510%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-respondent-id.html"><span class="token function">setRespondentId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rid<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1765136097%2FFunctions%2F514231956" anchor-label="setSignificantEventCount" id="1765136097%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-significant-event-count.html"><span>set</span><wbr><span>Significant</span><wbr><span>Event</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1765136097%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-significant-event-count.html"><span class="token function">setSignificantEventCount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1054359758%2FFunctions%2F514231956" anchor-label="setUnifiedSampling" id="1054359758%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-unified-sampling.html"><span>set</span><wbr><span>Unified</span><wbr><span><span>Sampling</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1054359758%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-unified-sampling.html"><span class="token function">setUnifiedSampling</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">instance<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.storyEngine.webSdkInterface.interfaces/SdkEventHandler///PointingToDeclaration/">SdkEventHandler</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2077555232%2FFunctions%2F514231956" anchor-label="setWorkManager" id="2077555232%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-work-manager.html"><span>set</span><wbr><span>Work</span><wbr><span><span>Manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2077555232%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-work-manager.html"><span class="token function">setWorkManager</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">workManager<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/work/WorkManager.html">WorkManager</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1278177671%2FFunctions%2F514231956" anchor-label="start" id="1278177671%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start.html"><span><span>start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1278177671%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1222015988%2FFunctions%2F514231956" anchor-label="triggerInvitation" id="-1222015988%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="trigger-invitation.html"><span>trigger</span><wbr><span><span>Invitation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1222015988%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="trigger-invitation.html"><span class="token function">triggerInvitation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">surveyId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="189870059%2FFunctions%2F514231956" anchor-label="triggerSurvey" id="189870059%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="trigger-survey.html"><span>trigger</span><wbr><span><span>Survey</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="189870059%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="trigger-survey.html"><span class="token function">triggerSurvey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">surveyId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-145301551%2FFunctions%2F514231956" anchor-label="triggerSurveyForName" id="-145301551%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="trigger-survey-for-name.html"><span>trigger</span><wbr><span>Survey</span><wbr><span>For</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-145301551%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="trigger-survey-for-name.html"><span class="token function">triggerSurveyForName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-291032350%2FFunctions%2F514231956" anchor-label="update" id="-291032350%2FFunctions%2F514231956" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:predictive:dokkaHtmlPartial/release" data-filterable-set=":sdk:predictive:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="update.html"><span><span>update</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-291032350%2FFunctions%2F514231956"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="update.html"><span class="token function">update</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a><span class="token punctuation">, </span></span><span class="parameter ">newConfiguration<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
