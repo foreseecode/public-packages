@@ -28,7 +28,26 @@
         <article>
             <pre class="prettyprint source linenums"><code>'use strict';
 
-const VerintXM = require('react-native').NativeModules.VerintXM;
+import { NativeModules, Platform } from 'react-native';
+
+const LINKING_ERROR =
+  `The package 'react-native-verint-xm-sdk' doesn't seem to be linked. Make sure: \n\n` +
+  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
+  '- You rebuilt the app after installing the package\n' +
+  '- You are not using Expo Go\n';
+
+const FCP_DEFAULT_VERSION = "mobsdk"
+
+const VerintXM = NativeModules.VerintXM
+  ? NativeModules.VerintXM
+  : new Proxy(
+      {},
+      {
+        get() {
+          throw new Error(LINKING_ERROR);
+        },
+      }
+    );
 
 function registerPlatform() {
   VerintXM.setCPP("sdk-platform", "react-native");
@@ -45,11 +64,11 @@ module.exports = {
    * Useful for getting an object that NativeEventEmitter can wrap.
    * @memberof VerintXM
    */
-nativeModule: VerintXM,
+  nativeModule: VerintXM,
 
   /**
    * Starts the Verint SDK. Accepts an optional config object (which must
-   * represent a valid Verint config, including a clientId). If no config
+   * represent a valid Verint config, including a customerId). If no config
    * is provided, then the native module will look for the config in a file called
    * exp_configuration.json (which must be available to the native modules).
    * @memberof VerintXM
@@ -60,7 +79,6 @@ nativeModule: VerintXM,
     } else {
       VerintXM.start();
     }
-
     registerPlatform();
   },
 
@@ -70,7 +88,6 @@ nativeModule: VerintXM,
    */
   startWithConfigurationFile(fileName) {
     VerintXM.startWithConfigurationFile(fileName);
-
     registerPlatform();
   },
 
@@ -80,8 +97,61 @@ nativeModule: VerintXM,
    */
   startWithConfigurationJson(jsonString) {
     VerintXM.startWithConfigurationJson(jsonString);
-
     registerPlatform();
+  },
+
+  /**
+   * Starts the SDK with the given configuration URL.
+   * @memberof VerintXM
+   */
+  startWithConfigurationUrl(urlString) {
+    VerintXM.startWithConfigurationUrl(urlString);
+    registerPlatform();
+  },
+
+  /**
+   * Starts the SDK using the given appId and version.
+   *
+   * If version is undefined, the default value is 'mobsdk'.
+   *
+   * Note: new configs may have been setup using a version of `1`. If this is true
+   * of your config, then you will need to supply this value explicitly.
+   *
+   * @memberof VerintXM
+   * @deprecated since v3.1.0. Use the Configurator instead. See: startWithSiteKey.
+   */
+  startWithAppId(appId, version = FCP_DEFAULT_VERSION) {
+    VerintXM.startWithAppId(appId, version);
+    registerPlatform();
+  },
+
+  /**
+   * Starts the SDK with a configuration from the Configurator.
+   *
+   * @memberof VerintXM
+   */
+  startWithSiteKey(siteKey) {
+    VerintXM.startWithSiteKey(siteKey);
+    registerPlatform();
+  },
+
+
+  /**
+   * Sets the remote configuration container.
+   *
+   * Note: when specifying a configuration container, this method must be called before
+   * starting the SDK.
+   */
+  setConfigurationContainer(name) {
+    VerintXM.setConfigurationContainer(name);
+  },
+
+  /**
+   * Gets the remote configuration container
+   *
+   */
+  getConfigurationContainer() {
+    return Promise.resolve(VerintXM.getConfigurationContainer());
   },
 
   /**
@@ -93,7 +163,7 @@ nativeModule: VerintXM,
   },
 
   /**
-   * Check to see if the user is eligible for a survey.
+   * Checks to see if the user is eligible for a survey.
    * If the user meets trigger criteria *and* are in the sampling pool, the invitation is presented.
    * Implementers must explicitly check for eligibility (the SDK does not do this automatically).
    * @memberof VerintXM
@@ -103,16 +173,18 @@ nativeModule: VerintXM,
   },
 
   /**
-   * Programmatically present the invitation for a given survey ID (sid).
+   * Programmatically presents the invitation for a given survey ID (sid).
    * @memberof VerintXM
-   */
+   * @deprecated since v3.2.0. Use Survey Management instead. See: showInviteForName.
+  */
   showInvite(surveyId) {
     VerintXM.showInvite(surveyId);
   },
 
   /**
-   * Programmatically present the survey for a given survey ID (sid).
+   * Programmatically presents the survey for a given survey ID (sid).
    * @memberof VerintXM
+   * @deprecated since v3.2.0. Use Survey Management instead. See: showSurveyForName.
    */
   showSurvey(surveyId) {
     VerintXM.showSurvey(surveyId);
@@ -124,7 +196,23 @@ nativeModule: VerintXM,
    * @memberof VerintXM
    */
   setCPP(key, value) {
-    VerintXM.setCPP(key, value);
+    if (Array.isArray(value)) {
+      VerintXM.setCPPFromArray(key, value);
+    } else {
+      VerintXM.setCPP(key, value);
+    }
+  },
+
+  /**
+   * Appends a Custom Passed Parameter (CPP) for the list associated with the given key. 
+   * If no list exists for the given key, then one will be created. If the key already 
+   * contains a non-array value, then that value will be destroyed and a new list will 
+   * be created.
+   *
+   * CPPs are transmitted along with surveys upon submission.
+   */
+  appendCPP(key, value) {
+    VerintXM.appendCPP(key, value);
   },
 
   /**
@@ -152,7 +240,7 @@ nativeModule: VerintXM,
   },
 
   /**
-   * Manually increment the number of page views criteria counted by the Verint SDK.
+   * Manually increments the number of page views criteria counted by the Verint SDK.
    * This can be useful when the user expected a new page to have been shown.
    * @memberof VerintXM
    */
@@ -169,15 +257,15 @@ nativeModule: VerintXM,
   },
 
   /**
-   * Set the significant event count for a given key.
+   * Sets the significant event count for a given key.
    * @memberof VerintXM
    */
-  setSignificantEventCount(count, key) {
-    VerintXM.setSignificantEventCount(count, key);
+  setSignificantEventCount(key, count) {
+    VerintXM.setSignificantEventCount(key, count);
   },
 
   /**
-   * Reset the significant event count for a given key.
+   * Resets the significant event count for a given key.
    * @memberof VerintXM
    */
   resetSignificantEventCount(key) {
@@ -193,7 +281,7 @@ nativeModule: VerintXM,
   },
 
   /**
-   * Programmatically cancel any pending invites for the user when the type is EXIT_INVITE or EXIT_SURVEY.
+   * Programmatically cancels any pending invites for the user when the type is EXIT_INVITE or EXIT_SURVEY.
    * @memberof VerintXM
    */
   cancelPendingInvites() {
@@ -218,6 +306,17 @@ nativeModule: VerintXM,
   },
 
   /**
+   * Sets whether or not to enable remote event logging.
+   * Event logging captures and transmits significant events that occur during the SDK life cycle.
+   * By default, event logging is enabled 
+   * and it is highly recommended that this logging remain enabled in release builds.
+   * @memberof VerintXM
+   */
+  setEventLogEnabled(enabled) {
+    VerintXM.setEventLogEnabled(enabled);
+  },
+
+  /**
    * Returns the version of the SDK.
    * @memberof VerintXM
    */
@@ -233,6 +332,21 @@ nativeModule: VerintXM,
    */
   setSkipPoolingCheck(shouldSkip) {
     VerintXM.setSkipPoolingCheck(shouldSkip);
+  },
+
+  /**
+   * Sets whether to enable custom invites.
+   *
+   * When enabled the SDK will send the following events, which the client should handle:
+   *
+   * - shouldShowCustomInvite
+   * - shouldHideCustomInvite
+   * - shouldSetInvalidInput
+   *
+   * @memberof VerintXM
+   */
+  setCustomInviteEnabled(enabled, invitationMode) {
+    VerintXM.setCustomInviteEnabled(enabled, (invitationMode ? invitationMode.toUpperCase(invitationMode) : "IN_SESSION"));
   },
 
   /**
@@ -295,47 +409,69 @@ nativeModule: VerintXM,
   },
 
   /**
-   * Programmatically present the default Digital survey (the first one in the configuration json).
+   * Presents the default Digital survey (the first one in the configuration).
    * @memberof VerintXM
+   * @deprecated since v3.2.0. Digital surveys are no longer supported.
    */
   showDigitalSurvey() {
     VerintXM.showDigitalSurvey();
   },
 
   /**
-   * Programmatically present the Digital survey for a given name.
+   * Presents the Digital survey for a given name.
    * @memberof VerintXM
+   * @deprecated since v3.2.0. Digital surveys are no longer supported.
    */
   showDigitalSurveyForName(surveyName) {
     VerintXM.showDigitalSurveyForName(surveyName);
   },
 
   /**
-   * Check if the default Digital Survey is enabled.
+   * Checks if the default Digital Survey is enabled.
    * @memberof VerintXM
+   * @deprecated since v3.2.0. Digital surveys are no longer supported.
    */
   checkIfDigitalSurveyEnabled() {
     VerintXM.checkIfDigitalSurveyEnabled();
   },
   
   /**
-   * Check if a Digital survey is enabled for a given name.
+   * Checks if a Digital survey is enabled for the given name.
    * @memberof VerintXM
+   * @deprecated since v3.2.0. Digital surveys are no longer supported.
    */
   checkIfDigitalSurveyEnabledForName(surveyName) {
     VerintXM.checkIfDigitalSurveyEnabledForName(surveyName);
   },
 
   /**
-   * Returns all available Digital Survey names defined in the Configuration.
+   * Returns all available Digital Survey names defined in the configuration.
    * @memberof VerintXM
+   * @deprecated since v3.2.0. Digital surveys are no longer supported.
    */
   getAvailableDigitalSurveyNames() {
     return Promise.resolve(VerintXM.getAvailableDigitalSurveyNames());
+  },
+
+  // Survey Management
+
+  /**
+   * Programmatically presents the Survey Management invitation for a given name.
+   * @memberof VerintXM
+   */
+  showInviteForName(name) {
+    VerintXM.showInviteForName(name);
+  },
+  
+  /**
+   * Programmatically presents the Survey Management survey for a given name.
+   * @memberof VerintXM
+   */
+  showSurveyForName(name) {
+    VerintXM.showSurveyForName(name);
   }
 
 };
-
 </code></pre>
         </article>
     </section>
@@ -352,7 +488,7 @@ nativeModule: VerintXM,
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Fri Aug 18 2023 17:27:45 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Jul 17 2025 15:27:53 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
