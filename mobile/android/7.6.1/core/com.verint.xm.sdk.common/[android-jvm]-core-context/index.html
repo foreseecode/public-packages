@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]CoreContext</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    core
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:core/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:core/release"
+                                       data-filter=":sdk:core/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    core
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="core::com.verint.xm.sdk.common/CoreContext///PointingToDeclaration//831293418">
+  <div class="breadcrumbs"><a href="../../../index.html">core</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk.common</a><span class="delimiter">/</span><span class="current">[androidJvm]CoreContext</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Core</span><wbr></wbr><span><span>Context</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">CoreContext</a> : <a href="../../com.verint.xm.sdk.common.storyEngine.webSdkInterface.interfaces/[android-jvm]-sdk-event-handler/index.html">SdkEventHandler</a></div><p class="paragraph">Created by alan.wang on 8/28/18.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-219681048%2FClasslikes%2F831293418" anchor-label="ConfigUpdateListener" id="-219681048%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-config-update-listener/index.html"><span>Config</span><wbr></wbr><span>Update</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-219681048%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-config-update-listener/index.html">ConfigUpdateListener</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-674062676%2FProperties%2F831293418" anchor-label="appId" id="-674062676%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="app-id.html"><span>app</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-674062676%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="app-id.html">appId</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2055575880%2FProperties%2F831293418" anchor-label="application" id="-2055575880%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="application.html"><span><span>application</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2055575880%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="application.html">application</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="213713412%2FProperties%2F831293418" anchor-label="broadcastIntentDispatcher" id="213713412%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="broadcast-intent-dispatcher.html"><span>broadcast</span><wbr></wbr><span>Intent</span><wbr></wbr><span><span>Dispatcher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="213713412%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="broadcast-intent-dispatcher.html">broadcastIntentDispatcher</a><span class="token operator">: </span><a href="../../com.verint.xm.sdk.common.utils/[android-jvm]-broadcast-intent-dispatcher/index.html">BroadcastIntentDispatcher</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1322297582%2FProperties%2F831293418" anchor-label="configuration" id="-1322297582%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configuration.html"><span><span>configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1322297582%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="configuration.html">configuration</a><span class="token operator">: </span><a href="../../com.verint.xm.sdk.common.configuration/[android-jvm]-i-configuration/index.html">IConfiguration</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2051902777%2FProperties%2F831293418" anchor-label="configurationContainer" id="-2051902777%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configuration-container.html"><span>configuration</span><wbr></wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2051902777%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="configuration-container.html">configurationContainer</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1655838176%2FProperties%2F831293418" anchor-label="currentActivity" id="1655838176%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-activity.html"><span>current</span><wbr></wbr><span><span>Activity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1655838176%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="current-activity.html">currentActivity</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-44493919%2FProperties%2F831293418" anchor-label="eventIngestionSessionId" id="-44493919%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="event-ingestion-session-id.html"><span>event</span><wbr></wbr><span>Ingestion</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-44493919%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="event-ingestion-session-id.html">eventIngestionSessionId</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="12607069%2FProperties%2F831293418" anchor-label="instance" id="12607069%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="instance.html"><span><span>instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="12607069%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="instance.html">instance</a><span class="token operator">: </span><a href="index.html">CoreContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="141075336%2FFunctions%2F831293418" anchor-label="attachWebView" id="141075336%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="attach-web-view.html"><span>attach</span><wbr></wbr><span>Web</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="141075336%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="attach-web-view.html"><span class="token function">attachWebView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">webView<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="418922820%2FFunctions%2F831293418" anchor-label="cleanUp" id="418922820%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clean-up.html"><span>clean</span><wbr></wbr><span><span>Up</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="418922820%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="clean-up.html"><span class="token function">cleanUp</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1207919784%2FFunctions%2F831293418" anchor-label="clearEventIngestionSessionId" id="-1207919784%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clear-event-ingestion-session-id.html"><span>clear</span><wbr></wbr><span>Event</span><wbr></wbr><span>Ingestion</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1207919784%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="clear-event-ingestion-session-id.html"><span class="token function">clearEventIngestionSessionId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1312054387%2FFunctions%2F831293418" anchor-label="getDatacenter" id="1312054387%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-datacenter.html"><span>get</span><wbr></wbr><span><span>Datacenter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1312054387%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-datacenter.html"><span class="token function">getDatacenter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.verint.xm.sdk.common.storyEngine.enums/[android-jvm]-datacenters/index.html">Datacenters</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1906621543%2FFunctions%2F831293418" anchor-label="getEvents" id="-1906621543%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-events.html"><span>get</span><wbr></wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1906621543%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-events.html"><span class="token function">getEvents</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/ArrayList.html">ArrayList</a><span class="token operator">&lt;</span><a href="../../com.verint.xm.sdk.common.storyEngine.webSdkInterface.events/[android-jvm]-sdk-event/index.html">SdkEvent</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="966726954%2FFunctions%2F831293418" anchor-label="getFCPConfigurationContainer" id="966726954%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-f-c-p-configuration-container.html"><span>get</span><wbr></wbr><span>FCPConfiguration</span><wbr></wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="966726954%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-f-c-p-configuration-container.html"><span class="token function">getFCPConfigurationContainer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1947727286%2FFunctions%2F831293418" anchor-label="getInstance" id="-1947727286%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-instance.html"><span>get</span><wbr></wbr><span><span>Instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1947727286%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-instance.html"><span class="token function">getInstance</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CoreContext</a></div><div class="brief ">Initialize or get an instance of CoreContext.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-459720446%2FFunctions%2F831293418" anchor-label="getIsDebugLogEnabled" id="-459720446%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-is-debug-log-enabled.html"><span>get</span><wbr></wbr><span>Is</span><wbr></wbr><span>Debug</span><wbr></wbr><span>Log</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-459720446%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-is-debug-log-enabled.html"><span class="token function">getIsDebugLogEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="375291739%2FFunctions%2F831293418" anchor-label="getIsEventLogEnabled" id="375291739%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-is-event-log-enabled.html"><span>get</span><wbr></wbr><span>Is</span><wbr></wbr><span>Event</span><wbr></wbr><span>Log</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="375291739%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-is-event-log-enabled.html"><span class="token function">getIsEventLogEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="593354139%2FFunctions%2F831293418" anchor-label="getIsQaLogEnabled" id="593354139%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-is-qa-log-enabled.html"><span>get</span><wbr></wbr><span>Is</span><wbr></wbr><span>Qa</span><wbr></wbr><span>Log</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="593354139%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-is-qa-log-enabled.html"><span class="token function">getIsQaLogEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1688660770%2FFunctions%2F831293418" anchor-label="getIsTablet" id="1688660770%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-is-tablet.html"><span>get</span><wbr></wbr><span>Is</span><wbr></wbr><span><span>Tablet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1688660770%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-is-tablet.html"><span class="token function">getIsTablet</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1255150754%2FFunctions%2F831293418" anchor-label="getUCMConfigurationContainer" id="-1255150754%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-u-c-m-configuration-container.html"><span>get</span><wbr></wbr><span>UCMConfiguration</span><wbr></wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1255150754%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-u-c-m-configuration-container.html"><span class="token function">getUCMConfigurationContainer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2031926411%2FFunctions%2F831293418" anchor-label="logEvent" id="-2031926411%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-event.html"><span>log</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2031926411%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="log-event.html"><span class="token function">logEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>event<span class="token operator">: </span><a href="../../com.verint.xm.sdk.common.storyEngine.webSdkInterface.events/[android-jvm]-base-event/index.html">BaseEvent</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-587695401%2FFunctions%2F831293418" anchor-label="registerSdkEventListener" id="-587695401%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="register-sdk-event-listener.html"><span>register</span><wbr></wbr><span>Sdk</span><wbr></wbr><span>Event</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-587695401%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="register-sdk-event-listener.html"><span class="token function">registerSdkEventListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../../com.verint.xm.sdk.common.storyEngine.webSdkInterface.interfaces/[android-jvm]-web-sdk-interface-listener/index.html">WebSdkInterfaceListener</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1371623385%2FFunctions%2F831293418" anchor-label="reset" id="1371623385%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset.html"><span><span>reset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1371623385%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="reset.html"><span class="token function">reset</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1248158998%2FFunctions%2F831293418" anchor-label="setConfigListener" id="-1248158998%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-config-listener.html"><span>set</span><wbr></wbr><span>Config</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1248158998%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-config-listener.html"><span class="token function">setConfigListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="-config-update-listener/index.html">CoreContext.ConfigUpdateListener</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-184569886%2FFunctions%2F831293418" anchor-label="setDatacenter" id="-184569886%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-datacenter.html"><span>set</span><wbr></wbr><span><span>Datacenter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-184569886%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-datacenter.html"><span class="token function">setDatacenter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1429169844%2FFunctions%2F831293418" anchor-label="setIsDebugLogEnabled" id="-1429169844%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-is-debug-log-enabled.html"><span>set</span><wbr></wbr><span>Is</span><wbr></wbr><span>Debug</span><wbr></wbr><span>Log</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1429169844%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-is-debug-log-enabled.html"><span class="token function">setIsDebugLogEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1862718253%2FFunctions%2F831293418" anchor-label="setIsEventLogEnabled" id="-1862718253%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-is-event-log-enabled.html"><span>set</span><wbr></wbr><span>Is</span><wbr></wbr><span>Event</span><wbr></wbr><span>Log</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1862718253%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-is-event-log-enabled.html"><span class="token function">setIsEventLogEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1979880949%2FFunctions%2F831293418" anchor-label="setIsQALogEnabled" id="-1979880949%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-is-q-a-log-enabled.html"><span>set</span><wbr></wbr><span>Is</span><wbr></wbr><span>QALog</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1979880949%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-is-q-a-log-enabled.html"><span class="token function">setIsQALogEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2006862256%2FFunctions%2F831293418" anchor-label="unregisterSdkEventListener" id="2006862256%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unregister-sdk-event-listener.html"><span>unregister</span><wbr></wbr><span>Sdk</span><wbr></wbr><span>Event</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2006862256%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="unregister-sdk-event-listener.html"><span class="token function">unregisterSdkEventListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../../com.verint.xm.sdk.common.storyEngine.webSdkInterface.interfaces/[android-jvm]-web-sdk-interface-listener/index.html">WebSdkInterfaceListener</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

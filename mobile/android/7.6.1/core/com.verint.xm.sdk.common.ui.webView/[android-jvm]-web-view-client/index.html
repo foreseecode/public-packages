@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]WebViewClient</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    core
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:core/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:core/release"
+                                       data-filter=":sdk:core/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    core
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="core::com.verint.xm.sdk.common.ui.webView/WebViewClient///PointingToDeclaration//831293418">
+  <div class="breadcrumbs"><a href="../../../index.html">core</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk.common.ui.webView</a><span class="delimiter">/</span><span class="current">[androidJvm]WebViewClient</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Web</span><wbr></wbr><span>View</span><wbr></wbr><span><span>Client</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">WebViewClient</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebViewClient.html">WebViewClient</a></div><p class="paragraph">Created by selwyn.leeke on 2017-12-01.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-685384124%2FConstructors%2F831293418" anchor-label="WebViewClient" id="-685384124%2FConstructors%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-view-client.html"><span>Web</span><wbr></wbr><span>View</span><wbr></wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-685384124%2FConstructors%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">delegate<span class="token operator">: </span><a href="../[android-jvm]-exp-web-view-delegate/index.html">ExpWebViewDelegate</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1569201771%2FProperties%2F831293418" anchor-label="ERROR_AUTHENTICATION" id="-1569201771%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1569201771%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span><span>AUTHENTICATION</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1569201771%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1569201771%2FProperties%2F831293418">ERROR_AUTHENTICATION</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-4</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="424665112%2FProperties%2F831293418" anchor-label="ERROR_BAD_URL" id="424665112%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#424665112%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>BAD_</span><wbr></wbr><span>URL</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="424665112%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#424665112%2FProperties%2F831293418">ERROR_BAD_URL</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-12</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1264205085%2FProperties%2F831293418" anchor-label="ERROR_CONNECT" id="-1264205085%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1264205085%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>CONNECT</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1264205085%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1264205085%2FProperties%2F831293418">ERROR_CONNECT</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-6</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1716898165%2FProperties%2F831293418" anchor-label="ERROR_FAILED_SSL_HANDSHAKE" id="-1716898165%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1716898165%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>FAILED_</span><wbr></wbr><span>SSL_</span><wbr></wbr><span>HANDSHAKE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1716898165%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1716898165%2FProperties%2F831293418">ERROR_FAILED_SSL_HANDSHAKE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-11</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="159664913%2FProperties%2F831293418" anchor-label="ERROR_FILE" id="159664913%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#159664913%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>FILE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="159664913%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#159664913%2FProperties%2F831293418">ERROR_FILE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-13</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1489270938%2FProperties%2F831293418" anchor-label="ERROR_FILE_NOT_FOUND" id="1489270938%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1489270938%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>FILE_</span><wbr></wbr><span>NOT_</span><wbr></wbr><span>FOUND</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1489270938%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#1489270938%2FProperties%2F831293418">ERROR_FILE_NOT_FOUND</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-14</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="888043932%2FProperties%2F831293418" anchor-label="ERROR_HOST_LOOKUP" id="888043932%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#888043932%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>HOST_</span><wbr></wbr><span>LOOKUP</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="888043932%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#888043932%2FProperties%2F831293418">ERROR_HOST_LOOKUP</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-2</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="565630631%2FProperties%2F831293418" anchor-label="ERROR_IO" id="565630631%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#565630631%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>IO</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="565630631%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#565630631%2FProperties%2F831293418">ERROR_IO</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-7</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-407243612%2FProperties%2F831293418" anchor-label="ERROR_PROXY_AUTHENTICATION" id="-407243612%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-407243612%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>PROXY_</span><wbr></wbr><span><span>AUTHENTICATION</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-407243612%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-407243612%2FProperties%2F831293418">ERROR_PROXY_AUTHENTICATION</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-5</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-3597018%2FProperties%2F831293418" anchor-label="ERROR_REDIRECT_LOOP" id="-3597018%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-3597018%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>REDIRECT_</span><wbr></wbr><span>LOOP</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-3597018%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-3597018%2FProperties%2F831293418">ERROR_REDIRECT_LOOP</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-9</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1036456524%2FProperties%2F831293418" anchor-label="ERROR_TIMEOUT" id="1036456524%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1036456524%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>TIMEOUT</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1036456524%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#1036456524%2FProperties%2F831293418">ERROR_TIMEOUT</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-8</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="403177652%2FProperties%2F831293418" anchor-label="ERROR_TOO_MANY_REQUESTS" id="403177652%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#403177652%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>TOO_</span><wbr></wbr><span>MANY_</span><wbr></wbr><span>REQUESTS</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="403177652%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#403177652%2FProperties%2F831293418">ERROR_TOO_MANY_REQUESTS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-15</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="142809987%2FProperties%2F831293418" anchor-label="ERROR_UNKNOWN" id="142809987%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#142809987%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>UNKNOWN</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="142809987%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#142809987%2FProperties%2F831293418">ERROR_UNKNOWN</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-1</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-840825914%2FProperties%2F831293418" anchor-label="ERROR_UNSAFE_RESOURCE" id="-840825914%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-840825914%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>UNSAFE_</span><wbr></wbr><span>RESOURCE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-840825914%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-840825914%2FProperties%2F831293418">ERROR_UNSAFE_RESOURCE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-16</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="181478331%2FProperties%2F831293418" anchor-label="ERROR_UNSUPPORTED_AUTH_SCHEME" id="181478331%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#181478331%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>UNSUPPORTED_</span><wbr></wbr><span>AUTH_</span><wbr></wbr><span>SCHEME</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="181478331%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#181478331%2FProperties%2F831293418">ERROR_UNSUPPORTED_AUTH_SCHEME</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-3</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1738659618%2FProperties%2F831293418" anchor-label="ERROR_UNSUPPORTED_SCHEME" id="-1738659618%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1738659618%2FProperties%2F831293418"><span>ERROR_</span><wbr></wbr><span>UNSUPPORTED_</span><wbr></wbr><span>SCHEME</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1738659618%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1738659618%2FProperties%2F831293418">ERROR_UNSUPPORTED_SCHEME</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-10</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="948471784%2FProperties%2F831293418" anchor-label="SAFE_BROWSING_THREAT_BILLING" id="948471784%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#948471784%2FProperties%2F831293418"><span>SAFE_</span><wbr></wbr><span>BROWSING_</span><wbr></wbr><span>THREAT_</span><wbr></wbr><span>BILLING</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="948471784%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#948471784%2FProperties%2F831293418">SAFE_BROWSING_THREAT_BILLING</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">4</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1932707890%2FProperties%2F831293418" anchor-label="SAFE_BROWSING_THREAT_MALWARE" id="-1932707890%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1932707890%2FProperties%2F831293418"><span>SAFE_</span><wbr></wbr><span>BROWSING_</span><wbr></wbr><span>THREAT_</span><wbr></wbr><span>MALWARE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1932707890%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1932707890%2FProperties%2F831293418">SAFE_BROWSING_THREAT_MALWARE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1208606917%2FProperties%2F831293418" anchor-label="SAFE_BROWSING_THREAT_PHISHING" id="-1208606917%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1208606917%2FProperties%2F831293418"><span>SAFE_</span><wbr></wbr><span>BROWSING_</span><wbr></wbr><span>THREAT_</span><wbr></wbr><span>PHISHING</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1208606917%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1208606917%2FProperties%2F831293418">SAFE_BROWSING_THREAT_PHISHING</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">2</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1001564935%2FProperties%2F831293418" anchor-label="SAFE_BROWSING_THREAT_UNKNOWN" id="-1001564935%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1001564935%2FProperties%2F831293418"><span>SAFE_</span><wbr></wbr><span>BROWSING_</span><wbr></wbr><span>THREAT_</span><wbr></wbr><span>UNKNOWN</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1001564935%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1001564935%2FProperties%2F831293418">SAFE_BROWSING_THREAT_UNKNOWN</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-128228699%2FProperties%2F831293418" anchor-label="SAFE_BROWSING_THREAT_UNWANTED_SOFTWARE" id="-128228699%2FProperties%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-128228699%2FProperties%2F831293418"><span>SAFE_</span><wbr></wbr><span>BROWSING_</span><wbr></wbr><span>THREAT_</span><wbr></wbr><span>UNWANTED_</span><wbr></wbr><span>SOFTWARE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-128228699%2FProperties%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-128228699%2FProperties%2F831293418">SAFE_BROWSING_THREAT_UNWANTED_SOFTWARE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1645860891%2FFunctions%2F831293418" anchor-label="doUpdateVisitedHistory" id="1645860891%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1645860891%2FFunctions%2F831293418"><span>do</span><wbr></wbr><span>Update</span><wbr></wbr><span>Visited</span><wbr></wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1645860891%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1645860891%2FFunctions%2F831293418"><span class="token function">doUpdateVisitedHistory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">p2<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="909720264%2FFunctions%2F831293418" anchor-label="isWhiteListedDomain" id="909720264%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-white-listed-domain.html"><span>is</span><wbr></wbr><span>White</span><wbr></wbr><span>Listed</span><wbr></wbr><span><span>Domain</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="909720264%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-white-listed-domain.html"><span class="token function">isWhiteListedDomain</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-613795914%2FFunctions%2F831293418" anchor-label="onFormResubmission" id="-613795914%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-613795914%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Form</span><wbr></wbr><span><span>Resubmission</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-613795914%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-613795914%2FFunctions%2F831293418"><span class="token function">onFormResubmission</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Message.html">Message</a><span class="token punctuation">, </span></span><span class="parameter ">p2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Message.html">Message</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2062610164%2FFunctions%2F831293418" anchor-label="onLoadResource" id="-2062610164%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-load-resource.html"><span>on</span><wbr></wbr><span>Load</span><wbr></wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2062610164%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-load-resource.html"><span class="token function">onLoadResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="928171005%2FFunctions%2F831293418" anchor-label="onPageCommitVisible" id="928171005%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#928171005%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Page</span><wbr></wbr><span>Commit</span><wbr></wbr><span><span>Visible</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="928171005%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#928171005%2FFunctions%2F831293418"><span class="token function">onPageCommitVisible</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2068903399%2FFunctions%2F831293418" anchor-label="onPageFinished" id="-2068903399%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-page-finished.html"><span>on</span><wbr></wbr><span>Page</span><wbr></wbr><span><span>Finished</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2068903399%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-page-finished.html"><span class="token function">onPageFinished</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-799040868%2FFunctions%2F831293418" anchor-label="onPageStarted" id="-799040868%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-page-started.html"><span>on</span><wbr></wbr><span>Page</span><wbr></wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-799040868%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-page-started.html"><span class="token function">onPageStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">favicon<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Bitmap.html">Bitmap</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1854066498%2FFunctions%2F831293418" anchor-label="onReceivedClientCertRequest" id="1854066498%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1854066498%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Received</span><wbr></wbr><span>Client</span><wbr></wbr><span>Cert</span><wbr></wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1854066498%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1854066498%2FFunctions%2F831293418"><span class="token function">onReceivedClientCertRequest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/ClientCertRequest.html">ClientCertRequest</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="353129084%2FFunctions%2F831293418" anchor-label="onReceivedError" id="353129084%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1297440773%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Received</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="353129084%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-1297440773%2FFunctions%2F831293418"><span class="token function">onReceivedError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebResourceRequest.html">WebResourceRequest</a><span class="token punctuation">, </span></span><span class="parameter ">p2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebResourceError.html">WebResourceError</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-received-error.html"><span class="token function">onReceivedError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">errorCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">description<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">failingUrl<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="767545991%2FFunctions%2F831293418" anchor-label="onReceivedHttpAuthRequest" id="767545991%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#767545991%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Received</span><wbr></wbr><span>Http</span><wbr></wbr><span>Auth</span><wbr></wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="767545991%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#767545991%2FFunctions%2F831293418"><span class="token function">onReceivedHttpAuthRequest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/HttpAuthHandler.html">HttpAuthHandler</a><span class="token punctuation">, </span></span><span class="parameter ">p2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">p3<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-164901697%2FFunctions%2F831293418" anchor-label="onReceivedHttpError" id="-164901697%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-received-http-error.html"><span>on</span><wbr></wbr><span>Received</span><wbr></wbr><span>Http</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-164901697%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-received-http-error.html"><span class="token function">onReceivedHttpError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">request<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebResourceRequest.html">WebResourceRequest</a><span class="token punctuation">, </span></span><span class="parameter ">errorResponse<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebResourceResponse.html">WebResourceResponse</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2036647976%2FFunctions%2F831293418" anchor-label="onReceivedLoginRequest" id="2036647976%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2036647976%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Received</span><wbr></wbr><span>Login</span><wbr></wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2036647976%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#2036647976%2FFunctions%2F831293418"><span class="token function">onReceivedLoginRequest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">p2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">p3<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2121006195%2FFunctions%2F831293418" anchor-label="onReceivedSslError" id="2121006195%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2121006195%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Received</span><wbr></wbr><span>Ssl</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2121006195%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#2121006195%2FFunctions%2F831293418"><span class="token function">onReceivedSslError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/SslErrorHandler.html">SslErrorHandler</a><span class="token punctuation">, </span></span><span class="parameter ">p2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/net/http/SslError.html">SslError</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1426268434%2FFunctions%2F831293418" anchor-label="onRenderProcessGone" id="1426268434%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1426268434%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Render</span><wbr></wbr><span>Process</span><wbr></wbr><span><span>Gone</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1426268434%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1426268434%2FFunctions%2F831293418"><span class="token function">onRenderProcessGone</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/RenderProcessGoneDetail.html">RenderProcessGoneDetail</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1928221784%2FFunctions%2F831293418" anchor-label="onSafeBrowsingHit" id="-1928221784%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1928221784%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Safe</span><wbr></wbr><span>Browsing</span><wbr></wbr><span><span>Hit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1928221784%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-1928221784%2FFunctions%2F831293418"><span class="token function">onSafeBrowsingHit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebResourceRequest.html">WebResourceRequest</a><span class="token punctuation">, </span></span><span class="parameter ">p2<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">p3<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/SafeBrowsingResponse.html">SafeBrowsingResponse</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1276194275%2FFunctions%2F831293418" anchor-label="onScaleChanged" id="-1276194275%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1276194275%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Scale</span><wbr></wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1276194275%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-1276194275%2FFunctions%2F831293418"><span class="token function">onScaleChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">p2<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1416939659%2FFunctions%2F831293418" anchor-label="onTooManyRedirects" id="-1416939659%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1416939659%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Too</span><wbr></wbr><span>Many</span><wbr></wbr><span><span>Redirects</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1416939659%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-1416939659%2FFunctions%2F831293418"><span class="token function">onTooManyRedirects</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Message.html">Message</a><span class="token punctuation">, </span></span><span class="parameter ">p2<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Message.html">Message</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-127956311%2FFunctions%2F831293418" anchor-label="onUnhandledKeyEvent" id="-127956311%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-127956311%2FFunctions%2F831293418"><span>on</span><wbr></wbr><span>Unhandled</span><wbr></wbr><span>Key</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-127956311%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-127956311%2FFunctions%2F831293418"><span class="token function">onUnhandledKeyEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/view/KeyEvent.html">KeyEvent</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-65248762%2FFunctions%2F831293418" anchor-label="setConfiguration" id="-65248762%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-configuration.html"><span>set</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-65248762%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-configuration.html"><span class="token function">setConfiguration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="../../com.verint.xm.sdk.common.configuration/[android-jvm]-configuration/index.html">Configuration</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="856453857%2FFunctions%2F831293418" anchor-label="shouldInterceptRequest" id="856453857%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#856453857%2FFunctions%2F831293418"><span>should</span><wbr></wbr><span>Intercept</span><wbr></wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="856453857%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#856453857%2FFunctions%2F831293418"><span class="token function">shouldInterceptRequest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebResourceRequest.html">WebResourceRequest</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebResourceResponse.html">WebResourceResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1841628860%2FFunctions%2F831293418" anchor-label="shouldOverrideKeyEvent" id="1841628860%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1841628860%2FFunctions%2F831293418"><span>should</span><wbr></wbr><span>Override</span><wbr></wbr><span>Key</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1841628860%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1841628860%2FFunctions%2F831293418"><span class="token function">shouldOverrideKeyEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/view/KeyEvent.html">KeyEvent</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="610757367%2FFunctions%2F831293418" anchor-label="shouldOverrideUrlLoading" id="610757367%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="should-override-url-loading.html"><span>should</span><wbr></wbr><span>Override</span><wbr></wbr><span>Url</span><wbr></wbr><span><span>Loading</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="610757367%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>api<span class="token operator"> = </span><a href="https://developer.android.com/reference/kotlin/android/os/Build.VERSION_CODES.html">Build.VERSION_CODES.N</a></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">open </span><span class="token keyword">fun </span><a href="should-override-url-loading.html"><span class="token function">shouldOverrideUrlLoading</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">request<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebResourceRequest.html">WebResourceRequest</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="should-override-url-loading.html"><span class="token function">shouldOverrideUrlLoading</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

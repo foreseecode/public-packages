@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]SessionManager</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    dba
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:dba/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:dba/release"
+                                       data-filter=":sdk:dba/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    dba
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="dba::com.verint.xm.sdk.dba.session/SessionManager///PointingToDeclaration//-710680164">
+  <div class="breadcrumbs"><a href="../../../index.html">dba</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk.dba.session</a><span class="delimiter">/</span><span class="current">[androidJvm]SessionManager</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Session</span><wbr></wbr><span><span>Manager</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">SessionManager</a> : <a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a>, <span data-unresolved-link="com.verint.xm.sdk.common.events/InternalLifecycleObserverSync///PointingToDeclaration/">InternalLifecycleObserverSync</span>, <a href="../../com.verint.xm.sdk.dba.network/[android-jvm]-blacklist-callback/index.html">BlacklistCallback</a>, <span data-unresolved-link="com.verint.xm.sdk.common.exception/IUncaughtExceptionListener///PointingToDeclaration/">IUncaughtExceptionListener</span>, <a href="../../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-orientation-change-listener/index.html">OrientationChangeListener</a></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1959729674%2FConstructors%2F-710680164" anchor-label="SessionManager" id="1959729674%2FConstructors%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-session-manager.html"><span>Session</span><wbr></wbr><span><span>Manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1959729674%2FConstructors%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">sessionRepository<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.data/[android-jvm]-session-repository/index.html">SessionRepository</a><span class="token punctuation">, </span></span><span class="parameter ">jobQueueService<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.jobQueue/[android-jvm]-job-queue-service/index.html">JobQueueService</a><span class="token punctuation">, </span></span><span class="parameter ">blacklistCheck<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.network/[android-jvm]-blacklist-check/index.html">BlacklistCheck</a><span class="token punctuation">, </span></span><span class="parameter ">downsampleRatio<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">displayManager<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/hardware/display/DisplayManager.html">DisplayManager</a><span class="token punctuation">, </span></span><span class="parameter ">sensorManager<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/hardware/SensorManager.html">SensorManager</a><span class="token punctuation">, </span></span><span class="parameter ">activityManager<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/ActivityManager.html">ActivityManager</a><span class="token punctuation">, </span></span><span class="parameter ">customerKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="971536120%2FProperties%2F-710680164" anchor-label="jobQueueService" id="971536120%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="job-queue-service.html"><span>job</span><wbr></wbr><span>Queue</span><wbr></wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="971536120%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="job-queue-service.html">jobQueueService</a><span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.jobQueue/[android-jvm]-job-queue-service/index.html">JobQueueService</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-13645531%2FProperties%2F-710680164" anchor-label="maskingVisualizer" id="-13645531%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="masking-visualizer.html"><span>masking</span><wbr></wbr><span><span>Visualizer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-13645531%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="masking-visualizer.html">maskingVisualizer</a><span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.visualizer/[android-jvm]-masking-visualization-controller/index.html">MaskingVisualizationController</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1882506747%2FProperties%2F-710680164" anchor-label="previousActivity" id="1882506747%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="previous-activity.html"><span>previous</span><wbr></wbr><span><span>Activity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1882506747%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="previous-activity.html">previousActivity</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-390476192%2FProperties%2F-710680164" anchor-label="previousOrientation" id="-390476192%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="previous-orientation.html"><span>previous</span><wbr></wbr><span><span>Orientation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-390476192%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="previous-orientation.html">previousOrientation</a><span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.utils/[android-jvm]-orientation-type/index.html">OrientationType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1035851933%2FProperties%2F-710680164" anchor-label="recorder" id="-1035851933%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="recorder.html"><span><span>recorder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1035851933%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="recorder.html">recorder</a><span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.recorder/[android-jvm]-screen-recorder/index.html">ScreenRecorder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1265405091%2FProperties%2F-710680164" anchor-label="sessionGroupId" id="-1265405091%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="session-group-id.html"><span>session</span><wbr></wbr><span>Group</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1265405091%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="session-group-id.html">sessionGroupId</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-450671512%2FProperties%2F-710680164" anchor-label="sessionId" id="-450671512%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="session-id.html"><span>session</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-450671512%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="session-id.html">sessionId</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1590046422%2FProperties%2F-710680164" anchor-label="VIDEO_CHUNKS_SUBMISSION_COMPLETE" id="-1590046422%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v-i-d-e-o_-c-h-u-n-k-s_-s-u-b-m-i-s-s-i-o-n_-c-o-m-p-l-e-t-e.html"><span>VIDEO_</span><wbr></wbr><span>CHUNKS_</span><wbr></wbr><span>SUBMISSION_</span><wbr></wbr><span>COMPLETE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1590046422%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="-v-i-d-e-o_-c-h-u-n-k-s_-s-u-b-m-i-s-s-i-o-n_-c-o-m-p-l-e-t-e.html">VIDEO_CHUNKS_SUBMISSION_COMPLETE</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator"> = </span><span class="token string">&quot;SUBMISSION_COMPLETE&quot;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1782579238%2FProperties%2F-710680164" anchor-label="VIDEO_CHUNKS_SUBMISSION_FAILED" id="1782579238%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v-i-d-e-o_-c-h-u-n-k-s_-s-u-b-m-i-s-s-i-o-n_-f-a-i-l-e-d.html"><span>VIDEO_</span><wbr></wbr><span>CHUNKS_</span><wbr></wbr><span>SUBMISSION_</span><wbr></wbr><span>FAILED</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1782579238%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="-v-i-d-e-o_-c-h-u-n-k-s_-s-u-b-m-i-s-s-i-o-n_-f-a-i-l-e-d.html">VIDEO_CHUNKS_SUBMISSION_FAILED</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator"> = </span><span class="token string">&quot;SUBMISSION_FAILED&quot;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-2040461861%2FFunctions%2F-710680164" anchor-label="abortSession" id="-2040461861%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="abort-session.html"><span>abort</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2040461861%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="abort-session.html"><span class="token function">abortSession</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1782231333%2FFunctions%2F-710680164" anchor-label="activityCreated" id="-1782231333%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-created.html"><span>activity</span><wbr></wbr><span><span>Created</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1782231333%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="activity-created.html"><span class="token function">activityCreated</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">bundle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Bundle.html">Bundle</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1297345076%2FFunctions%2F-710680164" anchor-label="activityDestroyed" id="1297345076%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-destroyed.html"><span>activity</span><wbr></wbr><span><span>Destroyed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1297345076%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="activity-destroyed.html"><span class="token function">activityDestroyed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1216674423%2FFunctions%2F-710680164" anchor-label="activityPaused" id="-1216674423%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-paused.html"><span>activity</span><wbr></wbr><span><span>Paused</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1216674423%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="activity-paused.html"><span class="token function">activityPaused</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1551649290%2FFunctions%2F-710680164" anchor-label="activityResumed" id="-1551649290%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-resumed.html"><span>activity</span><wbr></wbr><span><span>Resumed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1551649290%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="activity-resumed.html"><span class="token function">activityResumed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-477700444%2FFunctions%2F-710680164" anchor-label="activitySaveInstanceState" id="-477700444%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-save-instance-state.html"><span>activity</span><wbr></wbr><span>Save</span><wbr></wbr><span>Instance</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-477700444%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="activity-save-instance-state.html"><span class="token function">activitySaveInstanceState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">bundle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Bundle.html">Bundle</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1585643404%2FFunctions%2F-710680164" anchor-label="activityStarted" id="1585643404%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-started.html"><span>activity</span><wbr></wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1585643404%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="activity-started.html"><span class="token function">activityStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1349756480%2FFunctions%2F-710680164" anchor-label="activityStopped" id="-1349756480%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="activity-stopped.html"><span>activity</span><wbr></wbr><span><span>Stopped</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1349756480%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="activity-stopped.html"><span class="token function">activityStopped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1604744530%2FFunctions%2F-710680164" anchor-label="addObserver" id="1604744530%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-observer.html"><span>add</span><wbr></wbr><span><span>Observer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1604744530%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="add-observer.html"><span class="token function">addObserver</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">observer<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba/[android-jvm]-d-b-a-event-observer/index.html">DBAEventObserver</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1355551391%2FFunctions%2F-710680164" anchor-label="attach" id="-1355551391%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="attach.html"><span><span>attach</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1355551391%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="attach.html"><span class="token function">attach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1412121716%2FFunctions%2F-710680164" anchor-label="attachActivityToRecorder" id="1412121716%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="attach-activity-to-recorder.html"><span>attach</span><wbr></wbr><span>Activity</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Recorder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1412121716%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="attach-activity-to-recorder.html"><span class="token function">attachActivityToRecorder</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">sessionGroupId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">isPaused<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1496041644%2FFunctions%2F-710680164" anchor-label="beginSession" id="-1496041644%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="begin-session.html"><span>begin</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1496041644%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="begin-session.html"><span class="token function">beginSession</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-927766058%2FFunctions%2F-710680164" anchor-label="blacklistServiceCallback" id="-927766058%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blacklist-service-callback.html"><span>blacklist</span><wbr></wbr><span>Service</span><wbr></wbr><span><span>Callback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-927766058%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="blacklist-service-callback.html"><span class="token function">blacklistServiceCallback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isBlacklisted<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="689306830%2FFunctions%2F-710680164" anchor-label="blacklistUnavailable" id="689306830%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blacklist-unavailable.html"><span>blacklist</span><wbr></wbr><span><span>Unavailable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="689306830%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="blacklist-unavailable.html"><span class="token function">blacklistUnavailable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1618842276%2FFunctions%2F-710680164" anchor-label="deactivateRecording" id="-1618842276%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="deactivate-recording.html"><span>deactivate</span><wbr></wbr><span><span>Recording</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1618842276%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="deactivate-recording.html"><span class="token function">deactivateRecording</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="80736791%2FFunctions%2F-710680164" anchor-label="deleteAllSessionData" id="80736791%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete-all-session-data.html"><span>delete</span><wbr></wbr><span>All</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="80736791%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="delete-all-session-data.html"><span class="token function">deleteAllSessionData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1357155027%2FFunctions%2F-710680164" anchor-label="detach" id="1357155027%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="detach.html"><span><span>detach</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1357155027%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="detach.html"><span class="token function">detach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2063367528%2FFunctions%2F-710680164" anchor-label="disableRecording" id="-2063367528%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="disable-recording.html"><span>disable</span><wbr></wbr><span><span>Recording</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2063367528%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="disable-recording.html"><span class="token function">disableRecording</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="524258475%2FFunctions%2F-710680164" anchor-label="enableRecording" id="524258475%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enable-recording.html"><span>enable</span><wbr></wbr><span><span>Recording</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="524258475%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="enable-recording.html"><span class="token function">enableRecording</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1015805079%2FFunctions%2F-710680164" anchor-label="endSession" id="1015805079%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="end-session.html"><span>end</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1015805079%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="end-session.html"><span class="token function">endSession</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="end-session.html"><span class="token function">endSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">endType<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/-end-type/index.html">SessionStateContext.EndType</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="end-session.html"><span class="token function">endSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1972302929%2FFunctions%2F-710680164" anchor-label="getCurrentOrientation" id="1972302929%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-current-orientation.html"><span>get</span><wbr></wbr><span>Current</span><wbr></wbr><span><span>Orientation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1972302929%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-current-orientation.html"><span class="token function">getCurrentOrientation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.utils/[android-jvm]-orientation-type/index.html">OrientationType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1546777528%2FFunctions%2F-710680164" anchor-label="getExceptionHandler" id="-1546777528%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-exception-handler.html"><span>get</span><wbr></wbr><span>Exception</span><wbr></wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1546777528%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-exception-handler.html"><span class="token function">getExceptionHandler</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Thread.UncaughtExceptionHandler.html">Thread.UncaughtExceptionHandler</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1050792084%2FFunctions%2F-710680164" anchor-label="getMaskedViews" id="1050792084%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-masked-views.html"><span>get</span><wbr></wbr><span>Masked</span><wbr></wbr><span><span>Views</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1050792084%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-masked-views.html"><span class="token function">getMaskedViews</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/List.html">List</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/ref/WeakReference.html">WeakReference</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="538983454%2FFunctions%2F-710680164" anchor-label="getPageChangeEvent" id="538983454%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-page-change-event.html"><span>get</span><wbr></wbr><span>Page</span><wbr></wbr><span>Change</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="538983454%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-page-change-event.html"><span class="token function">getPageChangeEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isReconnectEvent<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.hoover.model/[android-jvm]-page-change-event/index.html">PageChangeEvent</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1853034470%2FFunctions%2F-710680164" anchor-label="getState" id="1853034470%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-state.html"><span>get</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1853034470%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-state.html"><span class="token function">getState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="873281992%2FFunctions%2F-710680164" anchor-label="initSessionGroup" id="873281992%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="init-session-group.html"><span>init</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Group</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="873281992%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="init-session-group.html"><span class="token function">initSessionGroup</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1343989143%2FFunctions%2F-710680164" anchor-label="isPaused" id="-1343989143%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-paused.html"><span>is</span><wbr></wbr><span><span>Paused</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1343989143%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-paused.html"><span class="token function">isPaused</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-589325377%2FFunctions%2F-710680164" anchor-label="isPausedActivity" id="-589325377%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-paused-activity.html"><span>is</span><wbr></wbr><span>Paused</span><wbr></wbr><span><span>Activity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-589325377%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-paused-activity.html"><span class="token function">isPausedActivity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-434366685%2FFunctions%2F-710680164" anchor-label="isPendingReactivation" id="-434366685%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-pending-reactivation.html"><span>is</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Reactivation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-434366685%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-pending-reactivation.html"><span class="token function">isPendingReactivation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-743270254%2FFunctions%2F-710680164" anchor-label="isRecording" id="-743270254%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-recording.html"><span>is</span><wbr></wbr><span><span>Recording</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-743270254%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-recording.html"><span class="token function">isRecording</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-251598681%2FFunctions%2F-710680164" anchor-label="isSessionActive" id="-251598681%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-session-active.html"><span>is</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Active</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-251598681%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-session-active.html"><span class="token function">isSessionActive</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-780197519%2FFunctions%2F-710680164" anchor-label="logPageChange" id="-780197519%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-page-change.html"><span>log</span><wbr></wbr><span>Page</span><wbr></wbr><span><span>Change</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-780197519%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="log-page-change.html"><span class="token function">logPageChange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2097864285%2FFunctions%2F-710680164" anchor-label="maskView" id="-2097864285%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mask-view.html"><span>mask</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2097864285%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="mask-view.html"><span class="token function">maskView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="55555648%2FFunctions%2F-710680164" anchor-label="onAllPermissionsGranted" id="55555648%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-all-permissions-granted.html"><span>on</span><wbr></wbr><span>All</span><wbr></wbr><span>Permissions</span><wbr></wbr><span><span>Granted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="55555648%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-all-permissions-granted.html"><span class="token function">onAllPermissionsGranted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1940761020%2FFunctions%2F-710680164" anchor-label="onApplicationCrash" id="-1940761020%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-application-crash.html"><span>on</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Crash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1940761020%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-application-crash.html"><span class="token function">onApplicationCrash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">thread<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Thread.html">Thread</a><span class="token punctuation">, </span></span><span class="parameter ">throwable<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Throwable.html">Throwable</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="225209482%2FFunctions%2F-710680164" anchor-label="onApplicationCreated" id="225209482%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-application-created.html"><span>on</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Created</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="225209482%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-application-created.html"><span class="token function">onApplicationCreated</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-679911733%2FFunctions%2F-710680164" anchor-label="onApplicationExited" id="-679911733%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-application-exited.html"><span>on</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Exited</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-679911733%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-application-exited.html"><span class="token function">onApplicationExited</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1055716827%2FFunctions%2F-710680164" anchor-label="onDeactivateRecording" id="1055716827%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-deactivate-recording.html"><span>on</span><wbr></wbr><span>Deactivate</span><wbr></wbr><span><span>Recording</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1055716827%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-deactivate-recording.html"><span class="token function">onDeactivateRecording</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2130352694%2FFunctions%2F-710680164" anchor-label="onFirstPageResumed" id="-2130352694%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-first-page-resumed.html"><span>on</span><wbr></wbr><span>First</span><wbr></wbr><span>Page</span><wbr></wbr><span><span>Resumed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2130352694%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-first-page-resumed.html"><span class="token function">onFirstPageResumed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1295918960%2FFunctions%2F-710680164" anchor-label="onInterfaceActivity" id="1295918960%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-interface-activity.html"><span>on</span><wbr></wbr><span>Interface</span><wbr></wbr><span><span>Activity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1295918960%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-interface-activity.html"><span class="token function">onInterfaceActivity</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="227746908%2FFunctions%2F-710680164" anchor-label="onNetworkChanged" id="227746908%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-network-changed.html"><span>on</span><wbr></wbr><span>Network</span><wbr></wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="227746908%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-network-changed.html"><span class="token function">onNetworkChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">networkType<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.utils/NetworkType///PointingToDeclaration/">NetworkType</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1266990631%2FFunctions%2F-710680164" anchor-label="onNetworkConnected" id="1266990631%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-network-connected.html"><span>on</span><wbr></wbr><span>Network</span><wbr></wbr><span><span>Connected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1266990631%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-network-connected.html"><span class="token function">onNetworkConnected</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-611412029%2FFunctions%2F-710680164" anchor-label="onPageChange" id="-611412029%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-page-change.html"><span>on</span><wbr></wbr><span>Page</span><wbr></wbr><span><span>Change</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-611412029%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-page-change.html"><span class="token function">onPageChange</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1194648282%2FFunctions%2F-710680164" anchor-label="onReactivated" id="1194648282%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-reactivated.html"><span>on</span><wbr></wbr><span><span>Reactivated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1194648282%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-reactivated.html"><span class="token function">onReactivated</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="879594526%2FFunctions%2F-710680164" anchor-label="onRecordingStopped" id="879594526%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-recording-stopped.html"><span>on</span><wbr></wbr><span>Recording</span><wbr></wbr><span><span>Stopped</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="879594526%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-recording-stopped.html"><span class="token function">onRecordingStopped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stopType<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-stop-type/index.html">StopType</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2100586167%2FFunctions%2F-710680164" anchor-label="onSessionAborted" id="-2100586167%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-session-aborted.html"><span>on</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Aborted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2100586167%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-session-aborted.html"><span class="token function">onSessionAborted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="350681079%2FFunctions%2F-710680164" anchor-label="onSessionTimeout" id="350681079%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-session-timeout.html"><span>on</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="350681079%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-session-timeout.html"><span class="token function">onSessionTimeout</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="477482740%2FFunctions%2F-710680164" anchor-label="onStorageExhausted" id="477482740%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-storage-exhausted.html"><span>on</span><wbr></wbr><span>Storage</span><wbr></wbr><span><span>Exhausted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="477482740%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-storage-exhausted.html"><span class="token function">onStorageExhausted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1557894247%2FFunctions%2F-710680164" anchor-label="onSubmissionCompleted" id="-1557894247%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-submission-completed.html"><span>on</span><wbr></wbr><span>Submission</span><wbr></wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1557894247%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-submission-completed.html"><span class="token function">onSubmissionCompleted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="349234371%2FFunctions%2F-710680164" anchor-label="orientationChanged" id="349234371%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="orientation-changed.html"><span>orientation</span><wbr></wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="349234371%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="orientation-changed.html"><span class="token function">orientationChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">newOrientation<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.utils/[android-jvm]-orientation-type/index.html">OrientationType</a><span class="token punctuation">, </span></span><span class="parameter ">newWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">newHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1922181060%2FFunctions%2F-710680164" anchor-label="pauseRecording" id="1922181060%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="pause-recording.html"><span>pause</span><wbr></wbr><span><span>Recording</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1922181060%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="pause-recording.html"><span class="token function">pauseRecording</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="pause-recording.html"><span class="token function">pauseRecording</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pauseRecordingForMilliseconds<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1798022149%2FFunctions%2F-710680164" anchor-label="reactivate" id="-1798022149%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reactivate.html"><span><span>reactivate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1798022149%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="reactivate.html"><span class="token function">reactivate</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-264387547%2FFunctions%2F-710680164" anchor-label="registerNetworkTypeReceiver" id="-264387547%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="register-network-type-receiver.html"><span>register</span><wbr></wbr><span>Network</span><wbr></wbr><span>Type</span><wbr></wbr><span><span>Receiver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-264387547%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="register-network-type-receiver.html"><span class="token function">registerNetworkTypeReceiver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1107817966%2FFunctions%2F-710680164" anchor-label="registerStorageReceiver" id="-1107817966%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="register-storage-receiver.html"><span>register</span><wbr></wbr><span>Storage</span><wbr></wbr><span><span>Receiver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1107817966%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="register-storage-receiver.html"><span class="token function">registerStorageReceiver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-52838697%2FFunctions%2F-710680164" anchor-label="removeObserver" id="-52838697%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-observer.html"><span>remove</span><wbr></wbr><span><span>Observer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-52838697%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="remove-observer.html"><span class="token function">removeObserver</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">observer<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba/[android-jvm]-d-b-a-event-observer/index.html">DBAEventObserver</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2075770819%2FFunctions%2F-710680164" anchor-label="requestBeginSession" id="-2075770819%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-begin-session.html"><span>request</span><wbr></wbr><span>Begin</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2075770819%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="request-begin-session.html"><span class="token function">requestBeginSession</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="176460940%2FFunctions%2F-710680164" anchor-label="requestPermissions" id="176460940%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-permissions.html"><span>request</span><wbr></wbr><span><span>Permissions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="176460940%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="request-permissions.html"><span class="token function">requestPermissions</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1079577142%2FFunctions%2F-710680164" anchor-label="resetCaptureRate" id="-1079577142%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-capture-rate.html"><span>reset</span><wbr></wbr><span>Capture</span><wbr></wbr><span><span>Rate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1079577142%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="reset-capture-rate.html"><span class="token function">resetCaptureRate</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1473400747%2FFunctions%2F-710680164" anchor-label="resetCurrentPageMasks" id="1473400747%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-current-page-masks.html"><span>reset</span><wbr></wbr><span>Current</span><wbr></wbr><span>Page</span><wbr></wbr><span><span>Masks</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1473400747%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="reset-current-page-masks.html"><span class="token function">resetCurrentPageMasks</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-724849734%2FFunctions%2F-710680164" anchor-label="restartSession" id="-724849734%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="restart-session.html"><span>restart</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-724849734%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="restart-session.html"><span class="token function">restartSession</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1010762965%2FFunctions%2F-710680164" anchor-label="resumeRecording" id="1010762965%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resume-recording.html"><span>resume</span><wbr></wbr><span><span>Recording</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1010762965%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="resume-recording.html"><span class="token function">resumeRecording</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1620887083%2FFunctions%2F-710680164" anchor-label="sendDeviceInfoEvent" id="1620887083%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="send-device-info-event.html"><span>send</span><wbr></wbr><span>Device</span><wbr></wbr><span>Info</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1620887083%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="send-device-info-event.html"><span class="token function">sendDeviceInfoEvent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1849670630%2FFunctions%2F-710680164" anchor-label="sendPageChangeEvent" id="1849670630%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="send-page-change-event.html"><span>send</span><wbr></wbr><span>Page</span><wbr></wbr><span>Change</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1849670630%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="send-page-change-event.html"><span class="token function">sendPageChangeEvent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="681350202%2FFunctions%2F-710680164" anchor-label="sendRestartEventIfNecessary" id="681350202%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="send-restart-event-if-necessary.html"><span>send</span><wbr></wbr><span>Restart</span><wbr></wbr><span>Event</span><wbr></wbr><span>If</span><wbr></wbr><span><span>Necessary</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="681350202%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="send-restart-event-if-necessary.html"><span class="token function">sendRestartEventIfNecessary</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="612375250%2FFunctions%2F-710680164" anchor-label="sendSessionStartedEvent" id="612375250%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="send-session-started-event.html"><span>send</span><wbr></wbr><span>Session</span><wbr></wbr><span>Started</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="612375250%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="send-session-started-event.html"><span class="token function">sendSessionStartedEvent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1766089350%2FFunctions%2F-710680164" anchor-label="sendSocketClosedEvent" id="1766089350%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="send-socket-closed-event.html"><span>send</span><wbr></wbr><span>Socket</span><wbr></wbr><span>Closed</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1766089350%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="send-socket-closed-event.html"><span class="token function">sendSocketClosedEvent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1431353482%2FFunctions%2F-710680164" anchor-label="setCaptureRate" id="-1431353482%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-capture-rate.html"><span>set</span><wbr></wbr><span>Capture</span><wbr></wbr><span><span>Rate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1431353482%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-capture-rate.html"><span class="token function">setCaptureRate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">captureRate<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1465529250%2FFunctions%2F-710680164" anchor-label="setEndReason" id="-1465529250%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-end-reason.html"><span>set</span><wbr></wbr><span>End</span><wbr></wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1465529250%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-end-reason.html"><span class="token function">setEndReason</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">endType<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/-end-type/index.html">SessionStateContext.EndType</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="696199131%2FFunctions%2F-710680164" anchor-label="setMaskingDebugEnabled" id="696199131%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-masking-debug-enabled.html"><span>set</span><wbr></wbr><span>Masking</span><wbr></wbr><span>Debug</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="696199131%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-masking-debug-enabled.html"><span class="token function">setMaskingDebugEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">maskingDebugEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1966141190%2FFunctions%2F-710680164" anchor-label="setSessionListener" id="-1966141190%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-session-listener.html"><span>set</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1966141190%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-session-listener.html"><span class="token function">setSessionListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionListener<span class="token operator">: </span><a href="../[android-jvm]-session-listener/index.html">SessionListener</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="823111658%2FFunctions%2F-710680164" anchor-label="setState" id="823111658%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-state.html"><span>set</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="823111658%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-state.html"><span class="token function">setState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">targetState<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1959091981%2FFunctions%2F-710680164" anchor-label="startSession" id="1959091981%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-session.html"><span>start</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1959091981%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="start-session.html"><span class="token function">startSession</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1213427804%2FFunctions%2F-710680164" anchor-label="submissionComplete" id="1213427804%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="submission-complete.html"><span>submission</span><wbr></wbr><span><span>Complete</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1213427804%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="submission-complete.html"><span class="token function">submissionComplete</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="486015561%2FFunctions%2F-710680164" anchor-label="submit" id="486015561%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="submit.html"><span><span>submit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="486015561%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="submit.html"><span class="token function">submit</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1087992060%2FFunctions%2F-710680164" anchor-label="unmaskView" id="1087992060%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unmask-view.html"><span>unmask</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1087992060%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="unmask-view.html"><span class="token function">unmaskView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-968122050%2FFunctions%2F-710680164" anchor-label="unregisterNetworkTypeReceiver" id="-968122050%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unregister-network-type-receiver.html"><span>unregister</span><wbr></wbr><span>Network</span><wbr></wbr><span>Type</span><wbr></wbr><span><span>Receiver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-968122050%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="unregister-network-type-receiver.html"><span class="token function">unregisterNetworkTypeReceiver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-14001237%2FFunctions%2F-710680164" anchor-label="unregisterStorageReceiver" id="-14001237%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unregister-storage-receiver.html"><span>unregister</span><wbr></wbr><span>Storage</span><wbr></wbr><span><span>Receiver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-14001237%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="unregister-storage-receiver.html"><span class="token function">unregisterStorageReceiver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-539736178%2FFunctions%2F-710680164" anchor-label="updateActivity" id="-539736178%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="update-activity.html"><span>update</span><wbr></wbr><span><span>Activity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-539736178%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="update-activity.html"><span class="token function">updateActivity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2090421182%2FFunctions%2F-710680164" anchor-label="updateNetworkStatus" id="-2090421182%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="update-network-status.html"><span>update</span><wbr></wbr><span>Network</span><wbr></wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2090421182%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="update-network-status.html"><span class="token function">updateNetworkStatus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">networkType<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.utils/NetworkType///PointingToDeclaration/">NetworkType</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

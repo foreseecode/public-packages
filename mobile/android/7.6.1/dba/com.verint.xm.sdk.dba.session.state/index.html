@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.verint.xm.sdk.dba.session.state</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    dba
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:dba/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:dba/release"
+                                       data-filter=":sdk:dba/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    dba
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="dba::com.verint.xm.sdk.dba.session.state////PointingToDeclaration//-710680164">
+  <div class="breadcrumbs"><a href="../../index.html">dba</a><span class="delimiter">/</span><span class="current">com.verint.xm.sdk.dba.session.state</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-175348402%2FClasslikes%2F-710680164" anchor-label="AbstractDBASessionState" id="-175348402%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-abstract-d-b-a-session-state/index.html"><span>Abstract</span><wbr></wbr><span>DBASession</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-175348402%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a> : <a href="[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a> : <a href="[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a> : <a href="[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a> : <a href="[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1989614580%2FClasslikes%2F-710680164" anchor-label="DBASessionState" id="-1989614580%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-d-b-a-session-state/index.html"><span>DBASession</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1989614580%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1619449853%2FClasslikes%2F-710680164" anchor-label="SessionAwaitingBlacklistCheck" id="1619449853%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-awaiting-blacklist-check/index.html"><span>Session</span><wbr></wbr><span>Awaiting</span><wbr></wbr><span>Blacklist</span><wbr></wbr><span><span>Check</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1619449853%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1780020768%2FClasslikes%2F-710680164" anchor-label="SessionAwaitingBlacklistCheckAfterReactivation" id="1780020768%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-awaiting-blacklist-check-after-reactivation/index.html"><span>Session</span><wbr></wbr><span>Awaiting</span><wbr></wbr><span>Blacklist</span><wbr></wbr><span>Check</span><wbr></wbr><span>After</span><wbr></wbr><span><span>Reactivation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1780020768%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-awaiting-blacklist-check-after-reactivation/index.html">SessionAwaitingBlacklistCheckAfterReactivation</a> : <a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-awaiting-blacklist-check-after-reactivation/index.html">SessionAwaitingBlacklistCheckAfterReactivation</a> : <a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-awaiting-blacklist-check-after-reactivation/index.html">SessionAwaitingBlacklistCheckAfterReactivation</a> : <a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-awaiting-blacklist-check-after-reactivation/index.html">SessionAwaitingBlacklistCheckAfterReactivation</a> : <a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a></div><div class="brief ">Created by hyleung on 1/16/2014.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1344758446%2FClasslikes%2F-710680164" anchor-label="SessionBlacklisted" id="-1344758446%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-blacklisted/index.html"><span>Session</span><wbr></wbr><span><span>Blacklisted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1344758446%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-blacklisted/index.html">SessionBlacklisted</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-blacklisted/index.html">SessionBlacklisted</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-blacklisted/index.html">SessionBlacklisted</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-blacklisted/index.html">SessionBlacklisted</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created by hyleung on 2013-08-27.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1093306824%2FClasslikes%2F-710680164" anchor-label="SessionDisabled" id="-1093306824%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-disabled/index.html"><span>Session</span><wbr></wbr><span><span>Disabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1093306824%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-disabled/index.html">SessionDisabled</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-disabled/index.html">SessionDisabled</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-disabled/index.html">SessionDisabled</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-disabled/index.html">SessionDisabled</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="296781958%2FClasslikes%2F-710680164" anchor-label="SessionPaused" id="296781958%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-paused/index.html"><span>Session</span><wbr></wbr><span><span>Paused</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="296781958%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused/index.html">SessionPaused</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-session-activity-paused/index.html">SessionActivityPaused</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused/index.html">SessionPaused</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-session-activity-paused/index.html">SessionActivityPaused</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused/index.html">SessionPaused</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-session-activity-paused/index.html">SessionActivityPaused</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused/index.html">SessionPaused</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-session-activity-paused/index.html">SessionActivityPaused</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1526163957%2FClasslikes%2F-710680164" anchor-label="SessionPausedAwaitingBlacklist" id="-1526163957%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-paused-awaiting-blacklist/index.html"><span>Session</span><wbr></wbr><span>Paused</span><wbr></wbr><span>Awaiting</span><wbr></wbr><span><span>Blacklist</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1526163957%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused-awaiting-blacklist/index.html">SessionPausedAwaitingBlacklist</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-session-activity-paused/index.html">SessionActivityPaused</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused-awaiting-blacklist/index.html">SessionPausedAwaitingBlacklist</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-session-activity-paused/index.html">SessionActivityPaused</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused-awaiting-blacklist/index.html">SessionPausedAwaitingBlacklist</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-session-activity-paused/index.html">SessionActivityPaused</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused-awaiting-blacklist/index.html">SessionPausedAwaitingBlacklist</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-session-activity-paused/index.html">SessionActivityPaused</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-550973777%2FClasslikes%2F-710680164" anchor-label="SessionPausedAwaitingBlacklistCheck" id="-550973777%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-paused-awaiting-blacklist-check/index.html"><span>Session</span><wbr></wbr><span>Paused</span><wbr></wbr><span>Awaiting</span><wbr></wbr><span>Blacklist</span><wbr></wbr><span><span>Check</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-550973777%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused-awaiting-blacklist-check/index.html">SessionPausedAwaitingBlacklistCheck</a> : <a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused-awaiting-blacklist-check/index.html">SessionPausedAwaitingBlacklistCheck</a> : <a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused-awaiting-blacklist-check/index.html">SessionPausedAwaitingBlacklistCheck</a> : <a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-paused-awaiting-blacklist-check/index.html">SessionPausedAwaitingBlacklistCheck</a> : <a href="[android-jvm]-session-awaiting-blacklist-check/index.html">SessionAwaitingBlacklistCheck</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-318394089%2FClasslikes%2F-710680164" anchor-label="SessionPending" id="-318394089%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-pending/index.html"><span>Session</span><wbr></wbr><span><span>Pending</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-318394089%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending/index.html">SessionPending</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending/index.html">SessionPending</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending/index.html">SessionPending</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending/index.html">SessionPending</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1158817133%2FClasslikes%2F-710680164" anchor-label="SessionPendingPermissionsCheck" id="-1158817133%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-pending-permissions-check/index.html"><span>Session</span><wbr></wbr><span>Pending</span><wbr></wbr><span>Permissions</span><wbr></wbr><span><span>Check</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1158817133%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-permissions-check/index.html">SessionPendingPermissionsCheck</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-permissions-check/index.html">SessionPendingPermissionsCheck</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-permissions-check/index.html">SessionPendingPermissionsCheck</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-permissions-check/index.html">SessionPendingPermissionsCheck</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="610224270%2FClasslikes%2F-710680164" anchor-label="SessionPendingReactivation" id="610224270%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-pending-reactivation/index.html"><span>Session</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Reactivation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="610224270%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-reactivation/index.html">SessionPendingReactivation</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-reactivation/index.html">SessionPendingReactivation</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-reactivation/index.html">SessionPendingReactivation</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-reactivation/index.html">SessionPendingReactivation</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1518596360%2FClasslikes%2F-710680164" anchor-label="SessionPendingRecordingStop" id="-1518596360%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-pending-recording-stop/index.html"><span>Session</span><wbr></wbr><span>Pending</span><wbr></wbr><span>Recording</span><wbr></wbr><span><span>Stop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1518596360%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-recording-stop/index.html">SessionPendingRecordingStop</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-recording-stop/index.html">SessionPendingRecordingStop</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-recording-stop/index.html">SessionPendingRecordingStop</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-recording-stop/index.html">SessionPendingRecordingStop</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2142544811%2FClasslikes%2F-710680164" anchor-label="SessionPendingSubmission" id="2142544811%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-pending-submission/index.html"><span>Session</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Submission</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2142544811%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-submission/index.html">SessionPendingSubmission</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-submission/index.html">SessionPendingSubmission</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-submission/index.html">SessionPendingSubmission</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-pending-submission/index.html">SessionPendingSubmission</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Represents the &quot;Pending Submission&quot; state.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1012743491%2FClasslikes%2F-710680164" anchor-label="SessionRecording" id="-1012743491%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-recording/index.html"><span>Session</span><wbr></wbr><span><span>Recording</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1012743491%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-recording/index.html">SessionRecording</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-recording/index.html">SessionRecording</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-recording/index.html">SessionRecording</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-recording/index.html">SessionRecording</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1214887277%2FClasslikes%2F-710680164" anchor-label="SessionStarted" id="1214887277%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-started/index.html"><span>Session</span><wbr></wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1214887277%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-started/index.html">SessionStarted</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-started/index.html">SessionStarted</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-started/index.html">SessionStarted</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-started/index.html">SessionStarted</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="846824494%2FClasslikes%2F-710680164" anchor-label="SessionSubmitting" id="846824494%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-submitting/index.html"><span>Session</span><wbr></wbr><span><span>Submitting</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="846824494%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-submitting/index.html">SessionSubmitting</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-submitting/index.html">SessionSubmitting</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-submitting/index.html">SessionSubmitting</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-submitting/index.html">SessionSubmitting</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1292537363%2FClasslikes%2F-710680164" anchor-label="SessionSuspended" id="1292537363%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-suspended/index.html"><span>Session</span><wbr></wbr><span><span>Suspended</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1292537363%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-suspended/index.html">SessionSuspended</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-suspended/index.html">SessionSuspended</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-suspended/index.html">SessionSuspended</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-suspended/index.html">SessionSuspended</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created by hyleung on 2013-10-02.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-943330356%2FClasslikes%2F-710680164" anchor-label="SessionSuspendedPendingSubmission" id="-943330356%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-session-suspended-pending-submission/index.html"><span>Session</span><wbr></wbr><span>Suspended</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Submission</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-943330356%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-suspended-pending-submission/index.html">SessionSuspendedPendingSubmission</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-suspended-pending-submission/index.html">SessionSuspendedPendingSubmission</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-suspended-pending-submission/index.html">SessionSuspendedPendingSubmission</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-session-suspended-pending-submission/index.html">SessionSuspendedPendingSubmission</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Represents the &quot;Pending Submission&quot; state.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="555877701%2FClasslikes%2F-710680164" anchor-label="StorageErrorEncountered" id="555877701%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-storage-error-encountered/index.html"><span>Storage</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Encountered</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="555877701%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-storage-error-encountered/index.html">StorageErrorEncountered</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-storage-error-encountered/index.html">StorageErrorEncountered</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-storage-error-encountered/index.html">StorageErrorEncountered</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-storage-error-encountered/index.html">StorageErrorEncountered</a> : <a href="[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><div class="brief ">Created by hyleung on 2013-10-02.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
