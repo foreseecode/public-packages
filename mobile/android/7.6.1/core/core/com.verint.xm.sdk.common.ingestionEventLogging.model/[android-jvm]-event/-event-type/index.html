@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>EventType</title>
+    <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../../index.html">
+                    core
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:core/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:core/release"
+                                       data-filter=":sdk:core/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    core
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="core::com.verint.xm.sdk.common.ingestionEventLogging.model/Event.EventType///PointingToDeclaration//831293418">
+  <div class="breadcrumbs"><a href="../../../../index.html">core</a><span class="delimiter">/</span><a href="../../index.html">com.verint.xm.sdk.common.ingestionEventLogging.model</a><span class="delimiter">/</span><a href="../index.html">[androidJvm]Event</a><span class="delimiter">/</span><span class="current">EventType</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Event</span><wbr></wbr><span><span>Type</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">EventType</a></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="">Entries</h2>
+        <div class="table"><a data-name="-167554708%2FClasslikes%2F831293418" anchor-label="SDK_STARTED" id="-167554708%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-d-k_-s-t-a-r-t-e-d/index.html">SDK_STARTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-167554708%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-d-k_-s-t-a-r-t-e-d/index.html">SDK_STARTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1956831904%2FClasslikes%2F831293418" anchor-label="SDK_NOT_STARTED" id="-1956831904%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-d-k_-n-o-t_-s-t-a-r-t-e-d/index.html">SDK_NOT_STARTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1956831904%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-d-k_-n-o-t_-s-t-a-r-t-e-d/index.html">SDK_NOT_STARTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-5520269%2FClasslikes%2F831293418" anchor-label="INVITE_SHOWN" id="-5520269%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-s-h-o-w-n/index.html">INVITE_SHOWN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-5520269%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-s-h-o-w-n/index.html">INVITE_SHOWN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1633816485%2FClasslikes%2F831293418" anchor-label="INVITE_FAILED_TO_SHOW" id="1633816485%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-f-a-i-l-e-d_-t-o_-s-h-o-w/index.html">INVITE_FAILED_TO_SHOW</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1633816485%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-f-a-i-l-e-d_-t-o_-s-h-o-w/index.html">INVITE_FAILED_TO_SHOW</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="978081421%2FClasslikes%2F831293418" anchor-label="INVITE_ACCEPTED" id="978081421%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-a-c-c-e-p-t-e-d/index.html">INVITE_ACCEPTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="978081421%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-a-c-c-e-p-t-e-d/index.html">INVITE_ACCEPTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1784395988%2FClasslikes%2F831293418" anchor-label="INVITE_DECLINED" id="1784395988%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-d-e-c-l-i-n-e-d/index.html">INVITE_DECLINED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1784395988%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-d-e-c-l-i-n-e-d/index.html">INVITE_DECLINED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2045578279%2FClasslikes%2F831293418" anchor-label="INVITE_PAGE_SHOWN" id="2045578279%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-p-a-g-e_-s-h-o-w-n/index.html">INVITE_PAGE_SHOWN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2045578279%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-p-a-g-e_-s-h-o-w-n/index.html">INVITE_PAGE_SHOWN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-473990384%2FClasslikes%2F831293418" anchor-label="INVITE_REQUESTED" id="-473990384%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-r-e-q-u-e-s-t-e-d/index.html">INVITE_REQUESTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-473990384%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-r-e-q-u-e-s-t-e-d/index.html">INVITE_REQUESTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-42471273%2FClasslikes%2F831293418" anchor-label="INVITE_MEASURE_NOT_FOUND" id="-42471273%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-m-e-a-s-u-r-e_-n-o-t_-f-o-u-n-d/index.html">INVITE_MEASURE_NOT_FOUND</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-42471273%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-m-e-a-s-u-r-e_-n-o-t_-f-o-u-n-d/index.html">INVITE_MEASURE_NOT_FOUND</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1688796360%2FClasslikes%2F831293418" anchor-label="SESSION_STARTED" id="1688796360%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-e-s-s-i-o-n_-s-t-a-r-t-e-d/index.html">SESSION_STARTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1688796360%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-e-s-s-i-o-n_-s-t-a-r-t-e-d/index.html">SESSION_STARTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="893519117%2FClasslikes%2F831293418" anchor-label="SESSION_CLOSED" id="893519117%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-e-s-s-i-o-n_-c-l-o-s-e-d/index.html">SESSION_CLOSED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="893519117%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-e-s-s-i-o-n_-c-l-o-s-e-d/index.html">SESSION_CLOSED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="194444076%2FClasslikes%2F831293418" anchor-label="QUALIFIER_SHOWN" id="194444076%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-q-u-a-l-i-f-i-e-r_-s-h-o-w-n/index.html">QUALIFIER_SHOWN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="194444076%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-q-u-a-l-i-f-i-e-r_-s-h-o-w-n/index.html">QUALIFIER_SHOWN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="996243764%2FClasslikes%2F831293418" anchor-label="QUALIFIER_ACCEPTED" id="996243764%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-q-u-a-l-i-f-i-e-r_-a-c-c-e-p-t-e-d/index.html">QUALIFIER_ACCEPTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="996243764%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-q-u-a-l-i-f-i-e-r_-a-c-c-e-p-t-e-d/index.html">QUALIFIER_ACCEPTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1705226544%2FClasslikes%2F831293418" anchor-label="NOTIFICATION_SURVEY_SHOWN" id="-1705226544%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-o-t-i-f-i-c-a-t-i-o-n_-s-u-r-v-e-y_-s-h-o-w-n/index.html">NOTIFICATION_SURVEY_SHOWN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1705226544%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-n-o-t-i-f-i-c-a-t-i-o-n_-s-u-r-v-e-y_-s-h-o-w-n/index.html">NOTIFICATION_SURVEY_SHOWN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1596325279%2FClasslikes%2F831293418" anchor-label="SURVEY_REQUESTED" id="-1596325279%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-u-r-v-e-y_-r-e-q-u-e-s-t-e-d/index.html">SURVEY_REQUESTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1596325279%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-u-r-v-e-y_-r-e-q-u-e-s-t-e-d/index.html">SURVEY_REQUESTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1392741644%2FClasslikes%2F831293418" anchor-label="SURVEY_FAILED_TO_SHOW" id="-1392741644%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-u-r-v-e-y_-f-a-i-l-e-d_-t-o_-s-h-o-w/index.html">SURVEY_FAILED_TO_SHOW</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1392741644%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-u-r-v-e-y_-f-a-i-l-e-d_-t-o_-s-h-o-w/index.html">SURVEY_FAILED_TO_SHOW</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="732361231%2FClasslikes%2F831293418" anchor-label="SURVEY_FAILED_TO_SUBMIT" id="732361231%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-u-r-v-e-y_-f-a-i-l-e-d_-t-o_-s-u-b-m-i-t/index.html">SURVEY_FAILED_TO_SUBMIT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="732361231%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-u-r-v-e-y_-f-a-i-l-e-d_-t-o_-s-u-b-m-i-t/index.html">SURVEY_FAILED_TO_SUBMIT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-328696249%2FClasslikes%2F831293418" anchor-label="SURVEY_ABANDONED" id="-328696249%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-u-r-v-e-y_-a-b-a-n-d-o-n-e-d/index.html">SURVEY_ABANDONED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-328696249%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-u-r-v-e-y_-a-b-a-n-d-o-n-e-d/index.html">SURVEY_ABANDONED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="793638646%2FClasslikes%2F831293418" anchor-label="INVITE_ABANDONED" id="793638646%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-a-b-a-n-d-o-n-e-d/index.html">INVITE_ABANDONED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="793638646%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-a-b-a-n-d-o-n-e-d/index.html">INVITE_ABANDONED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1548446876%2FClasslikes%2F831293418" anchor-label="CANCEL_SHOWN" id="-1548446876%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-n-c-e-l_-s-h-o-w-n/index.html">CANCEL_SHOWN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1548446876%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-a-n-c-e-l_-s-h-o-w-n/index.html">CANCEL_SHOWN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2020629867%2FClasslikes%2F831293418" anchor-label="TIMER" id="-2020629867%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e-r/index.html">TIMER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2020629867%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-t-i-m-e-r/index.html">TIMER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="851606713%2FClasslikes%2F831293418" anchor-label="PURCHASE" id="851606713%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-u-r-c-h-a-s-e/index.html">PURCHASE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="851606713%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-p-u-r-c-h-a-s-e/index.html">PURCHASE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1630451152%2FClasslikes%2F831293418" anchor-label="ITEMS" id="1630451152%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-t-e-m-s/index.html">ITEMS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1630451152%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-t-e-m-s/index.html">ITEMS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="436464585%2FClasslikes%2F831293418" anchor-label="CURRENCY" id="436464585%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-u-r-r-e-n-c-y/index.html">CURRENCY</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="436464585%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-u-r-r-e-n-c-y/index.html">CURRENCY</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-904139056%2FClasslikes%2F831293418" anchor-label="AMOUNT" id="-904139056%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-m-o-u-n-t/index.html">AMOUNT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-904139056%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-a-m-o-u-n-t/index.html">AMOUNT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="727647829%2FClasslikes%2F831293418" anchor-label="ELIGIBILITY_CHECK_REQUESTED" id="727647829%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-l-i-g-i-b-i-l-i-t-y_-c-h-e-c-k_-r-e-q-u-e-s-t-e-d/index.html">ELIGIBILITY_CHECK_REQUESTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="727647829%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-e-l-i-g-i-b-i-l-i-t-y_-c-h-e-c-k_-r-e-q-u-e-s-t-e-d/index.html">ELIGIBILITY_CHECK_REQUESTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1212911718%2FClasslikes%2F831293418" anchor-label="ELIGIBILITY_MET" id="-1212911718%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-l-i-g-i-b-i-l-i-t-y_-m-e-t/index.html">ELIGIBILITY_MET</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1212911718%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-e-l-i-g-i-b-i-l-i-t-y_-m-e-t/index.html">ELIGIBILITY_MET</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-373776505%2FClasslikes%2F831293418" anchor-label="ELIGIBILITY_FAILED" id="-373776505%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-l-i-g-i-b-i-l-i-t-y_-f-a-i-l-e-d/index.html">ELIGIBILITY_FAILED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-373776505%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-e-l-i-g-i-b-i-l-i-t-y_-f-a-i-l-e-d/index.html">ELIGIBILITY_FAILED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1591136418%2FClasslikes%2F831293418" anchor-label="ELIGIBILITY_FAILED_WITH_NETWORK_ERROR" id="-1591136418%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-l-i-g-i-b-i-l-i-t-y_-f-a-i-l-e-d_-w-i-t-h_-n-e-t-w-o-r-k_-e-r-r-o-r/index.html">ELIGIBILITY_FAILED_WITH_NETWORK_ERROR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1591136418%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-e-l-i-g-i-b-i-l-i-t-y_-f-a-i-l-e-d_-w-i-t-h_-n-e-t-w-o-r-k_-e-r-r-o-r/index.html">ELIGIBILITY_FAILED_WITH_NETWORK_ERROR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1988618110%2FClasslikes%2F831293418" anchor-label="USER_IN_SAMPLING_POOL" id="1988618110%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-u-s-e-r_-i-n_-s-a-m-p-l-i-n-g_-p-o-o-l/index.html">USER_IN_SAMPLING_POOL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1988618110%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-u-s-e-r_-i-n_-s-a-m-p-l-i-n-g_-p-o-o-l/index.html">USER_IN_SAMPLING_POOL</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1302887798%2FClasslikes%2F831293418" anchor-label="USER_NOT_IN_SAMPLING_POOL" id="-1302887798%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-u-s-e-r_-n-o-t_-i-n_-s-a-m-p-l-i-n-g_-p-o-o-l/index.html">USER_NOT_IN_SAMPLING_POOL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1302887798%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-u-s-e-r_-n-o-t_-i-n_-s-a-m-p-l-i-n-g_-p-o-o-l/index.html">USER_NOT_IN_SAMPLING_POOL</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1766440227%2FClasslikes%2F831293418" anchor-label="DEBUG" id="1766440227%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-b-u-g/index.html">DEBUG</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1766440227%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-e-b-u-g/index.html">DEBUG</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="906184835%2FClasslikes%2F831293418" anchor-label="UNKNOWN_ERROR" id="906184835%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-u-n-k-n-o-w-n_-e-r-r-o-r/index.html">UNKNOWN_ERROR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="906184835%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-u-n-k-n-o-w-n_-e-r-r-o-r/index.html">UNKNOWN_ERROR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-743339197%2FClasslikes%2F831293418" anchor-label="UNHANDLED_EXCEPTION" id="-743339197%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-u-n-h-a-n-d-l-e-d_-e-x-c-e-p-t-i-o-n/index.html">UNHANDLED_EXCEPTION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-743339197%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-u-n-h-a-n-d-l-e-d_-e-x-c-e-p-t-i-o-n/index.html">UNHANDLED_EXCEPTION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1466473988%2FClasslikes%2F831293418" anchor-label="HANDLED_EXCEPTION" id="-1466473988%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-h-a-n-d-l-e-d_-e-x-c-e-p-t-i-o-n/index.html">HANDLED_EXCEPTION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1466473988%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-h-a-n-d-l-e-d_-e-x-c-e-p-t-i-o-n/index.html">HANDLED_EXCEPTION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1544625142%2FClasslikes%2F831293418" anchor-label="DATABASE_OVERFLOW" id="1544625142%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-a-b-a-s-e_-o-v-e-r-f-l-o-w/index.html">DATABASE_OVERFLOW</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1544625142%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-a-t-a-b-a-s-e_-o-v-e-r-f-l-o-w/index.html">DATABASE_OVERFLOW</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1299647379%2FClasslikes%2F831293418" anchor-label="LOCATION" id="-1299647379%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-o-c-a-t-i-o-n/index.html">LOCATION</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1299647379%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-l-o-c-a-t-i-o-n/index.html">LOCATION</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-916682210%2FClasslikes%2F831293418" anchor-label="DIGITAL_BADGE_SHOWN" id="-916682210%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-b-a-d-g-e_-s-h-o-w-n/index.html">DIGITAL_BADGE_SHOWN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-916682210%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-b-a-d-g-e_-s-h-o-w-n/index.html">DIGITAL_BADGE_SHOWN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="90011883%2FClasslikes%2F831293418" anchor-label="DIGITAL_SURVEY_SHOWN" id="90011883%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-s-h-o-w-n/index.html">DIGITAL_SURVEY_SHOWN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="90011883%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-s-h-o-w-n/index.html">DIGITAL_SURVEY_SHOWN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1842883485%2FClasslikes%2F831293418" anchor-label="DIGITAL_ABANDONED" id="1842883485%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-a-b-a-n-d-o-n-e-d/index.html">DIGITAL_ABANDONED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1842883485%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-a-b-a-n-d-o-n-e-d/index.html">DIGITAL_ABANDONED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="881635460%2FClasslikes%2F831293418" anchor-label="DIGITAL_SUBMITTED" id="881635460%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-s-u-b-m-i-t-t-e-d/index.html">DIGITAL_SUBMITTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="881635460%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-s-u-b-m-i-t-t-e-d/index.html">DIGITAL_SUBMITTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1866764730%2FClasslikes%2F831293418" anchor-label="DIGITAL_THANKYOU_SHOWN" id="-1866764730%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-t-h-a-n-k-y-o-u_-s-h-o-w-n/index.html">DIGITAL_THANKYOU_SHOWN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1866764730%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-t-h-a-n-k-y-o-u_-s-h-o-w-n/index.html">DIGITAL_THANKYOU_SHOWN</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1203634955%2FClasslikes%2F831293418" anchor-label="DIGITAL_SERVER_ERROR" id="1203634955%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-s-e-r-v-e-r_-e-r-r-o-r/index.html">DIGITAL_SERVER_ERROR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1203634955%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-s-e-r-v-e-r_-e-r-r-o-r/index.html">DIGITAL_SERVER_ERROR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-209024122%2FClasslikes%2F831293418" anchor-label="FEATURE" id="-209024122%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-e-a-t-u-r-e/index.html">FEATURE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-209024122%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-f-e-a-t-u-r-e/index.html">FEATURE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1316333718%2FClasslikes%2F831293418" anchor-label="CONFIG_UPDATED" id="1316333718%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-o-n-f-i-g_-u-p-d-a-t-e-d/index.html">CONFIG_UPDATED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1316333718%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-o-n-f-i-g_-u-p-d-a-t-e-d/index.html">CONFIG_UPDATED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="377306375%2FClasslikes%2F831293418" anchor-label="FORCE_SHOW_INVITE" id="377306375%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-o-r-c-e_-s-h-o-w_-i-n-v-i-t-e/index.html">FORCE_SHOW_INVITE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="377306375%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-f-o-r-c-e_-s-h-o-w_-i-n-v-i-t-e/index.html">FORCE_SHOW_INVITE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1032357272%2FClasslikes%2F831293418" anchor-label="FORCE_SHOW_SURVEY" id="1032357272%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-o-r-c-e_-s-h-o-w_-s-u-r-v-e-y/index.html">FORCE_SHOW_SURVEY</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1032357272%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-f-o-r-c-e_-s-h-o-w_-s-u-r-v-e-y/index.html">FORCE_SHOW_SURVEY</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1304323478%2FClasslikes%2F831293418" anchor-label="SET_CONTACT_DETAILS" id="1304323478%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-e-t_-c-o-n-t-a-c-t_-d-e-t-a-i-l-s/index.html">SET_CONTACT_DETAILS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1304323478%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-e-t_-c-o-n-t-a-c-t_-d-e-t-a-i-l-s/index.html">SET_CONTACT_DETAILS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2055684857%2FClasslikes%2F831293418" anchor-label="SKIP_POOLING_CHECK" id="-2055684857%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-k-i-p_-p-o-o-l-i-n-g_-c-h-e-c-k/index.html">SKIP_POOLING_CHECK</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2055684857%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-k-i-p_-p-o-o-l-i-n-g_-c-h-e-c-k/index.html">SKIP_POOLING_CHECK</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2000778998%2FClasslikes%2F831293418" anchor-label="SET_CUSTOM_INVITE" id="-2000778998%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-e-t_-c-u-s-t-o-m_-i-n-v-i-t-e/index.html">SET_CUSTOM_INVITE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2000778998%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-e-t_-c-u-s-t-o-m_-i-n-v-i-t-e/index.html">SET_CUSTOM_INVITE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1328718749%2FClasslikes%2F831293418" anchor-label="SET_INVITE_LISTENER" id="1328718749%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-e-t_-i-n-v-i-t-e_-l-i-s-t-e-n-e-r/index.html">SET_INVITE_LISTENER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1328718749%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-e-t_-i-n-v-i-t-e_-l-i-s-t-e-n-e-r/index.html">SET_INVITE_LISTENER</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="648679303%2FClasslikes%2F831293418" anchor-label="CUSTOM_INVITE_ACCEPTED" id="648679303%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-u-s-t-o-m_-i-n-v-i-t-e_-a-c-c-e-p-t-e-d/index.html">CUSTOM_INVITE_ACCEPTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="648679303%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-u-s-t-o-m_-i-n-v-i-t-e_-a-c-c-e-p-t-e-d/index.html">CUSTOM_INVITE_ACCEPTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2104407911%2FClasslikes%2F831293418" anchor-label="CUSTOM_INVITE_ACCEPTED_WITH_CONTACT" id="2104407911%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-u-s-t-o-m_-i-n-v-i-t-e_-a-c-c-e-p-t-e-d_-w-i-t-h_-c-o-n-t-a-c-t/index.html">CUSTOM_INVITE_ACCEPTED_WITH_CONTACT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2104407911%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-u-s-t-o-m_-i-n-v-i-t-e_-a-c-c-e-p-t-e-d_-w-i-t-h_-c-o-n-t-a-c-t/index.html">CUSTOM_INVITE_ACCEPTED_WITH_CONTACT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1454993870%2FClasslikes%2F831293418" anchor-label="CUSTOM_INVITE_DECLINED" id="1454993870%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-u-s-t-o-m_-i-n-v-i-t-e_-d-e-c-l-i-n-e-d/index.html">CUSTOM_INVITE_DECLINED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1454993870%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-u-s-t-o-m_-i-n-v-i-t-e_-d-e-c-l-i-n-e-d/index.html">CUSTOM_INVITE_DECLINED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1452830072%2FClasslikes%2F831293418" anchor-label="TRACKER_RESET" id="1452830072%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-a-c-k-e-r_-r-e-s-e-t/index.html">TRACKER_RESET</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1452830072%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-t-r-a-c-k-e-r_-r-e-s-e-t/index.html">TRACKER_RESET</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="925265009%2FClasslikes%2F831293418" anchor-label="TRACKER_ERROR" id="925265009%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-r-a-c-k-e-r_-e-r-r-o-r/index.html">TRACKER_ERROR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="925265009%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-t-r-a-c-k-e-r_-e-r-r-o-r/index.html">TRACKER_ERROR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-615729605%2FClasslikes%2F831293418" anchor-label="CUSTOM_CPP_SET_FROM_ARRAY" id="-615729605%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-u-s-t-o-m_-c-p-p_-s-e-t_-f-r-o-m_-a-r-r-a-y/index.html">CUSTOM_CPP_SET_FROM_ARRAY</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-615729605%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-u-s-t-o-m_-c-p-p_-s-e-t_-f-r-o-m_-a-r-r-a-y/index.html">CUSTOM_CPP_SET_FROM_ARRAY</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1072129933%2FClasslikes%2F831293418" anchor-label="CUSTOM_CPP_APPENDED" id="-1072129933%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-u-s-t-o-m_-c-p-p_-a-p-p-e-n-d-e-d/index.html">CUSTOM_CPP_APPENDED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1072129933%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-u-s-t-o-m_-c-p-p_-a-p-p-e-n-d-e-d/index.html">CUSTOM_CPP_APPENDED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1965751021%2FClasslikes%2F831293418" anchor-label="INVITE_STYLE" id="-1965751021%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-s-t-y-l-e/index.html">INVITE_STYLE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1965751021%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-s-t-y-l-e/index.html">INVITE_STYLE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-640732559%2FClasslikes%2F831293418" anchor-label="CONTACT_TYPE_SELECTED" id="-640732559%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-o-n-t-a-c-t_-t-y-p-e_-s-e-l-e-c-t-e-d/index.html">CONTACT_TYPE_SELECTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-640732559%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-o-n-t-a-c-t_-t-y-p-e_-s-e-l-e-c-t-e-d/index.html">CONTACT_TYPE_SELECTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-681412469%2FClasslikes%2F831293418" anchor-label="CONTACT_CLIENT_ERROR" id="-681412469%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-o-n-t-a-c-t_-c-l-i-e-n-t_-e-r-r-o-r/index.html">CONTACT_CLIENT_ERROR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-681412469%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-c-o-n-t-a-c-t_-c-l-i-e-n-t_-e-r-r-o-r/index.html">CONTACT_CLIENT_ERROR</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1456931040%2FClasslikes%2F831293418" anchor-label="INVALID_CONTACT_ENTERED" id="1456931040%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-a-l-i-d_-c-o-n-t-a-c-t_-e-n-t-e-r-e-d/index.html">INVALID_CONTACT_ENTERED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1456931040%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-a-l-i-d_-c-o-n-t-a-c-t_-e-n-t-e-r-e-d/index.html">INVALID_CONTACT_ENTERED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1687930949%2FClasslikes%2F831293418" anchor-label="DIGITAL_SURVEY_INITIATED" id="1687930949%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-i-n-i-t-i-a-t-e-d/index.html">DIGITAL_SURVEY_INITIATED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1687930949%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-i-n-i-t-i-a-t-e-d/index.html">DIGITAL_SURVEY_INITIATED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1336661720%2FClasslikes%2F831293418" anchor-label="DIGITAL_SURVEY_NOT_PRESENTED" id="-1336661720%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-n-o-t_-p-r-e-s-e-n-t-e-d/index.html">DIGITAL_SURVEY_NOT_PRESENTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1336661720%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-n-o-t_-p-r-e-s-e-n-t-e-d/index.html">DIGITAL_SURVEY_NOT_PRESENTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-476008594%2FClasslikes%2F831293418" anchor-label="DIGITAL_SURVEY_ABANDONED" id="-476008594%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-a-b-a-n-d-o-n-e-d/index.html">DIGITAL_SURVEY_ABANDONED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-476008594%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-a-b-a-n-d-o-n-e-d/index.html">DIGITAL_SURVEY_ABANDONED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1437256619%2FClasslikes%2F831293418" anchor-label="DIGITAL_SURVEY_SUBMITTED" id="-1437256619%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-s-u-b-m-i-t-t-e-d/index.html">DIGITAL_SURVEY_SUBMITTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1437256619%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-i-g-i-t-a-l_-s-u-r-v-e-y_-s-u-b-m-i-t-t-e-d/index.html">DIGITAL_SURVEY_SUBMITTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-446365230%2FClasslikes%2F831293418" anchor-label="EXTERNAL_LINK_OPENED" id="-446365230%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-x-t-e-r-n-a-l_-l-i-n-k_-o-p-e-n-e-d/index.html">EXTERNAL_LINK_OPENED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-446365230%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-e-x-t-e-r-n-a-l_-l-i-n-k_-o-p-e-n-e-d/index.html">EXTERNAL_LINK_OPENED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1067846811%2FClasslikes%2F831293418" anchor-label="START_WITH_CACHED_CONFIG" id="1067846811%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-a-r-t_-w-i-t-h_-c-a-c-h-e-d_-c-o-n-f-i-g/index.html">START_WITH_CACHED_CONFIG</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1067846811%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-t-a-r-t_-w-i-t-h_-c-a-c-h-e-d_-c-o-n-f-i-g/index.html">START_WITH_CACHED_CONFIG</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1323789303%2FClasslikes%2F831293418" anchor-label="START_WITH_REMOTE_CONFIG" id="1323789303%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-a-r-t_-w-i-t-h_-r-e-m-o-t-e_-c-o-n-f-i-g/index.html">START_WITH_REMOTE_CONFIG</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1323789303%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-t-a-r-t_-w-i-t-h_-r-e-m-o-t-e_-c-o-n-f-i-g/index.html">START_WITH_REMOTE_CONFIG</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1132534754%2FClasslikes%2F831293418" anchor-label="START_WITH_REMOTE_CONFIG_FAILURE" id="1132534754%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-a-r-t_-w-i-t-h_-r-e-m-o-t-e_-c-o-n-f-i-g_-f-a-i-l-u-r-e/index.html">START_WITH_REMOTE_CONFIG_FAILURE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1132534754%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-t-a-r-t_-w-i-t-h_-r-e-m-o-t-e_-c-o-n-f-i-g_-f-a-i-l-u-r-e/index.html">START_WITH_REMOTE_CONFIG_FAILURE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1130903395%2FClasslikes%2F831293418" anchor-label="APPROACHING_DISK_SPACE_LIMIT" id="-1130903395%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-p-p-r-o-a-c-h-i-n-g_-d-i-s-k_-s-p-a-c-e_-l-i-m-i-t/index.html">APPROACHING_DISK_SPACE_LIMIT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1130903395%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-a-p-p-r-o-a-c-h-i-n-g_-d-i-s-k_-s-p-a-c-e_-l-i-m-i-t/index.html">APPROACHING_DISK_SPACE_LIMIT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1402502146%2FClasslikes%2F831293418" anchor-label="REMOVED_INDECIPHERABLE_EVENTS" id="-1402502146%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-m-o-v-e-d_-i-n-d-e-c-i-p-h-e-r-a-b-l-e_-e-v-e-n-t-s/index.html">REMOVED_INDECIPHERABLE_EVENTS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1402502146%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-r-e-m-o-v-e-d_-i-n-d-e-c-i-p-h-e-r-a-b-l-e_-e-v-e-n-t-s/index.html">REMOVED_INDECIPHERABLE_EVENTS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1578912367%2FClasslikes%2F831293418" anchor-label="DATABASE_TABLE_CLEARED" id="1578912367%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-a-b-a-s-e_-t-a-b-l-e_-c-l-e-a-r-e-d/index.html">DATABASE_TABLE_CLEARED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1578912367%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-d-a-t-a-b-a-s-e_-t-a-b-l-e_-c-l-e-a-r-e-d/index.html">DATABASE_TABLE_CLEARED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1655082059%2FClasslikes%2F831293418" anchor-label="STORAGE_EXHAUSTED" id="-1655082059%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-o-r-a-g-e_-e-x-h-a-u-s-t-e-d/index.html">STORAGE_EXHAUSTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1655082059%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-s-t-o-r-a-g-e_-e-x-h-a-u-s-t-e-d/index.html">STORAGE_EXHAUSTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="302163748%2FClasslikes%2F831293418" anchor-label="FORBIDDEN_KEYBOARD_DETECTED" id="302163748%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-o-r-b-i-d-d-e-n_-k-e-y-b-o-a-r-d_-d-e-t-e-c-t-e-d/index.html">FORBIDDEN_KEYBOARD_DETECTED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="302163748%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-f-o-r-b-i-d-d-e-n_-k-e-y-b-o-a-r-d_-d-e-t-e-c-t-e-d/index.html">FORBIDDEN_KEYBOARD_DETECTED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1398288763%2FClasslikes%2F831293418" anchor-label="PENDING_INVITE_CANCELLED" id="1398288763%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-e-n-d-i-n-g_-i-n-v-i-t-e_-c-a-n-c-e-l-l-e-d/index.html">PENDING_INVITE_CANCELLED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1398288763%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-p-e-n-d-i-n-g_-i-n-v-i-t-e_-c-a-n-c-e-l-l-e-d/index.html">PENDING_INVITE_CANCELLED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="460660027%2FClasslikes%2F831293418" anchor-label="INVITE_REQUIRED_VALUES_NOT_SET" id="460660027%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-v-i-t-e_-r-e-q-u-i-r-e-d_-v-a-l-u-e-s_-n-o-t_-s-e-t/index.html">INVITE_REQUIRED_VALUES_NOT_SET</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="460660027%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-i-n-v-i-t-e_-r-e-q-u-i-r-e-d_-v-a-l-u-e-s_-n-o-t_-s-e-t/index.html">INVITE_REQUIRED_VALUES_NOT_SET</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1756399987%2FClasslikes%2F831293418" anchor-label="REFRESH_PENDING_INVITE" id="-1756399987%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-f-r-e-s-h_-p-e-n-d-i-n-g_-i-n-v-i-t-e/index.html">REFRESH_PENDING_INVITE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1756399987%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-r-e-f-r-e-s-h_-p-e-n-d-i-n-g_-i-n-v-i-t-e/index.html">REFRESH_PENDING_INVITE</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="656292845%2FClasslikes%2F831293418" anchor-label="NOTIFICATION_DISMISSED" id="656292845%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-n-o-t-i-f-i-c-a-t-i-o-n_-d-i-s-m-i-s-s-e-d/index.html">NOTIFICATION_DISMISSED</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="656292845%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><div class="block"><a href="-n-o-t-i-f-i-c-a-t-i-o-n_-d-i-s-m-i-s-s-e-d/index.html">NOTIFICATION_DISMISSED</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-2114148747%2FFunctions%2F831293418" anchor-label="valueOf" id="-2114148747%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2114148747%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Event.EventType</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1982919338%2FFunctions%2F831293418" anchor-label="values" id="-1982919338%2FFunctions%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1982919338%2FFunctions%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">Event.EventType</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared. This method may be used to iterate over the constants.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

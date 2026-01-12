@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]CapacityMonitorImpl</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    dba
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:dba/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:dba/release"
+                                       data-filter=":sdk:dba/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    dba
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="dba::com.verint.xm.sdk.dba.data/CapacityMonitorImpl///PointingToDeclaration//-710680164">
+  <div class="breadcrumbs"><a href="../../../index.html">dba</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk.dba.data</a><span class="delimiter">/</span><span class="current">[androidJvm]CapacityMonitorImpl</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Capacity</span><wbr></wbr><span>Monitor</span><wbr></wbr><span><span>Impl</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">CapacityMonitorImpl</a> : <a href="../[android-jvm]-capacity-monitor/index.html">CapacityMonitor</a></div><p class="paragraph">Created with IntelliJ IDEA. User: selwynleeke Date: 2013-04-30 Time: 3:33 PM To change this template use File | Settings | File Templates.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1961962553%2FConstructors%2F-710680164" anchor-label="CapacityMonitorImpl" id="1961962553%2FConstructors%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-capacity-monitor-impl.html"><span>Capacity</span><wbr></wbr><span>Monitor</span><wbr></wbr><span><span>Impl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1961962553%2FConstructors%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1826208619%2FProperties%2F-710680164" anchor-label="MIN_FREE_SPACE_PERCENTAGE" id="-1826208619%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../[android-jvm]-capacity-monitor/-m-i-n_-f-r-e-e_-s-p-a-c-e_-p-e-r-c-e-n-t-a-g-e.html"><span>MIN_</span><wbr></wbr><span>FREE_</span><wbr></wbr><span>SPACE_</span><wbr></wbr><span>PERCENTAGE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1826208619%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="../[android-jvm]-capacity-monitor/-m-i-n_-f-r-e-e_-s-p-a-c-e_-p-e-r-c-e-n-t-a-g-e.html">MIN_FREE_SPACE_PERCENTAGE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1650541773%2FProperties%2F-710680164" anchor-label="STORAGE_LIMIT_ABSOLUTE" id="1650541773%2FProperties%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../[android-jvm]-capacity-monitor/-s-t-o-r-a-g-e_-l-i-m-i-t_-a-b-s-o-l-u-t-e.html"><span>STORAGE_</span><wbr></wbr><span>LIMIT_</span><wbr></wbr><span>ABSOLUTE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1650541773%2FProperties%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="../[android-jvm]-capacity-monitor/-s-t-o-r-a-g-e_-l-i-m-i-t_-a-b-s-o-l-u-t-e.html">STORAGE_LIMIT_ABSOLUTE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1393662256%2FFunctions%2F-710680164" anchor-label="adjustUsedSpaceEstimate" id="1393662256%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="adjust-used-space-estimate.html"><span>adjust</span><wbr></wbr><span>Used</span><wbr></wbr><span>Space</span><wbr></wbr><span><span>Estimate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1393662256%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="adjust-used-space-estimate.html"><span class="token function">adjustUsedSpaceEstimate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">deltaBytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1228680769%2FFunctions%2F-710680164" anchor-label="getMetrics" id="-1228680769%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-metrics.html"><span>get</span><wbr></wbr><span><span>Metrics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1228680769%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-metrics.html"><span class="token function">getMetrics</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/HashMap.html">HashMap</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1496885374%2FFunctions%2F-710680164" anchor-label="getStorageUsedEstimate" id="-1496885374%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-storage-used-estimate.html"><span>get</span><wbr></wbr><span>Storage</span><wbr></wbr><span>Used</span><wbr></wbr><span><span>Estimate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1496885374%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-storage-used-estimate.html"><span class="token function">getStorageUsedEstimate</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="403222950%2FFunctions%2F-710680164" anchor-label="isCapacityExceededAccurate" id="403222950%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-capacity-exceeded-accurate.html"><span>is</span><wbr></wbr><span>Capacity</span><wbr></wbr><span>Exceeded</span><wbr></wbr><span><span>Accurate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="403222950%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-capacity-exceeded-accurate.html"><span class="token function">isCapacityExceededAccurate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1451629031%2FFunctions%2F-710680164" anchor-label="isCapacityExceededFast" id="-1451629031%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-capacity-exceeded-fast.html"><span>is</span><wbr></wbr><span>Capacity</span><wbr></wbr><span>Exceeded</span><wbr></wbr><span><span>Fast</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1451629031%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-capacity-exceeded-fast.html"><span class="token function">isCapacityExceededFast</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1660073454%2FFunctions%2F-710680164" anchor-label="setStorageUsedEstimate" id="-1660073454%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-storage-used-estimate.html"><span>set</span><wbr></wbr><span>Storage</span><wbr></wbr><span>Used</span><wbr></wbr><span><span>Estimate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1660073454%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-storage-used-estimate.html"><span class="token function">setStorageUsedEstimate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">currentUsage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

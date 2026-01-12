@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>dba</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="index.html">
+                    dba
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:dba/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:dba/release"
+                                       data-filter=":sdk:dba/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    dba
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageIds="dba::////PointingToDeclaration//-710680164">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>dba</span></span></h1>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="1522646072%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk" id="1522646072%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk/index.html">com.verint.xm.sdk</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1522646072%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="372008365%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba" id="372008365%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba/index.html">com.verint.xm.sdk.dba</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="372008365%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-2005350429%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.annotations" id="-2005350429%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.annotations/index.html">com.verint.xm.sdk.dba.annotations</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2005350429%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1259963403%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.configuration" id="-1259963403%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.configuration/index.html">com.verint.xm.sdk.dba.configuration</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1259963403%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1230316635%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.controls" id="1230316635%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.controls/index.html">com.verint.xm.sdk.dba.controls</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1230316635%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="374824399%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.data" id="374824399%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.data/index.html">com.verint.xm.sdk.dba.data</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="374824399%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1739051748%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.data.storage" id="-1739051748%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.data.storage/index.html">com.verint.xm.sdk.dba.data.storage</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1739051748%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-104012008%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.data.storage.states" id="-104012008%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.data.storage.states/index.html">com.verint.xm.sdk.dba.data.storage.states</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-104012008%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1423171183%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.diagnosticEventLogging" id="-1423171183%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.diagnosticEventLogging/index.html">com.verint.xm.sdk.dba.diagnosticEventLogging</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1423171183%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1303378356%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.diagnosticEventLogging.model" id="-1303378356%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.diagnosticEventLogging.model/index.html">com.verint.xm.sdk.dba.diagnosticEventLogging.model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1303378356%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-577052286%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.diagnosticEventLogging.persistence" id="-577052286%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.diagnosticEventLogging.persistence/index.html">com.verint.xm.sdk.dba.diagnosticEventLogging.persistence</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-577052286%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1973571764%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.diagnosticEventLogging.publishing" id="1973571764%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.diagnosticEventLogging.publishing/index.html">com.verint.xm.sdk.dba.diagnosticEventLogging.publishing</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1973571764%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="840821587%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.diagnosticEventLogging.serialization" id="840821587%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.diagnosticEventLogging.serialization/index.html">com.verint.xm.sdk.dba.diagnosticEventLogging.serialization</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="840821587%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1447907753%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.domain" id="1447907753%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.domain/index.html">com.verint.xm.sdk.dba.domain</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1447907753%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-2125235003%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.eventLogging.model" id="-2125235003%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.eventLogging.model/index.html">com.verint.xm.sdk.dba.eventLogging.model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2125235003%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-34239360%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.hoover" id="-34239360%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.hoover/index.html">com.verint.xm.sdk.dba.hoover</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-34239360%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1119667267%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.hoover.client" id="-1119667267%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.hoover.client/index.html">com.verint.xm.sdk.dba.hoover.client</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1119667267%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1043119621%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.hoover.model" id="-1043119621%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.hoover.model/index.html">com.verint.xm.sdk.dba.hoover.model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1043119621%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="937975281%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.hoover.persistence" id="937975281%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.hoover.persistence/index.html">com.verint.xm.sdk.dba.hoover.persistence</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="937975281%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="2022443621%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.hoover.publishing" id="2022443621%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.hoover.publishing/index.html">com.verint.xm.sdk.dba.hoover.publishing</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2022443621%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="788400130%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.hoover.serialization" id="788400130%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.hoover.serialization/index.html">com.verint.xm.sdk.dba.hoover.serialization</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="788400130%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="200585779%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.hoover.timeout" id="200585779%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.hoover.timeout/index.html">com.verint.xm.sdk.dba.hoover.timeout</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="200585779%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1728208615%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.hoover.websocket" id="-1728208615%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.hoover.websocket/index.html">com.verint.xm.sdk.dba.hoover.websocket</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1728208615%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1815562495%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.imageDiff" id="1815562495%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.imageDiff/index.html">com.verint.xm.sdk.dba.imageDiff</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1815562495%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1894682489%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.jobQueue" id="1894682489%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.jobQueue/index.html">com.verint.xm.sdk.dba.jobQueue</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1894682489%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1420788973%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.network" id="1420788973%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.network/index.html">com.verint.xm.sdk.dba.network</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1420788973%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1116573670%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.perfLog" id="-1116573670%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.perfLog/index.html">com.verint.xm.sdk.dba.perfLog</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1116573670%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="254682211%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.receivers" id="254682211%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.receivers/index.html">com.verint.xm.sdk.dba.receivers</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="254682211%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="464424035%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder" id="464424035%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder/index.html">com.verint.xm.sdk.dba.recorder</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="464424035%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1931253210%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.captureState" id="1931253210%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.captureState/index.html">com.verint.xm.sdk.dba.recorder.captureState</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1931253210%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1180741234%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.captureStrategy" id="-1180741234%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.captureStrategy/index.html">com.verint.xm.sdk.dba.recorder.captureStrategy</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1180741234%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-381137596%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.chunking" id="-381137596%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.chunking/index.html">com.verint.xm.sdk.dba.recorder.chunking</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-381137596%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="608679719%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.chunking.state" id="608679719%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.chunking.state/index.html">com.verint.xm.sdk.dba.recorder.chunking.state</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="608679719%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1870773726%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.frameComposer" id="-1870773726%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.frameComposer/index.html">com.verint.xm.sdk.dba.recorder.frameComposer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1870773726%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="534646149%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.frameComposer.state" id="534646149%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.frameComposer.state/index.html">com.verint.xm.sdk.dba.recorder.frameComposer.state</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="534646149%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="277696768%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.hierarchyWalker" id="277696768%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.hierarchyWalker/index.html">com.verint.xm.sdk.dba.recorder.hierarchyWalker</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="277696768%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-313439509%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.masking" id="-313439509%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.masking/index.html">com.verint.xm.sdk.dba.recorder.masking</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-313439509%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="219126670%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.masking.state" id="219126670%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.masking.state/index.html">com.verint.xm.sdk.dba.recorder.masking.state</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="219126670%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1855811843%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.maskingPolicy" id="-1855811843%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.maskingPolicy/index.html">com.verint.xm.sdk.dba.recorder.maskingPolicy</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1855811843%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1492185351%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.permissions" id="-1492185351%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.permissions/index.html">com.verint.xm.sdk.dba.recorder.permissions</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1492185351%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1473600869%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.permissions.states" id="-1473600869%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.permissions.states/index.html">com.verint.xm.sdk.dba.recorder.permissions.states</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1473600869%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="277301136%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.pixelCopy" id="277301136%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.pixelCopy/index.html">com.verint.xm.sdk.dba.recorder.pixelCopy</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="277301136%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1999562255%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.recorder.states" id="-1999562255%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.recorder.states/index.html">com.verint.xm.sdk.dba.recorder.states</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1999562255%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-269571069%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.services" id="-269571069%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.services/index.html">com.verint.xm.sdk.dba.services</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-269571069%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1813284011%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.session" id="-1813284011%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.session/index.html">com.verint.xm.sdk.dba.session</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1813284011%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-358984584%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.session.state" id="-358984584%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.session.state/index.html">com.verint.xm.sdk.dba.session.state</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-358984584%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1777933135%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.submission" id="-1777933135%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.submission/index.html">com.verint.xm.sdk.dba.submission</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1777933135%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-654146076%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.submission.asyncTask" id="-654146076%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.submission.asyncTask/index.html">com.verint.xm.sdk.dba.submission.asyncTask</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-654146076%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1938632969%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.submission.jobs" id="-1938632969%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.submission.jobs/index.html">com.verint.xm.sdk.dba.submission.jobs</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1938632969%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-271977310%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.submission.persistence" id="-271977310%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.submission.persistence/index.html">com.verint.xm.sdk.dba.submission.persistence</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-271977310%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-118234739%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.tasks" id="-118234739%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.tasks/index.html">com.verint.xm.sdk.dba.tasks</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-118234739%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-304256533%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.testGroups" id="-304256533%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.testGroups/index.html">com.verint.xm.sdk.dba.testGroups</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-304256533%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1737970197%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.touchTracking" id="1737970197%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.touchTracking/index.html">com.verint.xm.sdk.dba.touchTracking</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1737970197%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1851752688%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.utils" id="1851752688%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.utils/index.html">com.verint.xm.sdk.dba.utils</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1851752688%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="2109166166%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.videoUpload.model" id="2109166166%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.videoUpload.model/index.html">com.verint.xm.sdk.dba.videoUpload.model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2109166166%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="2134863811%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.dba.visualizer" id="2134863811%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.dba.visualizer/index.html">com.verint.xm.sdk.dba.visualizer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2134863811%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-2128416905%2FPackages%2F-710680164" anchor-label="com.verint.xm.sdk.internal" id="-2128416905%2FPackages%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+    <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="dba/com.verint.xm.sdk.internal/index.html">com.verint.xm.sdk.internal</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2128416905%2FPackages%2F-710680164"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">androidJvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

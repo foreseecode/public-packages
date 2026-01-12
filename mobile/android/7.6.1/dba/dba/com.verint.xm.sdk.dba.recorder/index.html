@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.verint.xm.sdk.dba.recorder</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    dba
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:dba/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:dba/release"
+                                       data-filter=":sdk:dba/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    dba
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="dba::com.verint.xm.sdk.dba.recorder////PointingToDeclaration//-710680164">
+  <div class="breadcrumbs"><a href="../../index.html">dba</a><span class="delimiter">/</span><span class="current">com.verint.xm.sdk.dba.recorder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-290215440%2FClasslikes%2F-710680164" anchor-label="Constants" id="-290215440%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-constants/index.html"><span><span>Constants</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-290215440%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-constants/index.html">Constants</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-constants/index.html">Constants</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-constants/index.html">Constants</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-constants/index.html">Constants</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1152371293%2FClasslikes%2F-710680164" anchor-label="DisplayDetails" id="-1152371293%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-display-details/index.html"><span>Display</span><wbr></wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1152371293%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="[android-jvm]-display-details/index.html">DisplayDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>width<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dpi<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">class </span><a href="[android-jvm]-display-details/index.html">DisplayDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>width<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dpi<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">class </span><a href="[android-jvm]-display-details/index.html">DisplayDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>width<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dpi<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">class </span><a href="[android-jvm]-display-details/index.html">DisplayDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>width<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dpi<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1904738687%2FClasslikes%2F-710680164" anchor-label="EventPublisher" id="-1904738687%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-event-publisher/index.html"><span>Event</span><wbr></wbr><span><span>Publisher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1904738687%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-event-publisher/index.html">EventPublisher</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-event-publisher/index.html">EventPublisher</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-event-publisher/index.html">EventPublisher</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-event-publisher/index.html">EventPublisher</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-301215560%2FClasslikes%2F-710680164" anchor-label="FsOrientationEventListener" id="-301215560%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-fs-orientation-event-listener/index.html"><span>Fs</span><wbr></wbr><span>Orientation</span><wbr></wbr><span>Event</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-301215560%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-fs-orientation-event-listener/index.html">FsOrientationEventListener</a> : <a href="https://developer.android.com/reference/kotlin/android/hardware/SensorEventListener.html">SensorEventListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-fs-orientation-event-listener/index.html">FsOrientationEventListener</a> : <a href="https://developer.android.com/reference/kotlin/android/hardware/SensorEventListener.html">SensorEventListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-fs-orientation-event-listener/index.html">FsOrientationEventListener</a> : <a href="https://developer.android.com/reference/kotlin/android/hardware/SensorEventListener.html">SensorEventListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-fs-orientation-event-listener/index.html">FsOrientationEventListener</a> : <a href="https://developer.android.com/reference/kotlin/android/hardware/SensorEventListener.html">SensorEventListener</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2077801048%2FClasslikes%2F-710680164" anchor-label="InteractionDelayTracker" id="2077801048%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-interaction-delay-tracker/index.html"><span>Interaction</span><wbr></wbr><span>Delay</span><wbr></wbr><span><span>Tracker</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2077801048%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-interaction-delay-tracker/index.html">InteractionDelayTracker</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-interaction-delay-tracker/index.html">InteractionDelayTracker</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-interaction-delay-tracker/index.html">InteractionDelayTracker</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-interaction-delay-tracker/index.html">InteractionDelayTracker</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1161382064%2FClasslikes%2F-710680164" anchor-label="InteractionTimer" id="-1161382064%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-interaction-timer/index.html"><span>Interaction</span><wbr></wbr><span><span>Timer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1161382064%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-interaction-timer/index.html">InteractionTimer</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-interaction-timer/index.html">InteractionTimer</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-interaction-timer/index.html">InteractionTimer</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-interaction-timer/index.html">InteractionTimer</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-742731064%2FClasslikes%2F-710680164" anchor-label="MaskCaptureRunnable" id="-742731064%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-mask-capture-runnable/index.html"><span>Mask</span><wbr></wbr><span>Capture</span><wbr></wbr><span><span>Runnable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-742731064%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-mask-capture-runnable/index.html">MaskCaptureRunnable</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-mask-capture-runnable/index.html">MaskCaptureRunnable</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-mask-capture-runnable/index.html">MaskCaptureRunnable</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-mask-capture-runnable/index.html">MaskCaptureRunnable</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-830815419%2FClasslikes%2F-710680164" anchor-label="Recorder" id="-830815419%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-recorder/index.html"><span><span>Recorder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-830815419%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-recorder/index.html">Recorder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fileSystemHelper<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.data/[android-jvm]-file-system-helper/index.html">FileSystemHelper</a><span class="token punctuation">, </span></span><span class="parameter ">camcorderProfile<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/media/CamcorderProfile.html">CamcorderProfile</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dispatcher<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/CoroutineDispatcher///PointingToDeclaration/">CoroutineDispatcher</span></span></span><span class="token punctuation">)</span> : <a href="[android-jvm]-recorder-context/index.html">RecorderContext</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-recorder/index.html">Recorder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fileSystemHelper<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.data/[android-jvm]-file-system-helper/index.html">FileSystemHelper</a><span class="token punctuation">, </span></span><span class="parameter ">camcorderProfile<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/media/CamcorderProfile.html">CamcorderProfile</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dispatcher<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/CoroutineDispatcher///PointingToDeclaration/">CoroutineDispatcher</span></span></span><span class="token punctuation">)</span> : <a href="[android-jvm]-recorder-context/index.html">RecorderContext</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-recorder/index.html">Recorder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fileSystemHelper<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.data/[android-jvm]-file-system-helper/index.html">FileSystemHelper</a><span class="token punctuation">, </span></span><span class="parameter ">camcorderProfile<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/media/CamcorderProfile.html">CamcorderProfile</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dispatcher<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/CoroutineDispatcher///PointingToDeclaration/">CoroutineDispatcher</span></span></span><span class="token punctuation">)</span> : <a href="[android-jvm]-recorder-context/index.html">RecorderContext</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-recorder/index.html">Recorder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fileSystemHelper<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.data/[android-jvm]-file-system-helper/index.html">FileSystemHelper</a><span class="token punctuation">, </span></span><span class="parameter ">camcorderProfile<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/media/CamcorderProfile.html">CamcorderProfile</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dispatcher<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/CoroutineDispatcher///PointingToDeclaration/">CoroutineDispatcher</span></span></span><span class="token punctuation">)</span> : <a href="[android-jvm]-recorder-context/index.html">RecorderContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1074590738%2FClasslikes%2F-710680164" anchor-label="RecorderContext" id="-1074590738%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-recorder-context/index.html"><span>Recorder</span><wbr></wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1074590738%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-recorder-context/index.html">RecorderContext</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-recorder-context/index.html">RecorderContext</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-recorder-context/index.html">RecorderContext</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-recorder-context/index.html">RecorderContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1673073461%2FClasslikes%2F-710680164" anchor-label="RecorderFacade" id="-1673073461%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-recorder-facade/index.html"><span>Recorder</span><wbr></wbr><span><span>Facade</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1673073461%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-recorder-facade/index.html">RecorderFacade</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recorder<span class="token operator">: </span><a href="[android-jvm]-recorder/index.html">Recorder</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>screenCapture<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.recorder.pixelCopy/[android-jvm]-screen-capture/index.html">ScreenCapture</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stateManager<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.stateTracking/StateManager///PointingToDeclaration/">StateManager</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>chunker<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-chunker/index.html">Chunker</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>storageMonitor<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.data.storage/[android-jvm]-storage-monitor/index.html">StorageMonitor</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="com.verint.xm.sdk.common.session/SessionEventObserver///PointingToDeclaration/">SessionEventObserver</span>, <a href="../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-chunker/-chunking-listener/index.html">Chunker.ChunkingListener</a>, <a href="[android-jvm]-recorder/-recorder-listener/index.html">Recorder.RecorderListener</a>, <a href="../com.verint.xm.sdk.dba.data.storage/[android-jvm]-storage-monitor/-storage-listener/index.html">StorageMonitor.StorageListener</a>, <a href="../com.verint.xm.sdk.dba.recorder.pixelCopy/[android-jvm]-screen-capture/-screen-capture-listener/index.html">ScreenCapture.ScreenCaptureListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-recorder-facade/index.html">RecorderFacade</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recorder<span class="token operator">: </span><a href="[android-jvm]-recorder/index.html">Recorder</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>screenCapture<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.recorder.pixelCopy/[android-jvm]-screen-capture/index.html">ScreenCapture</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stateManager<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.stateTracking/StateManager///PointingToDeclaration/">StateManager</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>chunker<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-chunker/index.html">Chunker</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>storageMonitor<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.data.storage/[android-jvm]-storage-monitor/index.html">StorageMonitor</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="com.verint.xm.sdk.common.session/SessionEventObserver///PointingToDeclaration/">SessionEventObserver</span>, <a href="../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-chunker/-chunking-listener/index.html">Chunker.ChunkingListener</a>, <a href="[android-jvm]-recorder/-recorder-listener/index.html">Recorder.RecorderListener</a>, <a href="../com.verint.xm.sdk.dba.data.storage/[android-jvm]-storage-monitor/-storage-listener/index.html">StorageMonitor.StorageListener</a>, <a href="../com.verint.xm.sdk.dba.recorder.pixelCopy/[android-jvm]-screen-capture/-screen-capture-listener/index.html">ScreenCapture.ScreenCaptureListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-recorder-facade/index.html">RecorderFacade</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recorder<span class="token operator">: </span><a href="[android-jvm]-recorder/index.html">Recorder</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>screenCapture<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.recorder.pixelCopy/[android-jvm]-screen-capture/index.html">ScreenCapture</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stateManager<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.stateTracking/StateManager///PointingToDeclaration/">StateManager</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>chunker<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-chunker/index.html">Chunker</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>storageMonitor<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.data.storage/[android-jvm]-storage-monitor/index.html">StorageMonitor</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="com.verint.xm.sdk.common.session/SessionEventObserver///PointingToDeclaration/">SessionEventObserver</span>, <a href="../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-chunker/-chunking-listener/index.html">Chunker.ChunkingListener</a>, <a href="[android-jvm]-recorder/-recorder-listener/index.html">Recorder.RecorderListener</a>, <a href="../com.verint.xm.sdk.dba.data.storage/[android-jvm]-storage-monitor/-storage-listener/index.html">StorageMonitor.StorageListener</a>, <a href="../com.verint.xm.sdk.dba.recorder.pixelCopy/[android-jvm]-screen-capture/-screen-capture-listener/index.html">ScreenCapture.ScreenCaptureListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-recorder-facade/index.html">RecorderFacade</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recorder<span class="token operator">: </span><a href="[android-jvm]-recorder/index.html">Recorder</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>screenCapture<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.recorder.pixelCopy/[android-jvm]-screen-capture/index.html">ScreenCapture</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stateManager<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.stateTracking/StateManager///PointingToDeclaration/">StateManager</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>chunker<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-chunker/index.html">Chunker</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>storageMonitor<span class="token operator">: </span><a href="../com.verint.xm.sdk.dba.data.storage/[android-jvm]-storage-monitor/index.html">StorageMonitor</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="com.verint.xm.sdk.common.session/SessionEventObserver///PointingToDeclaration/">SessionEventObserver</span>, <a href="../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-chunker/-chunking-listener/index.html">Chunker.ChunkingListener</a>, <a href="[android-jvm]-recorder/-recorder-listener/index.html">Recorder.RecorderListener</a>, <a href="../com.verint.xm.sdk.dba.data.storage/[android-jvm]-storage-monitor/-storage-listener/index.html">StorageMonitor.StorageListener</a>, <a href="../com.verint.xm.sdk.dba.recorder.pixelCopy/[android-jvm]-screen-capture/-screen-capture-listener/index.html">ScreenCapture.ScreenCaptureListener</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="850538722%2FClasslikes%2F-710680164" anchor-label="ScalingChangedListener" id="850538722%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-scaling-changed-listener/index.html"><span>Scaling</span><wbr></wbr><span>Changed</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="850538722%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-scaling-changed-listener/index.html">ScalingChangedListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-scaling-changed-listener/index.html">ScalingChangedListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-scaling-changed-listener/index.html">ScalingChangedListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-scaling-changed-listener/index.html">ScalingChangedListener</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-561664218%2FClasslikes%2F-710680164" anchor-label="ScheduledCaptureRateChangeListener" id="-561664218%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-scheduled-capture-rate-change-listener/index.html"><span>Scheduled</span><wbr></wbr><span>Capture</span><wbr></wbr><span>Rate</span><wbr></wbr><span>Change</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-561664218%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-scheduled-capture-rate-change-listener/index.html">ScheduledCaptureRateChangeListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-scheduled-capture-rate-change-listener/index.html">ScheduledCaptureRateChangeListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-scheduled-capture-rate-change-listener/index.html">ScheduledCaptureRateChangeListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-scheduled-capture-rate-change-listener/index.html">ScheduledCaptureRateChangeListener</a></div><div class="brief ">Created by hyleung on 2013-07-04.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="521235129%2FClasslikes%2F-710680164" anchor-label="ScreenRecorder" id="521235129%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-screen-recorder/index.html"><span>Screen</span><wbr></wbr><span><span>Recorder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="521235129%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-screen-recorder/index.html">ScreenRecorder</a> : <a href="[android-jvm]-screen-recorder-context/index.html">ScreenRecorderContext</a>, <a href="[android-jvm]-event-publisher/index.html">EventPublisher</a>, <a href="[android-jvm]-mask-capture-runnable/-view-capture-runnable-context/index.html">MaskCaptureRunnable.ViewCaptureRunnableContext</a>, <a href="../com.verint.xm.sdk.dba.recorder.hierarchyWalker/[android-jvm]-hierarchy-walker-listener/index.html">HierarchyWalkerListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-screen-recorder/index.html">ScreenRecorder</a> : <a href="[android-jvm]-screen-recorder-context/index.html">ScreenRecorderContext</a>, <a href="[android-jvm]-event-publisher/index.html">EventPublisher</a>, <a href="[android-jvm]-mask-capture-runnable/-view-capture-runnable-context/index.html">MaskCaptureRunnable.ViewCaptureRunnableContext</a>, <a href="../com.verint.xm.sdk.dba.recorder.hierarchyWalker/[android-jvm]-hierarchy-walker-listener/index.html">HierarchyWalkerListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-screen-recorder/index.html">ScreenRecorder</a> : <a href="[android-jvm]-screen-recorder-context/index.html">ScreenRecorderContext</a>, <a href="[android-jvm]-event-publisher/index.html">EventPublisher</a>, <a href="[android-jvm]-mask-capture-runnable/-view-capture-runnable-context/index.html">MaskCaptureRunnable.ViewCaptureRunnableContext</a>, <a href="../com.verint.xm.sdk.dba.recorder.hierarchyWalker/[android-jvm]-hierarchy-walker-listener/index.html">HierarchyWalkerListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-screen-recorder/index.html">ScreenRecorder</a> : <a href="[android-jvm]-screen-recorder-context/index.html">ScreenRecorderContext</a>, <a href="[android-jvm]-event-publisher/index.html">EventPublisher</a>, <a href="[android-jvm]-mask-capture-runnable/-view-capture-runnable-context/index.html">MaskCaptureRunnable.ViewCaptureRunnableContext</a>, <a href="../com.verint.xm.sdk.dba.recorder.hierarchyWalker/[android-jvm]-hierarchy-walker-listener/index.html">HierarchyWalkerListener</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1326786054%2FClasslikes%2F-710680164" anchor-label="ScreenRecorderContext" id="-1326786054%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-screen-recorder-context/index.html"><span>Screen</span><wbr></wbr><span>Recorder</span><wbr></wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1326786054%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-screen-recorder-context/index.html">ScreenRecorderContext</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-screen-recorder-context/index.html">ScreenRecorderContext</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-screen-recorder-context/index.html">ScreenRecorderContext</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-screen-recorder-context/index.html">ScreenRecorderContext</a></div><div class="brief ">Created by hyleung on 1/24/2014.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1368896927%2FClasslikes%2F-710680164" anchor-label="ScrollDelayTracker" id="-1368896927%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-scroll-delay-tracker/index.html"><span>Scroll</span><wbr></wbr><span>Delay</span><wbr></wbr><span><span>Tracker</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1368896927%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-scroll-delay-tracker/index.html">ScrollDelayTracker</a> : <a href="[android-jvm]-interaction-delay-tracker/index.html">InteractionDelayTracker</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-scroll-delay-tracker/index.html">ScrollDelayTracker</a> : <a href="[android-jvm]-interaction-delay-tracker/index.html">InteractionDelayTracker</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-scroll-delay-tracker/index.html">ScrollDelayTracker</a> : <a href="[android-jvm]-interaction-delay-tracker/index.html">InteractionDelayTracker</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-scroll-delay-tracker/index.html">ScrollDelayTracker</a> : <a href="[android-jvm]-interaction-delay-tracker/index.html">InteractionDelayTracker</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1542342875%2FClasslikes%2F-710680164" anchor-label="TimeProvider" id="-1542342875%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-time-provider/index.html"><span>Time</span><wbr></wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1542342875%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-time-provider/index.html">TimeProvider</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-time-provider/index.html">TimeProvider</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-time-provider/index.html">TimeProvider</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-time-provider/index.html">TimeProvider</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-437675837%2FClasslikes%2F-710680164" anchor-label="WebViewMaskingInterface" id="-437675837%2FClasslikes%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-web-view-masking-interface/index.html"><span>Web</span><wbr></wbr><span>View</span><wbr></wbr><span>Masking</span><wbr></wbr><span><span>Interface</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-437675837%2FClasslikes%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-web-view-masking-interface/index.html">WebViewMaskingInterface</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-web-view-event-source/index.html">WebViewEventSource</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-web-view-masking-interface/index.html">WebViewMaskingInterface</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-web-view-event-source/index.html">WebViewEventSource</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-web-view-masking-interface/index.html">WebViewMaskingInterface</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-web-view-event-source/index.html">WebViewEventSource</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-web-view-masking-interface/index.html">WebViewMaskingInterface</a> : <a href="../com.verint.xm.sdk.dba.session/[android-jvm]-web-view-event-source/index.html">WebViewEventSource</a></div><div class="brief ">Created by hyleung on 2013-09-06.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

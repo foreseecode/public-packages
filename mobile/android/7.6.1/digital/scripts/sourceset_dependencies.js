@@ -1,0 +1,1 @@
+sourceset_dependencies='{":sdk:digital/debug":[],":sdk:digital/dev":[],":sdk:digital/devDebug":[],":sdk:digital/devRelease":[],":sdk:digital/main":[],":sdk:digital/prod":[],":sdk:digital/prodDebug":[],":sdk:digital/prodRelease":[],":sdk:digital/qa":[],":sdk:digital/qaDebug":[],":sdk:digital/qaRelease":[],":sdk:digital/release":[]}'

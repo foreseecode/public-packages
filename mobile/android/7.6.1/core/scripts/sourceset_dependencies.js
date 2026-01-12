@@ -1,0 +1,1 @@
+sourceset_dependencies='{":sdk:core/debug":[],":sdk:core/dev":[],":sdk:core/devDebug":[],":sdk:core/devRelease":[],":sdk:core/main":[],":sdk:core/prod":[],":sdk:core/prodDebug":[],":sdk:core/prodRelease":[],":sdk:core/qa":[],":sdk:core/qaDebug":[],":sdk:core/qaRelease":[],":sdk:core/release":[]}'

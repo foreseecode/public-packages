@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]SessionActivityPaused</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    dba
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:dba/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:dba/release"
+                                       data-filter=":sdk:dba/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    dba
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="dba::com.verint.xm.sdk.dba.session/SessionActivityPaused///PointingToDeclaration//-710680164">
+  <div class="breadcrumbs"><a href="../../../index.html">dba</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk.dba.session</a><span class="delimiter">/</span><span class="current">[androidJvm]SessionActivityPaused</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Session</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Paused</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">SessionActivityPaused</a> : <a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/index.html">AbstractDBASessionState</a></div><p class="paragraph">Created with IntelliJ IDEA. User: HoYan.Leung Date: 2/18/13 Time: 2:14 PM To change this template use File | Settings | File Templates.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-session-paused-awaiting-blacklist/index.html">SessionPausedAwaitingBlacklist</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-session-paused/index.html">SessionPaused</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="811590306%2FConstructors%2F-710680164" anchor-label="SessionActivityPaused" id="811590306%2FConstructors%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-session-activity-paused.html"><span>Session</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Paused</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="811590306%2FConstructors%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-595847794%2FFunctions%2F-710680164" anchor-label="attachActivityToRecorder" id="-595847794%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="attach-activity-to-recorder.html"><span>attach</span><wbr></wbr><span>Activity</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Recorder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-595847794%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="attach-activity-to-recorder.html"><span class="token function">attachActivityToRecorder</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a><span class="token punctuation">, </span></span><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">sessionGroupId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">isPaused<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1389293130%2FFunctions%2F-710680164" anchor-label="getSessionId" id="-1389293130%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/get-session-id.html"><span>get</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1389293130%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/get-session-id.html"><span class="token function">getSessionId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="577105681%2FFunctions%2F-710680164" anchor-label="getStableState" id="577105681%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/get-stable-state.html"><span>get</span><wbr></wbr><span>Stable</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="577105681%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/get-stable-state.html"><span class="token function">getStableState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-d-b-a-session-state/index.html">DBASessionState</a></div><div class="brief ">Returns a suitable state in which to start the SDK in the event that an inappropriate state is found on startup.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1374674456%2FFunctions%2F-710680164" anchor-label="handleActivityResume" id="-1374674456%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/handle-activity-resume.html"><span>handle</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Resume</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1374674456%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/handle-activity-resume.html"><span class="token function">handleActivityResume</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionStateContext<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a><span class="token punctuation">, </span></span><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1042578695%2FFunctions%2F-710680164" anchor-label="isPaused" id="-1042578695%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/is-paused.html"><span>is</span><wbr></wbr><span><span>Paused</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1042578695%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/is-paused.html"><span class="token function">isPaused</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1312335725%2FFunctions%2F-710680164" anchor-label="isPendingReactivation" id="-1312335725%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/is-pending-reactivation.html"><span>is</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Reactivation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1312335725%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/is-pending-reactivation.html"><span class="token function">isPendingReactivation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2093737474%2FFunctions%2F-710680164" anchor-label="isRecording" id="2093737474%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/is-recording.html"><span>is</span><wbr></wbr><span><span>Recording</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2093737474%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/is-recording.html"><span class="token function">isRecording</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="17807505%2FFunctions%2F-710680164" anchor-label="isRecordingPossible" id="17807505%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/is-recording-possible.html"><span>is</span><wbr></wbr><span>Recording</span><wbr></wbr><span><span>Possible</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="17807505%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/is-recording-possible.html"><span class="token function">isRecordingPossible</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="778989187%2FFunctions%2F-710680164" anchor-label="isSessionActive" id="778989187%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-session-active.html"><span>is</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Active</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="778989187%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-session-active.html"><span class="token function">isSessionActive</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1711778648%2FFunctions%2F-710680164" anchor-label="onActivityPaused" id="1711778648%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-activity-paused.html"><span>on</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Paused</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1711778648%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-activity-paused.html"><span class="token function">onActivityPaused</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">An Activity has been paused.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-298405093%2FFunctions%2F-710680164" anchor-label="onActivityResumed" id="-298405093%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-activity-resumed.html"><span>on</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Resumed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-298405093%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-activity-resumed.html"><span class="token function">onActivityResumed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">An Activity has been resumed.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="784811717%2FFunctions%2F-710680164" anchor-label="onActivityStarted" id="784811717%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-activity-started.html"><span>on</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="784811717%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-activity-started.html"><span class="token function">onActivityStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1891333626%2FFunctions%2F-710680164" anchor-label="onApplicationCrash" id="1891333626%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-application-crash.html"><span>on</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Crash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1891333626%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-application-crash.html"><span class="token function">onApplicationCrash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">The application has crashed</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1773569250%2FFunctions%2F-710680164" anchor-label="onApplicationExited" id="1773569250%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-application-exited.html"><span>on</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Exited</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1773569250%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-application-exited.html"><span class="token function">onApplicationExited</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">The application has been backgrounded</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1032766760%2FFunctions%2F-710680164" anchor-label="onBlacklistReturned" id="1032766760%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-blacklist-returned.html"><span>on</span><wbr></wbr><span>Blacklist</span><wbr></wbr><span><span>Returned</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1032766760%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-blacklist-returned.html"><span class="token function">onBlacklistReturned</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a><span class="token punctuation">, </span></span><span class="parameter ">versionIsBlacklisted<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief ">The blacklist server was contacted, and response was returned indicating if the SDK should begin recording</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1842480306%2FFunctions%2F-710680164" anchor-label="onBlacklistUnreachable" id="-1842480306%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-blacklist-unreachable.html"><span>on</span><wbr></wbr><span>Blacklist</span><wbr></wbr><span><span>Unreachable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1842480306%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-blacklist-unreachable.html"><span class="token function">onBlacklistUnreachable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">The SDK was unable to contact the blacklisting server</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1329448137%2FFunctions%2F-710680164" anchor-label="onDeactivate" id="-1329448137%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-deactivate.html"><span>on</span><wbr></wbr><span><span>Deactivate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1329448137%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-deactivate.html"><span class="token function">onDeactivate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">A request has been made to disable the DBA feature</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-419807896%2FFunctions%2F-710680164" anchor-label="onDisabled" id="-419807896%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-disabled.html"><span>on</span><wbr></wbr><span><span>Disabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-419807896%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-disabled.html"><span class="token function">onDisabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">application<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">The SDK haas been manually disabled</div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-d-b-a-session-state/on-disabled.html"><span class="token function">onDisabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">stateContext<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1539843174%2FFunctions%2F-710680164" anchor-label="onEnable" id="-1539843174%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-enable.html"><span>on</span><wbr></wbr><span><span>Enable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1539843174%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-enable.html"><span class="token function">onEnable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">The SDK haas been manually enabled</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1833547043%2FFunctions%2F-710680164" anchor-label="onEnteredState" id="-1833547043%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-entered-state.html"><span>on</span><wbr></wbr><span>Entered</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1833547043%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-entered-state.html"><span class="token function">onEnteredState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionStateContext<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">A housekeeping method allowing each state to perform essential functions on entering the state</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="234593161%2FFunctions%2F-710680164" anchor-label="onExitedState" id="234593161%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-exited-state.html"><span>on</span><wbr></wbr><span>Exited</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="234593161%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-exited-state.html"><span class="token function">onExitedState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionStateContext<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">A housekeeping method allowing each state to perform essential functions on exiting the state</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1305960802%2FFunctions%2F-710680164" anchor-label="onNetworkChanged" id="1305960802%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-network-changed.html"><span>on</span><wbr></wbr><span>Network</span><wbr></wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1305960802%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-network-changed.html"><span class="token function">onNetworkChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionStateContext<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a><span class="token punctuation">, </span></span><span class="parameter ">networkType<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.utils/NetworkType///PointingToDeclaration/">NetworkType</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1662946002%2FFunctions%2F-710680164" anchor-label="onNetworkConnected" id="1662946002%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-network-connected.html"><span>on</span><wbr></wbr><span>Network</span><wbr></wbr><span><span>Connected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1662946002%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-network-connected.html"><span class="token function">onNetworkConnected</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">A network connection has been established</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1356549989%2FFunctions%2F-710680164" anchor-label="onReactivated" id="1356549989%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-reactivated.html"><span>on</span><wbr></wbr><span><span>Reactivated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1356549989%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-reactivated.html"><span class="token function">onReactivated</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a><span class="token punctuation">, </span></span><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div><div class="brief ">A request has been made to reactivate the DBA feature</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1708139083%2FFunctions%2F-710680164" anchor-label="onRecordingStopped" id="1708139083%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-recording-stopped.html"><span>on</span><wbr></wbr><span>Recording</span><wbr></wbr><span><span>Stopped</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1708139083%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-recording-stopped.html"><span class="token function">onRecordingStopped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-recording-stopped.html"><span class="token function">onRecordingStopped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a><span class="token punctuation">, </span></span><span class="parameter ">stopType<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.recorder.chunking/[android-jvm]-stop-type/index.html">StopType</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1726488456%2FFunctions%2F-710680164" anchor-label="onSessionEnded" id="-1726488456%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-session-ended.html"><span>on</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Ended</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1726488456%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-session-ended.html"><span class="token function">onSessionEnded</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">application<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">NOT USED - can be removed</div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-d-b-a-session-state/on-session-ended.html"><span class="token function">onSessionEnded</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">stateContext<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1159046714%2FFunctions%2F-710680164" anchor-label="onSessionStarted" id="-1159046714%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-session-started.html"><span>on</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1159046714%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-session-started.html"><span class="token function">onSessionStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">application<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">NOT USED - can be removed</div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-d-b-a-session-state/on-session-started.html"><span class="token function">onSessionStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">stateContext<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-361888658%2FFunctions%2F-710680164" anchor-label="onSessionTimeout" id="-361888658%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-session-timeout.html"><span>on</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-361888658%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-session-timeout.html"><span class="token function">onSessionTimeout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="896087546%2FFunctions%2F-710680164" anchor-label="onStorageErrorDuringSession" id="896087546%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-storage-error-during-session.html"><span>on</span><wbr></wbr><span>Storage</span><wbr></wbr><span>Error</span><wbr></wbr><span>During</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="896087546%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-storage-error-during-session.html"><span class="token function">onStorageErrorDuringSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a><span class="token punctuation">, </span></span><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">jobQueueService<span class="token operator">: </span><a href="../../com.verint.xm.sdk.dba.jobQueue/[android-jvm]-job-queue-service/index.html">JobQueueService</a><span class="token punctuation">, </span></span><span class="parameter ">groupId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief ">An error has occurred trying to save some session data</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-618427942%2FFunctions%2F-710680164" anchor-label="onStorageExceededDuringSession" id="-618427942%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-storage-exceeded-during-session.html"><span>on</span><wbr></wbr><span>Storage</span><wbr></wbr><span>Exceeded</span><wbr></wbr><span>During</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-618427942%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-storage-exceeded-during-session.html"><span class="token function">onStorageExceededDuringSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a><span class="token punctuation">, </span></span><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div><div class="brief ">The storage available on the device has fallen below the level required for recording</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1198141508%2FFunctions%2F-710680164" anchor-label="onSubmissionComplete" id="-1198141508%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-submission-complete.html"><span>on</span><wbr></wbr><span>Submission</span><wbr></wbr><span><span>Complete</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1198141508%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/on-submission-complete.html"><span class="token function">onSubmissionComplete</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">The SDK has completed submitting the recording and events to the backend</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1138982565%2FFunctions%2F-710680164" anchor-label="onSubmit" id="-1138982565%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-submit.html"><span>on</span><wbr></wbr><span><span>Submit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1138982565%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-submit.html"><span class="token function">onSubmit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../[android-jvm]-session-state-context/index.html">SessionStateContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">The SDK is starting to submit the recording and events to the backend</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="654224264%2FFunctions%2F-710680164" anchor-label="shouldPersist" id="654224264%2FFunctions%2F-710680164" data-filterable-set=":sdk:dba/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dba/release" data-filterable-set=":sdk:dba/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/should-persist.html"><span>should</span><wbr></wbr><span><span>Persist</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="654224264%2FFunctions%2F-710680164"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dba/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.verint.xm.sdk.dba.session.state/[android-jvm]-abstract-d-b-a-session-state/should-persist.html"><span class="token function">shouldPersist</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief ">Determines if the state is a transient state, or one which should be re-instantiated on SDK launch</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

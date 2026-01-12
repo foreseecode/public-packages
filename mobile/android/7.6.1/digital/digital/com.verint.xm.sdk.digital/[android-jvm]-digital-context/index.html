@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]DigitalContext</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    digital
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:digital/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:digital/release"
+                                       data-filter=":sdk:digital/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    digital
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="digital::com.verint.xm.sdk.digital/DigitalContext///PointingToDeclaration//1235889745">
+  <div class="breadcrumbs"><a href="../../../index.html">digital</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk.digital</a><span class="delimiter">/</span><span class="current">[androidJvm]DigitalContext</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Digital</span><wbr></wbr><span><span>Context</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">DigitalContext</a> : <a href="../[android-jvm]-digital-stateful-context/index.html">DigitalStatefulContext</a>, <span data-unresolved-link="com.verint.xm.sdk.common.provider/DigitalContextServiceProvider///PointingToDeclaration/">DigitalContextServiceProvider</span></div><p class="paragraph">Created by alan.wang on 7/24/18.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1823976912%2FProperties%2F1235889745" anchor-label="configuration" id="-1823976912%2FProperties%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configuration.html"><span><span>configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1823976912%2FProperties%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="configuration.html">configuration</a><span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1006373168%2FProperties%2F1235889745" anchor-label="currentDigitalSurveyName" id="1006373168%2FProperties%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-digital-survey-name.html"><span>current</span><wbr></wbr><span>Digital</span><wbr></wbr><span>Survey</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1006373168%2FProperties%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="current-digital-survey-name.html">currentDigitalSurveyName</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-589828773%2FProperties%2F1235889745" anchor-label="HTTP_FAILURE_CODE_NA" id="-589828773%2FProperties%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-h-t-t-p_-f-a-i-l-u-r-e_-c-o-d-e_-n-a.html"><span>HTTP_</span><wbr></wbr><span>FAILURE_</span><wbr></wbr><span>CODE_</span><wbr></wbr><span>NA</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-589828773%2FProperties%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="-h-t-t-p_-f-a-i-l-u-r-e_-c-o-d-e_-n-a.html">HTTP_FAILURE_CODE_NA</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">-1</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1426099933%2FProperties%2F1235889745" anchor-label="respondentId" id="-1426099933%2FProperties%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="respondent-id.html"><span>respondent</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1426099933%2FProperties%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="respondent-id.html">respondentId</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1809893638%2FFunctions%2F1235889745" anchor-label="checkIfDigitalSurveyEnabledForCurrentId" id="-1809893638%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="check-if-digital-survey-enabled-for-current-id.html"><span>check</span><wbr></wbr><span>If</span><wbr></wbr><span>Digital</span><wbr></wbr><span>Survey</span><wbr></wbr><span>Enabled</span><wbr></wbr><span>For</span><wbr></wbr><span>Current</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1809893638%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="check-if-digital-survey-enabled-for-current-id.html"><span class="token function">checkIfDigitalSurveyEnabledForCurrentId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><a href="../../com.verint.xm.sdk.digital.network/[android-jvm]-digital-status-callback/index.html">DigitalStatusCallback</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-231735023%2FFunctions%2F1235889745" anchor-label="checkIfDigitalSurveyEnabledForName" id="-231735023%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="check-if-digital-survey-enabled-for-name.html"><span>check</span><wbr></wbr><span>If</span><wbr></wbr><span>Digital</span><wbr></wbr><span>Survey</span><wbr></wbr><span>Enabled</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-231735023%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="check-if-digital-survey-enabled-for-name.html"><span class="token function">checkIfDigitalSurveyEnabledForName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">digitalSurveyName<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><a href="../../com.verint.xm.sdk.digital.network/[android-jvm]-digital-status-callback/index.html">DigitalStatusCallback</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-204447733%2FFunctions%2F1235889745" anchor-label="getAvailableDigitalSurveyNames" id="-204447733%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-available-digital-survey-names.html"><span>get</span><wbr></wbr><span>Available</span><wbr></wbr><span>Digital</span><wbr></wbr><span>Survey</span><wbr></wbr><span><span>Names</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-204447733%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-available-digital-survey-names.html"><span class="token function">getAvailableDigitalSurveyNames</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/List.html">List</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-586824588%2FFunctions%2F1235889745" anchor-label="getDefaultDigitalSurveyName" id="-586824588%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-default-digital-survey-name.html"><span>get</span><wbr></wbr><span>Default</span><wbr></wbr><span>Digital</span><wbr></wbr><span>Survey</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-586824588%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-default-digital-survey-name.html"><span class="token function">getDefaultDigitalSurveyName</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="415633520%2FFunctions%2F1235889745" anchor-label="getDigitalBaseUrlTemplate" id="415633520%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-digital-base-url-template.html"><span>get</span><wbr></wbr><span>Digital</span><wbr></wbr><span>Base</span><wbr></wbr><span>Url</span><wbr></wbr><span><span>Template</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="415633520%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-digital-base-url-template.html"><span class="token function">getDigitalBaseUrlTemplate</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1717828859%2FFunctions%2F1235889745" anchor-label="getInstance" id="1717828859%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-instance.html"><span>get</span><wbr></wbr><span><span>Instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1717828859%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-instance.html"><span class="token function">getInstance</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../[android-jvm]-digital-stateful-context/index.html">DigitalStatefulContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1368656109%2FFunctions%2F1235889745" anchor-label="getIsEnabled" id="-1368656109%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-is-enabled.html"><span>get</span><wbr></wbr><span>Is</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1368656109%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-is-enabled.html"><span class="token function">getIsEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1743725364%2FFunctions%2F1235889745" anchor-label="getLastServerFailureCode" id="-1743725364%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-last-server-failure-code.html"><span>get</span><wbr></wbr><span>Last</span><wbr></wbr><span>Server</span><wbr></wbr><span>Failure</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1743725364%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-last-server-failure-code.html"><span class="token function">getLastServerFailureCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2086276345%2FFunctions%2F1235889745" anchor-label="getState" id="2086276345%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-state.html"><span>get</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2086276345%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-state.html"><span class="token function">getState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.verint.xm.sdk.digital.state/[android-jvm]-abstract-digital-state/index.html">AbstractDigitalState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="875632466%2FFunctions%2F1235889745" anchor-label="getThankYouPageAutoCloseDelay" id="875632466%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-thank-you-page-auto-close-delay.html"><span>get</span><wbr></wbr><span>Thank</span><wbr></wbr><span>You</span><wbr></wbr><span>Page</span><wbr></wbr><span>Auto</span><wbr></wbr><span>Close</span><wbr></wbr><span><span>Delay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="875632466%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-thank-you-page-auto-close-delay.html"><span class="token function">getThankYouPageAutoCloseDelay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1528980984%2FFunctions%2F1235889745" anchor-label="initiateDigitalSurvey" id="-1528980984%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="initiate-digital-survey.html"><span>initiate</span><wbr></wbr><span>Digital</span><wbr></wbr><span><span>Survey</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1528980984%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="initiate-digital-survey.html"><span class="token function">initiateDigitalSurvey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1249045991%2FFunctions%2F1235889745" anchor-label="launchDigitalSurvey" id="1249045991%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="launch-digital-survey.html"><span>launch</span><wbr></wbr><span>Digital</span><wbr></wbr><span><span>Survey</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1249045991%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="launch-digital-survey.html"><span class="token function">launchDigitalSurvey</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="548087645%2FFunctions%2F1235889745" anchor-label="notifyListener" id="548087645%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="notify-listener.html"><span>notify</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="548087645%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="notify-listener.html"><span class="token function">notifyListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listenerEvent<span class="token operator">: </span><a href="../../com.verint.xm.sdk.digital.listener/[android-jvm]-listener-event/index.html">ListenerEvent</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1083101298%2FFunctions%2F1235889745" anchor-label="prepare" id="1083101298%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prepare.html"><span><span>prepare</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1083101298%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="prepare.html"><span class="token function">prepare</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">application<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a><span class="token punctuation">, </span></span><span class="parameter ">stopgapConfig<span class="token operator">: </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1475363557%2FFunctions%2F1235889745" anchor-label="setLastServerFailureCode" id="-1475363557%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-last-server-failure-code.html"><span>set</span><wbr></wbr><span>Last</span><wbr></wbr><span>Server</span><wbr></wbr><span>Failure</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1475363557%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-last-server-failure-code.html"><span class="token function">setLastServerFailureCode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">httpStatusCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-794889847%2FFunctions%2F1235889745" anchor-label="setListener" id="-794889847%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-listener.html"><span>set</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-794889847%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-listener.html"><span class="token function">setListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="../../com.verint.xm.sdk/[android-jvm]-exp-digital-listener/index.html">ExpDigitalListener</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-551402024%2FFunctions%2F1235889745" anchor-label="transition" id="-551402024%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="transition.html"><span><span>transition</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-551402024%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="transition.html"><span class="token function">transition</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="../../com.verint.xm.sdk.digital.state/[android-jvm]-digital-event-type/index.html">DigitalEventType</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="808700762%2FFunctions%2F1235889745" anchor-label="updateStatusCheckUrlTemplateForTest" id="808700762%2FFunctions%2F1235889745" data-filterable-set=":sdk:digital/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:digital/release" data-filterable-set=":sdk:digital/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="update-status-check-url-template-for-test.html"><span>update</span><wbr></wbr><span>Status</span><wbr></wbr><span>Check</span><wbr></wbr><span>Url</span><wbr></wbr><span>Template</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Test</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="808700762%2FFunctions%2F1235889745"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:digital/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="update-status-check-url-template-for-test.html"><span class="token function">updateStatusCheckUrlTemplateForTest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">template<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.verint.xm.sdk.common.utils</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    core
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.6.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:core/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:core/release"
+                                       data-filter=":sdk:core/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    core
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="core::com.verint.xm.sdk.common.utils////PointingToDeclaration//831293418">
+  <div class="breadcrumbs"><a href="../../index.html">core</a><span class="delimiter">/</span><span class="current">com.verint.xm.sdk.common.utils</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="620607286%2FClasslikes%2F831293418" anchor-label="BroadcastIntentDispatcher" id="620607286%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-broadcast-intent-dispatcher/index.html"><span>Broadcast</span><wbr></wbr><span>Intent</span><wbr></wbr><span><span>Dispatcher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="620607286%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-broadcast-intent-dispatcher/index.html">BroadcastIntentDispatcher</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-broadcast-intent-dispatcher/index.html">BroadcastIntentDispatcher</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-broadcast-intent-dispatcher/index.html">BroadcastIntentDispatcher</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-broadcast-intent-dispatcher/index.html">BroadcastIntentDispatcher</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-426090890%2FClasslikes%2F831293418" anchor-label="BroadcastIntentDispatcherImpl" id="-426090890%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-broadcast-intent-dispatcher-impl/index.html"><span>Broadcast</span><wbr></wbr><span>Intent</span><wbr></wbr><span>Dispatcher</span><wbr></wbr><span><span>Impl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-426090890%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-broadcast-intent-dispatcher-impl/index.html">BroadcastIntentDispatcherImpl</a> : <a href="[android-jvm]-broadcast-intent-dispatcher/index.html">BroadcastIntentDispatcher</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-broadcast-intent-dispatcher-impl/index.html">BroadcastIntentDispatcherImpl</a> : <a href="[android-jvm]-broadcast-intent-dispatcher/index.html">BroadcastIntentDispatcher</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-broadcast-intent-dispatcher-impl/index.html">BroadcastIntentDispatcherImpl</a> : <a href="[android-jvm]-broadcast-intent-dispatcher/index.html">BroadcastIntentDispatcher</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-broadcast-intent-dispatcher-impl/index.html">BroadcastIntentDispatcherImpl</a> : <a href="[android-jvm]-broadcast-intent-dispatcher/index.html">BroadcastIntentDispatcher</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1420861346%2FClasslikes%2F831293418" anchor-label="Bucket" id="-1420861346%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-bucket/index.html"><span><span>Bucket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1420861346%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-bucket/index.html">Bucket</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-bucket/index.html">Bucket</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-bucket/index.html">Bucket</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-bucket/index.html">Bucket</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1661589400%2FClasslikes%2F831293418" anchor-label="Consts" id="1661589400%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-consts/index.html"><span><span>Consts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1661589400%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-consts/index.html">Consts</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-consts/index.html">Consts</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-consts/index.html">Consts</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-consts/index.html">Consts</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-850900774%2FClasslikes%2F831293418" anchor-label="Date" id="-850900774%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-date/index.html"><span><span>Date</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-850900774%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-date/index.html">Date</a> : <a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-date/index.html">Date</a> : <a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-date/index.html">Date</a> : <a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-date/index.html">Date</a> : <a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1810203156%2FClasslikes%2F831293418" anchor-label="DebugFlags" id="1810203156%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-debug-flags/index.html"><span>Debug</span><wbr></wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1810203156%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-debug-flags/index.html">DebugFlags</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-debug-flags/index.html">DebugFlags</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-debug-flags/index.html">DebugFlags</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-debug-flags/index.html">DebugFlags</a></div><div class="brief ">A collection of Debug flags to enable development features within the Common module All flags added here should have...</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1705001770%2FClasslikes%2F831293418" anchor-label="DebugUtils" id="1705001770%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-debug-utils/index.html"><span>Debug</span><wbr></wbr><span><span>Utils</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1705001770%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-debug-utils/index.html">DebugUtils</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-debug-utils/index.html">DebugUtils</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-debug-utils/index.html">DebugUtils</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-debug-utils/index.html">DebugUtils</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1946628171%2FClasslikes%2F831293418" anchor-label="DescriptiveStatistics" id="1946628171%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-descriptive-statistics/index.html"><span>Descriptive</span><wbr></wbr><span><span>Statistics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1946628171%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-descriptive-statistics/index.html">DescriptiveStatistics</a> : <a href="https://developer.android.com/reference/kotlin/java/util/ArrayList.html">ArrayList</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/util/ArrayList.html">E</a><span class="token operator">&gt; </span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-descriptive-statistics/index.html">DescriptiveStatistics</a> : <a href="https://developer.android.com/reference/kotlin/java/util/ArrayList.html">ArrayList</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/util/ArrayList.html">E</a><span class="token operator">&gt; </span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-descriptive-statistics/index.html">DescriptiveStatistics</a> : <a href="https://developer.android.com/reference/kotlin/java/util/ArrayList.html">ArrayList</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/util/ArrayList.html">E</a><span class="token operator">&gt; </span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-descriptive-statistics/index.html">DescriptiveStatistics</a> : <a href="https://developer.android.com/reference/kotlin/java/util/ArrayList.html">ArrayList</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/util/ArrayList.html">E</a><span class="token operator">&gt; </span></div><div class="brief ">Created by ardavan.kalhori on 16-05-20.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="675489878%2FClasslikes%2F831293418" anchor-label="DisplayUtil" id="675489878%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-display-util/index.html"><span>Display</span><wbr></wbr><span><span>Util</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="675489878%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-display-util/index.html">DisplayUtil</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-display-util/index.html">DisplayUtil</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-display-util/index.html">DisplayUtil</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-display-util/index.html">DisplayUtil</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2135756874%2FClasslikes%2F831293418" anchor-label="ExpProperties" id="2135756874%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-exp-properties/index.html"><span>Exp</span><wbr></wbr><span><span>Properties</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2135756874%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-exp-properties/index.html">ExpProperties</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-exp-properties/index.html">ExpProperties</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-exp-properties/index.html">ExpProperties</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-exp-properties/index.html">ExpProperties</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-680617243%2FClasslikes%2F831293418" anchor-label="Functional" id="-680617243%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-functional/index.html"><span><span>Functional</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-680617243%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-functional/index.html">Functional</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-functional/index.html">Functional</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-functional/index.html">Functional</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-functional/index.html">Functional</a></div><div class="brief ">Created by Dan.Graham on 10/22/2014.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1484308130%2FClasslikes%2F831293418" anchor-label="IDGenerator" id="1484308130%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-i-d-generator/index.html"><span><span>IDGenerator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1484308130%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-i-d-generator/index.html">IDGenerator</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-i-d-generator/index.html">IDGenerator</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-i-d-generator/index.html">IDGenerator</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-i-d-generator/index.html">IDGenerator</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2001356835%2FClasslikes%2F831293418" anchor-label="Interval" id="2001356835%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-interval/index.html"><span><span>Interval</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2001356835%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-interval/index.html">Interval</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-interval/index.html">Interval</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-interval/index.html">Interval</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-interval/index.html">Interval</a></div><div class="brief ">Created with IntelliJ IDEA.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1202458256%2FClasslikes%2F831293418" anchor-label="JsonValidator" id="-1202458256%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-json-validator/index.html"><span>Json</span><wbr></wbr><span><span>Validator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1202458256%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-json-validator/index.html">JsonValidator</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-json-validator/index.html">JsonValidator</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-json-validator/index.html">JsonValidator</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-json-validator/index.html">JsonValidator</a></div><div class="brief ">Created by alan.wang on 5/25/18.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-956408270%2FClasslikes%2F831293418" anchor-label="NetworkType" id="-956408270%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-network-type/index.html"><span>Network</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-956408270%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-network-type/index.html">NetworkType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-network-type/index.html">NetworkType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-network-type/index.html">NetworkType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-network-type/index.html">NetworkType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-768330196%2FClasslikes%2F831293418" anchor-label="SamplingRateChecker" id="-768330196%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-sampling-rate-checker/index.html"><span>Sampling</span><wbr></wbr><span>Rate</span><wbr></wbr><span><span>Checker</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-768330196%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-sampling-rate-checker/index.html">SamplingRateChecker</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-sampling-rate-checker/index.html">SamplingRateChecker</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-sampling-rate-checker/index.html">SamplingRateChecker</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-sampling-rate-checker/index.html">SamplingRateChecker</a></div><div class="brief ">Provides namespace-based sampling rate checking with persistent decisions</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1933555562%2FClasslikes%2F831293418" anchor-label="SimplifiedSQLHelper" id="-1933555562%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-simplified-s-q-l-helper/index.html"><span>Simplified</span><wbr></wbr><span><span>SQLHelper</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1933555562%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-simplified-s-q-l-helper/index.html">SimplifiedSQLHelper</a> : <a href="https://developer.android.com/reference/kotlin/android/database/sqlite/SQLiteOpenHelper.html">SQLiteOpenHelper</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-simplified-s-q-l-helper/index.html">SimplifiedSQLHelper</a> : <a href="https://developer.android.com/reference/kotlin/android/database/sqlite/SQLiteOpenHelper.html">SQLiteOpenHelper</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-simplified-s-q-l-helper/index.html">SimplifiedSQLHelper</a> : <a href="https://developer.android.com/reference/kotlin/android/database/sqlite/SQLiteOpenHelper.html">SQLiteOpenHelper</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-simplified-s-q-l-helper/index.html">SimplifiedSQLHelper</a> : <a href="https://developer.android.com/reference/kotlin/android/database/sqlite/SQLiteOpenHelper.html">SQLiteOpenHelper</a></div><div class="brief ">Created by selwynleeke on 2017-03-03.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="320153119%2FClasslikes%2F831293418" anchor-label="Storage" id="320153119%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-storage/index.html"><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="320153119%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-storage/index.html">Storage</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-storage/index.html">Storage</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-storage/index.html">Storage</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-storage/index.html">Storage</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-326597408%2FClasslikes%2F831293418" anchor-label="UserSamplingSelection" id="-326597408%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-user-sampling-selection/index.html"><span>User</span><wbr></wbr><span>Sampling</span><wbr></wbr><span><span>Selection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-326597408%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-user-sampling-selection/index.html">UserSamplingSelection</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-user-sampling-selection/index.html">UserSamplingSelection</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-user-sampling-selection/index.html">UserSamplingSelection</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="[android-jvm]-user-sampling-selection/index.html">UserSamplingSelection</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="26185478%2FClasslikes%2F831293418" anchor-label="Util" id="26185478%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-util/index.html"><span><span>Util</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="26185478%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-util/index.html">Util</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-util/index.html">Util</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-util/index.html">Util</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-util/index.html">Util</a></div><div class="brief ">Created by Dan.Graham on 6/1/2015.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1579243967%2FClasslikes%2F831293418" anchor-label="WebView" id="-1579243967%2FClasslikes%2F831293418" data-filterable-set=":sdk:core/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:core/release" data-filterable-set=":sdk:core/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-web-view/index.html"><span>Web</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1579243967%2FClasslikes%2F831293418"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="[android-jvm]-web-view/index.html">WebView</a></div><div class="symbol monospace"><span class="token keyword">class </span><a href="[android-jvm]-web-view/index.html">WebView</a></div><div class="symbol monospace"><span class="token keyword">class </span><a href="[android-jvm]-web-view/index.html">WebView</a></div><div class="symbol monospace"><span class="token keyword">class </span><a href="[android-jvm]-web-view/index.html">WebView</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
