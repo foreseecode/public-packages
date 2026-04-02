@@ -1,0 +1,82 @@
+{
+  "customerId": "Ij6P1lfZHchO/co10lQ4BQ=="
+  "siteId": 12345,
+  "customerKey": 4453888,
+  "repeatDaysAfterDecline": 5,
+  "repeatDaysAfterComplete": 5,
+  "repeatDaysAfterAccept": 3,
+  "notificationType": "CONTACT",
+  "supportsReinvitation": true,
+  "sessionReplayEnabled": true,
+  "appName": "Stark Industries",
+  "whitelistedHosts": [
+    "verint.com"
+  ],
+  "surveyEngine": {
+    "phoneCodes": [
+      { "label": "Germany", "code": "49" },
+      { "label": "Austria", "code": "43" }
+    ],
+    "defaultPhoneCode": "43"
+  },
+  "rulesEngine": {
+    "enabled": true,
+    "stories": [
+      {
+        "name": "Show_Survey_1",
+        "enabled": true,
+        "repeatAfter": "10m",
+        "steps": [
+          {
+            "stepName": "checkSignificantEvent",
+            "name": "Show_Survey_1",
+            "value": 1
+          },
+          {
+            "stepName":"showSurvey",
+            "url": "https://survey.vovici.com/se/705E3F0533AE1B12",
+            "presentationMode": "MODAL"
+          }
+        ]
+      }
+    ]
+  },
+  "cppParameters": {
+    "myCPP": "test new cpp value",
+    "AnotherCPP": "hello",
+    "omtr_beacon": "https://metrics.cvshealthfake.com/b/ss/cvshealthspecialtyprod/1/JAVA-4.16.1-AN/s0000508936000?AQB=1&mid=000665357090495988250001&AQE=1"
+  },
+  "invite": {
+    "logo": "invite_logo.png",
+    "header": "invite_header.png",
+    "baseColor": [25, 141, 206]
+  },
+  "survey": {
+    "closeButtonColor": [132, 112, 255],
+    "closeButtonBackgroundColor": [255,255,102],
+    "headerColor": [255, 204, 203]
+  },
+  "notificationLayout": "notification_custom",
+  "notificationIcon": "invite_logo",
+  "replayStorage": {
+    "replayStorageLimitAsPercentageOfTotalSpace": 10
+  },
+  "supportLandscape": true,
+  "disabled_surveyManagement": {
+    "surveys": [
+      {
+        "campaignId": "0",
+        "groupId": "1885224709",
+        "projectId": "1069037906",
+        "url": "https://survey.vovici.com",
+        "name": "ContactSurvey",
+        "pageViews": 3
+      }
+    ],
+    "countryCodes": [
+      { "label": "Ireland", "code22": "353" },
+      { "label": "Ukraine", "code": "380" }
+    ],
+    "defaultCountryCode": "43"
+  }
+}
