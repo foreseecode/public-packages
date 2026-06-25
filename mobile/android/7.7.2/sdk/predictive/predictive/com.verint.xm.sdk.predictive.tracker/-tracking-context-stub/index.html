@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>TrackingContextStub</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    predictive
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+7.7.2        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:predictive/main">main</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:predictive/main"
+                                       data-filter=":sdk:predictive/main"/>
+                                <span class="checkbox--icon"></span>
+                                main
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    predictive
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="predictive::com.verint.xm.sdk.predictive.tracker/TrackingContextStub///PointingToDeclaration//89756419">
+  <div class="breadcrumbs"><a href="../../../index.html">predictive</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk.predictive.tracker</a><span class="delimiter">/</span><span class="current">TrackingContextStub</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Tracking</span><wbr></wbr><span>Context</span><wbr></wbr><span><span>Stub</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">TrackingContextStub</a><span class="token keyword"> extends </span><a href="../-tracking-context/index.html">TrackingContext</a></div><p class="paragraph">Created by selwynleeke on 2014-12-17.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-1303100626%2FConstructors%2F89756419" anchor-label="TrackingContextStub" id="-1303100626%2FConstructors%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tracking-context-stub.html"><span>Tracking</span><wbr></wbr><span>Context</span><wbr></wbr><span><span>Stub</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1303100626%2FConstructors%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="-tracking-context-stub.html"><span class="token function">TrackingContextStub</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-998887510%2FFunctions%2F89756419" anchor-label="abortSurvey" id="-998887510%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="abort-survey.html"><span>abort</span><wbr></wbr><span><span>Survey</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-998887510%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="abort-survey.html"><span class="token function">abortSurvey</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1558049445%2FFunctions%2F89756419" anchor-label="acceptedLocalNotification" id="1558049445%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accepted-local-notification.html"><span>accepted</span><wbr></wbr><span>Local</span><wbr></wbr><span><span>Notification</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1558049445%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="accepted-local-notification.html"><span class="token function">acceptedLocalNotification</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the local notification associated with the invitation has been accepted</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-624590043%2FFunctions%2F89756419" anchor-label="acceptInvitation" id="-624590043%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept-invitation.html"><span>accept</span><wbr></wbr><span><span>Invitation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-624590043%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="accept-invitation.html"><span class="token function">acceptInvitation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the survey invitation has been accepted</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="17519867%2FFunctions%2F89756419" anchor-label="addObserver" id="17519867%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-observer.html"><span>add</span><wbr></wbr><span><span>Observer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="17519867%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="add-observer.html"><span class="token function">addObserver</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.events/TriggerEventObserver///PointingToDeclaration/">TriggerEventObserver</span> observer</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="932909767%2FFunctions%2F89756419" anchor-label="applicationExited" id="932909767%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="application-exited.html"><span>application</span><wbr></wbr><span><span>Exited</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="932909767%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="application-exited.html"><span class="token function">applicationExited</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-965892782%2FFunctions%2F89756419" anchor-label="applicationLaunched" id="-965892782%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="application-launched.html"><span>application</span><wbr></wbr><span><span>Launched</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-965892782%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="application-launched.html"><span class="token function">applicationLaunched</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the application has launched</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1731627715%2FFunctions%2F89756419" anchor-label="checkState" id="-1731627715%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="check-state.html"><span>check</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1731627715%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="check-state.html"><span class="token function">checkState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Checks the state of the tracker.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2105210483%2FFunctions%2F89756419" anchor-label="completeSurvey" id="2105210483%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="complete-survey.html"><span>complete</span><wbr></wbr><span><span>Survey</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2105210483%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="complete-survey.html"><span class="token function">completeSurvey</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the survey has been completed</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1223239291%2FFunctions%2F89756419" anchor-label="declineInvitation" id="-1223239291%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="decline-invitation.html"><span>decline</span><wbr></wbr><span><span>Invitation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1223239291%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="decline-invitation.html"><span class="token function">declineInvitation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Indicate that the survey invitation has been declined</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1640084607%2FFunctions%2F89756419" anchor-label="getCurrentConfiguration" id="-1640084607%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-current-configuration.html"><span>get</span><wbr></wbr><span>Current</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1640084607%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/Configuration///PointingToDeclaration/">Configuration</span> <a href="get-current-configuration.html"><span class="token function">getCurrentConfiguration</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1478917813%2FFunctions%2F89756419" anchor-label="getState" id="-1478917813%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-state.html"><span>get</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1478917813%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../-persisted-state/index.html">PersistedState</a> <a href="get-state.html"><span class="token function">getState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="928599753%2FFunctions%2F89756419" anchor-label="getStringsProvider" id="928599753%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-strings-provider.html"><span>get</span><wbr></wbr><span>Strings</span><wbr></wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="928599753%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.utils.valuesProvider/ValuesProvider///PointingToDeclaration/">ValuesProvider</span> <a href="get-strings-provider.html"><span class="token function">getStringsProvider</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-102316190%2FFunctions%2F89756419" anchor-label="getSurveyUrlBase" id="-102316190%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-survey-url-base.html"><span>get</span><wbr></wbr><span>Survey</span><wbr></wbr><span>Url</span><wbr></wbr><span><span>Base</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-102316190%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-survey-url-base.html"><span class="token function">getSurveyUrlBase</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/SurveyStyle///PointingToDeclaration/">SurveyStyle</span> style</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1883875069%2FFunctions%2F89756419" anchor-label="getURLEncodedCID" id="1883875069%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-u-r-l-encoded-c-i-d.html"><span>get</span><wbr></wbr><span>URLEncoded</span><wbr></wbr><span><span>CID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1883875069%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-u-r-l-encoded-c-i-d.html"><span class="token function">getURLEncodedCID</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Getter for the API key</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1006999270%2FFunctions%2F89756419" anchor-label="incrementSignificantEventsCountWithKey" id="-1006999270%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="increment-significant-events-count-with-key.html"><span>increment</span><wbr></wbr><span>Significant</span><wbr></wbr><span>Events</span><wbr></wbr><span>Count</span><wbr></wbr><span>With</span><wbr></wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1006999270%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="increment-significant-events-count-with-key.html"><span class="token function">incrementSignificantEventsCountWithKey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key</span></span><span class="token punctuation">)</span></div><div class="brief ">Increment the significant event count for a given event key</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1335344135%2FFunctions%2F89756419" anchor-label="initLogging" id="-1335344135%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="init-logging.html"><span>init</span><wbr></wbr><span><span>Logging</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1335344135%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="init-logging.html"><span class="token function">initLogging</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a> application</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-791369969%2FFunctions%2F89756419" anchor-label="onActivityPaused" id="-791369969%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-activity-paused.html"><span>on</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Paused</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-791369969%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-activity-paused.html"><span class="token function">onActivityPaused</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a> activity</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1252113104%2FFunctions%2F89756419" anchor-label="onActivityResumed" id="-1252113104%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-activity-resumed.html"><span>on</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Resumed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1252113104%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-activity-resumed.html"><span class="token function">onActivityResumed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a> activity</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1885179590%2FFunctions%2F89756419" anchor-label="onActivityStarted" id="1885179590%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-activity-started.html"><span>on</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1885179590%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-activity-started.html"><span class="token function">onActivityStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a> activity</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="324810579%2FFunctions%2F89756419" anchor-label="onInviteAccepted" id="324810579%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-invite-accepted.html"><span>on</span><wbr></wbr><span>Invite</span><wbr></wbr><span><span>Accepted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="324810579%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-invite-accepted.html"><span class="token function">onInviteAccepted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span> measureConfiguration</span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the invitation is accepted</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1287169190%2FFunctions%2F89756419" anchor-label="onInviteDeclined" id="-1287169190%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-invite-declined.html"><span>on</span><wbr></wbr><span>Invite</span><wbr></wbr><span><span>Declined</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1287169190%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-invite-declined.html"><span class="token function">onInviteDeclined</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span> measureConfiguration</span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the invitation is declined</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="111717160%2FFunctions%2F89756419" anchor-label="onInvitePresented" id="111717160%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-invite-presented.html"><span>on</span><wbr></wbr><span>Invite</span><wbr></wbr><span><span>Presented</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="111717160%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-invite-presented.html"><span class="token function">onInvitePresented</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span> measureConfiguration</span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the invitation is presented</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1027686406%2FFunctions%2F89756419" anchor-label="onNetworkDisconnected" id="-1027686406%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-network-disconnected.html"><span>on</span><wbr></wbr><span>Network</span><wbr></wbr><span><span>Disconnected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1027686406%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-network-disconnected.html"><span class="token function">onNetworkDisconnected</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a> activity<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-tracking-context/-network-action/index.html">TrackingContext.NetworkAction</a> action<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span> measureConfiguration</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2105968789%2FFunctions%2F89756419" anchor-label="onReactivated" id="2105968789%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-reactivated.html"><span>on</span><wbr></wbr><span><span>Reactivated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2105968789%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-reactivated.html"><span class="token function">onReactivated</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1160039976%2FFunctions%2F89756419" anchor-label="onSamplingCheckCompleted" id="1160039976%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-sampling-check-completed.html"><span>on</span><wbr></wbr><span>Sampling</span><wbr></wbr><span>Check</span><wbr></wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1160039976%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-sampling-check-completed.html"><span class="token function">onSamplingCheckCompleted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span> measureConfiguration<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>boolean isInPool</span></span><span class="token punctuation">)</span></div><div class="brief ">Called by Tracker when the sampling pool check is completed on a given measure</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1213173036%2FFunctions%2F89756419" anchor-label="onSurveyAborted" id="1213173036%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-aborted.html"><span>on</span><wbr></wbr><span>Survey</span><wbr></wbr><span><span>Aborted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1213173036%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-survey-aborted.html"><span class="token function">onSurveyAborted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span> measureConfiguration</span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the survey is aborted</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1589055064%2FFunctions%2F89756419" anchor-label="onSurveyCompleted" id="-1589055064%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-completed.html"><span>on</span><wbr></wbr><span>Survey</span><wbr></wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1589055064%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-survey-completed.html"><span class="token function">onSurveyCompleted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span> measureConfiguration</span></span><span class="token punctuation">)</span></div><div class="brief ">Called by the Tracker when the survey is completed</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1931082030%2FFunctions%2F89756419" anchor-label="persistState" id="1931082030%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="persist-state.html"><span>persist</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1931082030%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="persist-state.html"><span class="token function">persistState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-persisted-state/index.html">PersistedState</a> persistedState</span></span><span class="token punctuation">)</span></div><div class="brief ">Persist the PersistedState to SharedPreferences</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1922242070%2FFunctions%2F89756419" anchor-label="removeObserver" id="-1922242070%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-observer.html"><span>remove</span><wbr></wbr><span><span>Observer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1922242070%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean <a href="remove-observer.html"><span class="token function">removeObserver</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.events/TriggerEventObserver///PointingToDeclaration/">TriggerEventObserver</span> observer</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="799126068%2FFunctions%2F89756419" anchor-label="resetAll" id="799126068%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-all.html"><span>reset</span><wbr></wbr><span><span>All</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="799126068%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="reset-all.html"><span class="token function">resetAll</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Resets all persisted state.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1115354410%2FFunctions%2F89756419" anchor-label="setDeclineDate" id="-1115354410%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-decline-date.html"><span>set</span><wbr></wbr><span>Decline</span><wbr></wbr><span><span>Date</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1115354410%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-decline-date.html"><span class="token function">setDeclineDate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a> declineDate</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-208558724%2FFunctions%2F89756419" anchor-label="setRespondentId" id="-208558724%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-respondent-id.html"><span>set</span><wbr></wbr><span>Respondent</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-208558724%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="set-respondent-id.html"><span class="token function">setRespondentId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> rid</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-694246530%2FFunctions%2F89756419" anchor-label="triggerInvitation" id="-694246530%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="trigger-invitation.html"><span>trigger</span><wbr></wbr><span><span>Invitation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-694246530%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="trigger-invitation.html"><span class="token function">triggerInvitation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> surveyId</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="370399325%2FFunctions%2F89756419" anchor-label="triggerSurvey" id="370399325%2FFunctions%2F89756419" data-filterable-set=":sdk:predictive/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:predictive/main" data-filterable-set=":sdk:predictive/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="trigger-survey.html"><span>trigger</span><wbr></wbr><span><span>Survey</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="370399325%2FFunctions%2F89756419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:predictive/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="trigger-survey.html"><span class="token function">triggerSurvey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> surveyId</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
