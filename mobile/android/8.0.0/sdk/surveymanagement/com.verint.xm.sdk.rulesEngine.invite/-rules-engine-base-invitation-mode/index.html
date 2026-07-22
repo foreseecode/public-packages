@@ -1,0 +1,434 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>RulesEngineBaseInvitationMode</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    Verint XM SDK
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":sdk:surveymanagement/main">main</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:surveymanagement/main" data-filter=":sdk:surveymanagement/main">
+                                <span class="checkbox--icon"></span>
+                                main
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Verint XM SDK
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="surveymanagement::com.verint.xm.sdk.rulesEngine.invite/RulesEngineBaseInvitationMode///PointingToDeclaration//-845573179">
+  <div class="breadcrumbs"><a href="../../index.html">surveymanagement</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk.rulesEngine.invite</a><span class="delimiter">/</span><span class="current">RulesEngineBaseInvitationMode</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Rules</span><wbr><span>Engine</span><wbr><span>Base</span><wbr><span>Invitation</span><wbr><span><span>Mode</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">RulesEngineBaseInvitationMode</a><span class="token keyword"> implements </span><a href="../-invitation-mode/index.html">InvitationMode</a></div><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-rules-engine-base-notification-invite-mode/index.html">RulesEngineBaseNotificationInviteMode</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-rules-engine-contact-invitation-mode/index.html">RulesEngineContactInvitationMode</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-rules-engine-invitation-mode/index.html">RulesEngineInvitationMode</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="628675413%2FConstructors%2F-845573179" anchor-label="RulesEngineBaseInvitationMode" id="628675413%2FConstructors%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-rules-engine-base-invitation-mode.html"><span>Rules</span><wbr><span>Engine</span><wbr><span>Base</span><wbr><span>Invitation</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="628675413%2FConstructors%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><a href="index.html">RulesEngineBaseInvitationMode</a>&nbsp;<a href="-rules-engine-base-invitation-mode.html"><span class="token function">RulesEngineBaseInvitationMode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.verint.xm.sdk.rulesEngine.survey/-r-e-survey/index.html">RESurvey</a>&nbsp;measureConfigurationInternal</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1526341606%2FProperties%2F-845573179" anchor-label="measureConfigurationInternal" id="1526341606%2FProperties%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1526341606%2FProperties%2F-845573179"><span>measure</span><wbr><span>Configuration</span><wbr><span><span>Internal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1526341606%2FProperties%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">private </span><a href="../../com.verint.xm.sdk.rulesEngine.survey/-r-e-survey/index.html">RESurvey</a>&nbsp;<a href="index.html#1526341606%2FProperties%2F-845573179">measureConfigurationInternal</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-464127589%2FFunctions%2F-845573179" anchor-label="cancelPendingNotifications" id="-464127589%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cancel-pending-notifications.html"><span>cancel</span><wbr><span>Pending</span><wbr><span><span>Notifications</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-464127589%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="cancel-pending-notifications.html"><span class="token function">cancelPendingNotifications</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-88717029%2FFunctions%2F-845573179" anchor-label="cleanUp" id="-88717029%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clean-up.html"><span>clean</span><wbr><span><span>Up</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-88717029%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="clean-up.html"><span class="token function">cleanUp</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1278591761%2FFunctions%2F-845573179" anchor-label="getMeasureConfig" id="1278591761%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-measure-config.html"><span>get</span><wbr><span>Measure</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1278591761%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/MeasureConfigurationInternal///PointingToDeclaration/">MeasureConfigurationInternal</span>&nbsp;<a href="get-measure-config.html"><span class="token function">getMeasureConfig</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2044710348%2FFunctions%2F-845573179" anchor-label="getMeasureConfigurationInternal" id="-2044710348%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-measure-configuration-internal.html"><span>get</span><wbr><span>Measure</span><wbr><span>Configuration</span><wbr><span><span>Internal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2044710348%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><a href="../../com.verint.xm.sdk.rulesEngine.survey/-r-e-survey/index.html">RESurvey</a>&nbsp;<a href="get-measure-configuration-internal.html"><span class="token function">getMeasureConfigurationInternal</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1416735899%2FFunctions%2F-845573179" anchor-label="isInvitePending" id="1416735899%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-invite-pending.html"><span>is</span><wbr><span>Invite</span><wbr><span><span>Pending</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1416735899%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a>&nbsp;<a href="is-invite-pending.html"><span class="token function">isInvitePending</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1397072108%2FFunctions%2F-845573179" anchor-label="isSurveyPending" id="1397072108%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-survey-pending.html"><span>is</span><wbr><span>Survey</span><wbr><span><span>Pending</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1397072108%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a>&nbsp;<a href="is-survey-pending.html"><span class="token function">isSurveyPending</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1613447231%2FFunctions%2F-845573179" anchor-label="launchInvite" id="1613447231%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="launch-invite.html"><span>launch</span><wbr><span><span>Invite</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1613447231%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="launch-invite.html"><span class="token function">launchInvite</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1802234610%2FFunctions%2F-845573179" anchor-label="launchSurvey" id="-1802234610%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="launch-survey.html"><span>launch</span><wbr><span><span>Survey</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1802234610%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="launch-survey.html"><span class="token function">launchSurvey</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="504074651%2FFunctions%2F-845573179" anchor-label="onApplicationExit" id="504074651%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-application-exit.html"><span>on</span><wbr><span>Application</span><wbr><span><span>Exit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="504074651%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="on-application-exit.html"><span class="token function">onApplicationExit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-590866545%2FFunctions%2F-845573179" anchor-label="onInvitationAccepted" id="-590866545%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-invitation-accepted.html"><span>on</span><wbr><span>Invitation</span><wbr><span><span>Accepted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-590866545%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="on-invitation-accepted.html"><span class="token function">onInvitationAccepted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2004637462%2FFunctions%2F-845573179" anchor-label="onInvitationDeclined" id="2004637462%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-invitation-declined.html"><span>on</span><wbr><span>Invitation</span><wbr><span><span>Declined</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2004637462%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="on-invitation-declined.html"><span class="token function">onInvitationDeclined</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1663561994%2FFunctions%2F-845573179" anchor-label="onLocalNotificationAccepted" id="1663561994%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-local-notification-accepted.html"><span>on</span><wbr><span>Local</span><wbr><span>Notification</span><wbr><span><span>Accepted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1663561994%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="on-local-notification-accepted.html"><span class="token function">onLocalNotificationAccepted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="964989451%2FFunctions%2F-845573179" anchor-label="onModalViewClosed" id="964989451%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-modal-view-closed.html"><span>on</span><wbr><span>Modal</span><wbr><span>View</span><wbr><span><span>Closed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="964989451%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="on-modal-view-closed.html"><span class="token function">onModalViewClosed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1324760598%2FFunctions%2F-845573179" anchor-label="onNetworkDisconnected" id="1324760598%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-network-disconnected.html"><span>on</span><wbr><span>Network</span><wbr><span><span>Disconnected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1324760598%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="on-network-disconnected.html"><span class="token function">onNetworkDisconnected</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1909631317%2FFunctions%2F-845573179" anchor-label="onSurveyClosed" id="1909631317%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-closed.html"><span>on</span><wbr><span>Survey</span><wbr><span><span>Closed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1909631317%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="on-survey-closed.html"><span class="token function">onSurveyClosed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1463642654%2FFunctions%2F-845573179" anchor-label="onSurveyCompleted" id="1463642654%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-survey-completed.html"><span>on</span><wbr><span>Survey</span><wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1463642654%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="on-survey-completed.html"><span class="token function">onSurveyCompleted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-184275336%2FFunctions%2F-845573179" anchor-label="refreshPendingNotifications" id="-184275336%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="refresh-pending-notifications.html"><span>refresh</span><wbr><span>Pending</span><wbr><span><span>Notifications</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-184275336%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="refresh-pending-notifications.html"><span class="token function">refreshPendingNotifications</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../../../sdk/predictive/com.verint.xm.sdk.predictive.tracker.state/-i-tracker-state-context/index.html">ITrackerStateContext</a>&nbsp;tracker</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1016774%2FFunctions%2F-845573179" anchor-label="setMeasureConfigurationInternal" id="1016774%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-measure-configuration-internal.html"><span>set</span><wbr><span>Measure</span><wbr><span>Configuration</span><wbr><span><span>Internal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1016774%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-measure-configuration-internal.html"><span class="token function">setMeasureConfigurationInternal</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.verint.xm.sdk.rulesEngine.survey/-r-e-survey/index.html">RESurvey</a>&nbsp;value</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

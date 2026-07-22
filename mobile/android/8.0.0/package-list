@@ -1,0 +1,74 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/cancelPendingNotifications/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/cancel-pending-notifications.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/getAllContactDetails/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/get-all-contact-details.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/getContactDetails/#com.verint.xm.sdk.common.configuration.ContactType?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/get-contact-details.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/getPageViews/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/get-page-views.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/getPreferredContactType/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/get-preferred-contact-type.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/getProperty/#kotlin.String/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/get-property.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/incrementIntProperty/#kotlin.String#kotlin.Int/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/increment-int-property.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/incrementPageViews/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/increment-page-views.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/incrementSignificantEventCountWithKey/#kotlin.String?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/increment-significant-event-count-with-key.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/removeProperty/#kotlin.String/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/remove-property.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/resetSignificantEventCount/#kotlin.String?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/reset-significant-event-count.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/resetSignificantEvents/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/reset-significant-events.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/runStory/#kotlin.String/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/run-story.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/setBoolProperty/#kotlin.String#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/set-bool-property.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/setContactDetails/#com.verint.xm.sdk.common.configuration.ContactType?#kotlin.String?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/set-contact-details.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/setDoubleProperty/#kotlin.String#kotlin.Double#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/set-double-property.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/setIntProperty/#kotlin.String#kotlin.Int#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/set-int-property.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/setPreferredContactType/#com.verint.xm.sdk.common.configuration.ContactType?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/set-preferred-contact-type.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/setPresentationListener/#com.verint.xm.sdk.common.rulesEngine.listeners.PresentationEventListener?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/set-presentation-listener.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/setSignificantEventCount/#kotlin.String?#kotlin.Int/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/set-significant-event-count.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/setStoryListener/#com.verint.xm.sdk.common.rulesEngine.listeners.StoryEventListener?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/set-story-listener.html
+$dokka.location:com.verint.xm.sdk/StoryEngine.Companion/setStringProperty/#kotlin.String#kotlin.String#kotlin.Boolean#kotlin.Boolean/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-story-engine/set-string-property.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/cancelPendingNotifications/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/cancel-pending-notifications.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/checkIfEligibleForSurvey/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/check-if-eligible-for-survey.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/customInviteAccepted/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/custom-invite-accepted.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/customInviteDeclined/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/custom-invite-declined.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/getAllContactDetails/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/get-all-contact-details.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/getContactDetails/#com.verint.xm.sdk.common.configuration.ContactType?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/get-contact-details.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/getPageViews/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/get-page-views.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/getPreferredContactType/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/get-preferred-contact-type.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/incrementPageViews/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/increment-page-views.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/incrementSignificantEventCountWithKey/#kotlin.String?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/increment-significant-event-count-with-key.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/resetSignificantEventCount/#kotlin.String?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/reset-significant-event-count.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/resetSignificantEvents/#/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/reset-significant-events.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/setContactDetails/#com.verint.xm.sdk.common.configuration.ContactType?#kotlin.String?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/set-contact-details.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/setInviteListener/#com.verint.xm.sdk.common.storyEngine.listeners.BaseInviteListener?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/set-invite-listener.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/setPreferredContactType/#com.verint.xm.sdk.common.configuration.ContactType?/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/set-preferred-contact-type.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/setSignificantEventCount/#kotlin.String?#kotlin.Int/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/set-significant-event-count.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/showInviteForName/#kotlin.String/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/show-invite-for-name.html
+$dokka.location:com.verint.xm.sdk/SurveyManagement.Companion/showSurveyForName/#kotlin.String/PointingToDeclaration/surveymanagement/com.verint.xm.sdk/-survey-management/show-survey-for-name.html
+module:core
+com.verint.xm.sdk
+module:predictive
+com.verint.xm.sdk
+com.verint.xm.sdk.predictive.tracker
+com.verint.xm.sdk.predictive.tracker.app
+com.verint.xm.sdk.predictive.tracker.app.helper
+com.verint.xm.sdk.predictive.tracker.app.invite
+com.verint.xm.sdk.predictive.tracker.app.invite.state
+com.verint.xm.sdk.predictive.tracker.app.invite.view
+com.verint.xm.sdk.predictive.tracker.app.survey
+com.verint.xm.sdk.predictive.tracker.configuration
+com.verint.xm.sdk.predictive.tracker.drawables
+com.verint.xm.sdk.predictive.tracker.listeners
+com.verint.xm.sdk.predictive.tracker.network
+com.verint.xm.sdk.predictive.tracker.service
+com.verint.xm.sdk.predictive.tracker.services
+com.verint.xm.sdk.predictive.tracker.state
+com.verint.xm.sdk.predictive.tracker.tasks
+com.verint.xm.sdk.predictive.tracker.util
+module:surveymanagement
+com.verint.xm.sdk
+com.verint.xm.sdk.rulesEngine
+com.verint.xm.sdk.rulesEngine.configuration
+com.verint.xm.sdk.rulesEngine.invite
+com.verint.xm.sdk.rulesEngine.properties
+com.verint.xm.sdk.rulesEngine.runloop
+com.verint.xm.sdk.rulesEngine.state
+com.verint.xm.sdk.rulesEngine.storage
+com.verint.xm.sdk.rulesEngine.story
+com.verint.xm.sdk.rulesEngine.survey
+com.verint.xm.sdk.rulesEngine.tracking
