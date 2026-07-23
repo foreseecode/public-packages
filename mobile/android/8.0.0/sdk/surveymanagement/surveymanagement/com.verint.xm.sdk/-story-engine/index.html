@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>StoryEngine</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    surveymanagement
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+8.0.0        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:surveymanagement/main">main</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:surveymanagement/main"
+                                       data-filter=":sdk:surveymanagement/main"/>
+                                <span class="checkbox--icon"></span>
+                                main
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    surveymanagement
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="surveymanagement::com.verint.xm.sdk/StoryEngine///PointingToDeclaration//-845573179">
+  <div class="breadcrumbs"><a href="../../../index.html">surveymanagement</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk</a><span class="delimiter">/</span><span class="current">StoryEngine</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Story</span><wbr></wbr><span><span>Engine</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">StoryEngine</a><span class="token keyword"> extends </span><span data-unresolved-link="com.verint.xm.sdk.internal/BaseProduct///PointingToDeclaration/">BaseProduct</span><span class="token keyword"> implements </span><span data-unresolved-link="com.verint.xm.sdk.common.product/Product///PointingToDeclaration/">Product</span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-1548126761%2FConstructors%2F-845573179" anchor-label="StoryEngine" id="-1548126761%2FConstructors%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-story-engine.html"><span>Story</span><wbr></wbr><span><span>Engine</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1548126761%2FConstructors%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><a href="index.html">StoryEngine</a> <a href="-story-engine.html"><span class="token function">StoryEngine</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-531959401%2FProperties%2F-845573179" anchor-label="isStarted" id="-531959401%2FProperties%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-531959401%2FProperties%2F-845573179"><span>is</span><wbr></wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-531959401%2FProperties%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> <a href="index.html#-531959401%2FProperties%2F-845573179">isStarted</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1934216223%2FFunctions%2F-845573179" anchor-label="cancelPendingNotifications" id="1934216223%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cancel-pending-notifications.html"><span>cancel</span><wbr></wbr><span>Pending</span><wbr></wbr><span><span>Notifications</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1934216223%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="cancel-pending-notifications.html"><span class="token function">cancelPendingNotifications</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1945892172%2FFunctions%2F-845573179" anchor-label="completeProductInitialization" id="1945892172%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="complete-product-initialization.html"><span>complete</span><wbr></wbr><span>Product</span><wbr></wbr><span><span>Initialization</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1945892172%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="complete-product-initialization.html"><span class="token function">completeProductInitialization</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a> application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span> oldConfig<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span> newConfig</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="637494525%2FFunctions%2F-845573179" anchor-label="getAllContactDetails" id="637494525%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-all-contact-details.html"><span>get</span><wbr></wbr><span>All</span><wbr></wbr><span>Contact</span><wbr></wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="637494525%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/util/Map.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/ContactType///PointingToDeclaration/">ContactType</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span> <a href="get-all-contact-details.html"><span class="token function">getAllContactDetails</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Check all contact details</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1826815006%2FFunctions%2F-845573179" anchor-label="getContactDetails" id="-1826815006%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-contact-details.html"><span>get</span><wbr></wbr><span>Contact</span><wbr></wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1826815006%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> <a href="get-contact-details.html"><span class="token function">getContactDetails</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/ContactType///PointingToDeclaration/">ContactType</span> contactType</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Check the contact details for the given contact type stored in the SDK</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="408228363%2FFunctions%2F-845573179" anchor-label="getIsStarted" id="408228363%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-is-started.html"><span>get</span><wbr></wbr><span>Is</span><wbr></wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="408228363%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> <a href="get-is-started.html"><span class="token function">getIsStarted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="766492769%2FFunctions%2F-845573179" anchor-label="getPageViews" id="766492769%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-page-views.html"><span>get</span><wbr></wbr><span>Page</span><wbr></wbr><span><span>Views</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="766492769%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a> <a href="get-page-views.html"><span class="token function">getPageViews</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">The number of pages counted by the Verint SDK.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-922497823%2FFunctions%2F-845573179" anchor-label="getPreferredContactType" id="-922497823%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-preferred-contact-type.html"><span>get</span><wbr></wbr><span>Preferred</span><wbr></wbr><span>Contact</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-922497823%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/ContactType///PointingToDeclaration/">ContactType</span> <a href="get-preferred-contact-type.html"><span class="token function">getPreferredContactType</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Get the preferred contact type</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1772636449%2FFunctions%2F-845573179" anchor-label="getProperty" id="-1772636449%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-property.html"><span>get</span><wbr></wbr><span><span>Property</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1772636449%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/Object.html">Object</a> <a href="get-property.html"><span class="token function">getProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Retrieves a property value as Any?</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1451964974%2FFunctions%2F-845573179" anchor-label="incrementIntProperty" id="1451964974%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="increment-int-property.html"><span>increment</span><wbr></wbr><span>Int</span><wbr></wbr><span><span>Property</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1451964974%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="increment-int-property.html"><span class="token function">incrementIntProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a> amount</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="increment-int-property.html"><span class="token function">incrementIntProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Increments an integer property by a specified amount.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1270951814%2FFunctions%2F-845573179" anchor-label="incrementPageViews" id="-1270951814%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="increment-page-views.html"><span>increment</span><wbr></wbr><span>Page</span><wbr></wbr><span><span>Views</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1270951814%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="increment-page-views.html"><span class="token function">incrementPageViews</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Manually increment the number of pages counted by the Verint SDK. This can be useful where the user would consider a new page to have been shown, but the activity has not been changed, e.g. when using full screen fragments</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1780638641%2FFunctions%2F-845573179" anchor-label="incrementSignificantEventCountWithKey" id="-1780638641%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="increment-significant-event-count-with-key.html"><span>increment</span><wbr></wbr><span>Significant</span><wbr></wbr><span>Event</span><wbr></wbr><span>Count</span><wbr></wbr><span>With</span><wbr></wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1780638641%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="increment-significant-event-count-with-key.html"><span class="token function">incrementSignificantEventCountWithKey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Increment the significant event count for a given key.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1954142343%2FFunctions%2F-845573179" anchor-label="initStubInstance" id="-1954142343%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="init-stub-instance.html"><span>init</span><wbr></wbr><span>Stub</span><wbr></wbr><span><span>Instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1954142343%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="init-stub-instance.html"><span class="token function">initStubInstance</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1032730692%2FFunctions%2F-845573179" anchor-label="logFeatures" id="1032730692%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-features.html"><span>log</span><wbr></wbr><span><span>Features</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1032730692%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="log-features.html"><span class="token function">logFeatures</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a> application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span> configuration</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-702376179%2FFunctions%2F-845573179" anchor-label="prepareProduct" id="-702376179%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prepare-product.html"><span>prepare</span><wbr></wbr><span><span>Product</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-702376179%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> <a href="prepare-product.html"><span class="token function">prepareProduct</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a> application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span> configuration</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1242195347%2FFunctions%2F-845573179" anchor-label="removeProperty" id="1242195347%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-property.html"><span>remove</span><wbr></wbr><span><span>Property</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1242195347%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="remove-property.html"><span class="token function">removeProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Removes a property for the given key.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2032539139%2FFunctions%2F-845573179" anchor-label="resetProductState" id="-2032539139%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-product-state.html"><span>reset</span><wbr></wbr><span>Product</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2032539139%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="reset-product-state.html"><span class="token function">resetProductState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="457362064%2FFunctions%2F-845573179" anchor-label="resetSignificantEventCount" id="457362064%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-significant-event-count.html"><span>reset</span><wbr></wbr><span>Significant</span><wbr></wbr><span>Event</span><wbr></wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="457362064%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="reset-significant-event-count.html"><span class="token function">resetSignificantEventCount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Resets the significant event count for a given key.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1465390189%2FFunctions%2F-845573179" anchor-label="resetSignificantEvents" id="1465390189%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-significant-events.html"><span>reset</span><wbr></wbr><span>Significant</span><wbr></wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1465390189%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="reset-significant-events.html"><span class="token function">resetSignificantEvents</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Resets all significant events.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1645306308%2FFunctions%2F-845573179" anchor-label="runStory" id="1645306308%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-story.html"><span>run</span><wbr></wbr><span><span>Story</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1645306308%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="run-story.html"><span class="token function">runStory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> name</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Runs the story with the given name.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1275693359%2FFunctions%2F-845573179" anchor-label="setBoolProperty" id="1275693359%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-bool-property.html"><span>set</span><wbr></wbr><span>Bool</span><wbr></wbr><span><span>Property</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1275693359%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-bool-property.html"><span class="token function">setBoolProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> value<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> multiple<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> transmit</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-bool-property.html"><span class="token function">setBoolProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> value<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> multiple</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-bool-property.html"><span class="token function">setBoolProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> value</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets a boolean property with full configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="223977200%2FFunctions%2F-845573179" anchor-label="setContactDetails" id="223977200%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-contact-details.html"><span>set</span><wbr></wbr><span>Contact</span><wbr></wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="223977200%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-contact-details.html"><span class="token function">setContactDetails</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/ContactType///PointingToDeclaration/">ContactType</span> contactType<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> contactDetails</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Add contact details for a particular type for use in the CONTACT notification method</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-222147135%2FFunctions%2F-845573179" anchor-label="setDoubleProperty" id="-222147135%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-double-property.html"><span>set</span><wbr></wbr><span>Double</span><wbr></wbr><span><span>Property</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-222147135%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-double-property.html"><span class="token function">setDoubleProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a> value<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> multiple<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> transmit</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-double-property.html"><span class="token function">setDoubleProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a> value<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> multiple</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-double-property.html"><span class="token function">setDoubleProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a> value</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets a double property with full configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="152052257%2FFunctions%2F-845573179" anchor-label="setIntProperty" id="152052257%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-int-property.html"><span>set</span><wbr></wbr><span>Int</span><wbr></wbr><span><span>Property</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="152052257%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-int-property.html"><span class="token function">setIntProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a> value<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> multiple<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> transmit</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-int-property.html"><span class="token function">setIntProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a> value<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> multiple</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-int-property.html"><span class="token function">setIntProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a> value</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets an integer property with full configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1965875611%2FFunctions%2F-845573179" anchor-label="setPreferredContactType" id="-1965875611%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-preferred-contact-type.html"><span>set</span><wbr></wbr><span>Preferred</span><wbr></wbr><span>Contact</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1965875611%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-preferred-contact-type.html"><span class="token function">setPreferredContactType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/ContactType///PointingToDeclaration/">ContactType</span> contactType</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Set a preferred contact type</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-273672248%2FFunctions%2F-845573179" anchor-label="setPresentationListener" id="-273672248%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-presentation-listener.html"><span>set</span><wbr></wbr><span>Presentation</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-273672248%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-presentation-listener.html"><span class="token function">setPresentationListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.rulesEngine.listeners/PresentationEventListener///PointingToDeclaration/">PresentationEventListener</span> listener</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets a listener for presentation events.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="39257882%2FFunctions%2F-845573179" anchor-label="setSignificantEventCount" id="39257882%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-significant-event-count.html"><span>set</span><wbr></wbr><span>Significant</span><wbr></wbr><span>Event</span><wbr></wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="39257882%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-significant-event-count.html"><span class="token function">setSignificantEventCount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a> value</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the significant event count to a specific value for a given key.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1084330700%2FFunctions%2F-845573179" anchor-label="setStoryListener" id="1084330700%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-story-listener.html"><span>set</span><wbr></wbr><span>Story</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1084330700%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-story-listener.html"><span class="token function">setStoryListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.rulesEngine.listeners/StoryEventListener///PointingToDeclaration/">StoryEventListener</span> listener</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets a listener for story events.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="548775361%2FFunctions%2F-845573179" anchor-label="setStringProperty" id="548775361%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-string-property.html"><span>set</span><wbr></wbr><span>String</span><wbr></wbr><span><span>Property</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="548775361%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-string-property.html"><span class="token function">setStringProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> value<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> multiple<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> transmit</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-string-property.html"><span class="token function">setStringProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> value<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> multiple</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="set-string-property.html"><span class="token function">setStringProperty</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> value</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets a string property with full configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2132050047%2FFunctions%2F-845573179" anchor-label="stopProduct" id="-2132050047%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-product.html"><span>stop</span><wbr></wbr><span><span>Product</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2132050047%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a> <a href="stop-product.html"><span class="token function">stopProduct</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1762273776%2FFunctions%2F-845573179" anchor-label="validateConfig" id="-1762273776%2FFunctions%2F-845573179" data-filterable-set=":sdk:surveymanagement/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:surveymanagement/main" data-filterable-set=":sdk:surveymanagement/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="validate-config.html"><span>validate</span><wbr></wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1762273776%2FFunctions%2F-845573179"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:surveymanagement/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a> <a href="validate-config.html"><span class="token function">validateConfig</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a> json</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

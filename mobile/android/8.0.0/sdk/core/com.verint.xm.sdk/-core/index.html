@@ -1,0 +1,738 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Core</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    Verint XM SDK
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":sdk:core/main">main</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:core/main" data-filter=":sdk:core/main">
+                                <span class="checkbox--icon"></span>
+                                main
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Verint XM SDK
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="core::com.verint.xm.sdk/Core///PointingToDeclaration//1737598467">
+  <div class="breadcrumbs"><a href="../../index.html">core</a><span class="delimiter">/</span><a href="../index.html">com.verint.xm.sdk</a><span class="delimiter">/</span><span class="current">Core</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Core</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="index.html">Core</a><span class="token keyword"> extends </span><span data-unresolved-link="com.verint.xm.sdk.internal/BaseProduct///PointingToDeclaration/">BaseProduct</span></div><p class="paragraph">This class contains the main API methods to be used by implementers when instrumenting their application.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="1010377831%2FConstructors%2F1737598467" anchor-label="Core" id="1010377831%2FConstructors%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-core.html"><span><span>Core</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1010377831%2FConstructors%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void&nbsp;<a href="-core.html"><span class="token function">Core</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1578294043%2FClasslikes%2F1737598467" anchor-label="VerintConfigStatus" id="1578294043%2FClasslikes%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-verint-config-status/index.html"><span>Verint</span><wbr><span>Config</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1578294043%2FClasslikes%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">enum </span><a href="-verint-config-status/index.html">VerintConfigStatus</a></div><div class="brief ">The set of possible configuration statuses</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1498926421%2FClasslikes%2F1737598467" anchor-label="VerintError" id="-1498926421%2FClasslikes%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-verint-error/index.html"><span>Verint</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1498926421%2FClasslikes%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">enum </span><a href="-verint-error/index.html">VerintError</a></div><div class="brief ">The set of possible configuration errors</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-252778779%2FClasslikes%2F1737598467" anchor-label="VerintSDKListener" id="-252778779%2FClasslikes%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-verint-s-d-k-listener/index.html"><span>Verint</span><wbr><span><span>SDKListener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-252778779%2FClasslikes%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">interface </span><a href="-verint-s-d-k-listener/index.html">VerintSDKListener</a></div><div class="brief ">Listener to notify on completion or failure of the configuration process</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-222017774%2FProperties%2F1737598467" anchor-label="verintSDKListener" id="-222017774%2FProperties%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-222017774%2FProperties%2F1737598467"><span>verint</span><wbr><span><span>SDKListener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-222017774%2FProperties%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="-verint-s-d-k-listener/index.html">Core.VerintSDKListener</a>&nbsp;<a href="index.html#-222017774%2FProperties%2F1737598467">verintSDKListener</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1809054502%2FFunctions%2F1737598467" anchor-label="addCPPValue" id="-1809054502%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-c-p-p-value.html"><span>add</span><wbr><span><span>CPPValue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1809054502%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="add-c-p-p-value.html"><span class="token function">addCPPValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;value</span></span><span class="token punctuation">)</span></div><div class="brief ">Adds a CPP key/value pair.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1893868703%2FFunctions%2F1737598467" anchor-label="appendCPPValue" id="-1893868703%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="append-c-p-p-value.html"><span>append</span><wbr><span><span>CPPValue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1893868703%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="append-c-p-p-value.html"><span class="token function">appendCPPValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;value</span></span><span class="token punctuation">)</span></div><div class="brief ">Appends a value to a comma separated list stored against a custom CPP key.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="103333478%2FFunctions%2F1737598467" anchor-label="completeProductInitialization" id="103333478%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="complete-product-initialization.html"><span>complete</span><wbr><span>Product</span><wbr><span><span>Initialization</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="103333478%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void&nbsp;<a href="complete-product-initialization.html"><span class="token function">completeProductInitialization</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span>&nbsp;oldConfig<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span>&nbsp;newConfig</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1079892139%2FFunctions%2F1737598467" anchor-label="getAllCPPs" id="1079892139%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-all-c-p-ps.html"><span>get</span><wbr><span>All</span><wbr><span><span>CPPs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1079892139%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/util/Map.html">Map</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span>&nbsp;<a href="get-all-c-p-ps.html"><span class="token function">getAllCPPs</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Gets all CPP key/value pairs</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1203497005%2FFunctions%2F1737598467" anchor-label="getConfigurationContainer" id="-1203497005%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-configuration-container.html"><span>get</span><wbr><span>Configuration</span><wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1203497005%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;<a href="get-configuration-container.html"><span class="token function">getConfigurationContainer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Get remote configuration container</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="439603083%2FFunctions%2F1737598467" anchor-label="getCPPValue" id="439603083%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-c-p-p-value.html"><span>get</span><wbr><span><span>CPPValue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="439603083%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;<a href="get-c-p-p-value.html"><span class="token function">getCPPValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;key</span></span><span class="token punctuation">)</span></div><div class="brief ">Gets the CPP value associated to a given key</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1718698113%2FFunctions%2F1737598467" anchor-label="getDatacenter" id="-1718698113%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-datacenter.html"><span>get</span><wbr><span><span>Datacenter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1718698113%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;<a href="get-datacenter.html"><span class="token function">getDatacenter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Gets the current datacenter name.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-745493126%2FFunctions%2F1737598467" anchor-label="getVerintSDKListener" id="-745493126%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-verint-s-d-k-listener.html"><span>get</span><wbr><span>Verint</span><wbr><span><span>SDKListener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-745493126%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="-verint-s-d-k-listener/index.html">Core.VerintSDKListener</a>&nbsp;<a href="get-verint-s-d-k-listener.html"><span class="token function">getVerintSDKListener</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Added to avoid synthetic accessor methods</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="150510116%2FFunctions%2F1737598467" anchor-label="getVersion" id="150510116%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-version.html"><span>get</span><wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="150510116%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;<a href="get-version.html"><span class="token function">getVersion</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Gets the version of the SDK</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1475871891%2FFunctions%2F1737598467" anchor-label="initStubInstance" id="1475871891%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="init-stub-instance.html"><span>init</span><wbr><span>Stub</span><wbr><span><span>Instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1475871891%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void&nbsp;<a href="init-stub-instance.html"><span class="token function">initStubInstance</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="303770126%2FFunctions%2F1737598467" anchor-label="isDebugLogEnabled" id="303770126%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-debug-log-enabled.html"><span>is</span><wbr><span>Debug</span><wbr><span>Log</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="303770126%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>boolean&nbsp;<a href="is-debug-log-enabled.html"><span class="token function">isDebugLogEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Check whether debug logging is enabled</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="235694095%2FFunctions%2F1737598467" anchor-label="isQaLogEnabled" id="235694095%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-qa-log-enabled.html"><span>is</span><wbr><span>Qa</span><wbr><span>Log</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="235694095%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>boolean&nbsp;<a href="is-qa-log-enabled.html"><span class="token function">isQaLogEnabled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2124450654%2FFunctions%2F1737598467" anchor-label="logFeatures" id="2124450654%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-features.html"><span>log</span><wbr><span><span>Features</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2124450654%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void&nbsp;<a href="log-features.html"><span class="token function">logFeatures</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span>&nbsp;configuration</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1234646451%2FFunctions%2F1737598467" anchor-label="prepareProduct" id="1234646451%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prepare-product.html"><span>prepare</span><wbr><span><span>Product</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1234646451%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean&nbsp;<a href="prepare-product.html"><span class="token function">prepareProduct</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/IConfiguration///PointingToDeclaration/">IConfiguration</span>&nbsp;configuration</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1867153423%2FFunctions%2F1737598467" anchor-label="removeCPPValue" id="1867153423%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-c-p-p-value.html"><span>remove</span><wbr><span><span>CPPValue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1867153423%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="remove-c-p-p-value.html"><span class="token function">removeCPPValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;key</span></span><span class="token punctuation">)</span></div><div class="brief ">Removes a CPP value.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1218687011%2FFunctions%2F1737598467" anchor-label="resetProductState" id="1218687011%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-product-state.html"><span>reset</span><wbr><span>Product</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1218687011%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void&nbsp;<a href="reset-product-state.html"><span class="token function">resetProductState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-960963004%2FFunctions%2F1737598467" anchor-label="resetState" id="-960963004%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-state.html"><span>reset</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-960963004%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="reset-state.html"><span class="token function">resetState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Reset the state of the SDK.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1994202434%2FFunctions%2F1737598467" anchor-label="setConfigurationContainer" id="1994202434%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-configuration-container.html"><span>set</span><wbr><span>Configuration</span><wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1994202434%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="set-configuration-container.html"><span class="token function">setConfigurationContainer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;name</span></span><span class="token punctuation">)</span></div><div class="brief ">Set remote configuration container  When testing your remote configuration of the Verint SDK, it may be useful to try out your new configuration in a non-production container first.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1371883478%2FFunctions%2F1737598467" anchor-label="setCPPValueFromArray" id="1371883478%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-c-p-p-value-from-array.html"><span>set</span><wbr><span>CPPValue</span><wbr><span>From</span><wbr><span><span>Array</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1371883478%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="set-c-p-p-value-from-array.html"><span class="token function">setCPPValueFromArray</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;key<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span>&nbsp;values</span></span><span class="token punctuation">)</span></div><div class="brief ">Adds a CPP key/value pair.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-987071762%2FFunctions%2F1737598467" anchor-label="setDatacenter" id="-987071762%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-datacenter.html"><span>set</span><wbr><span><span>Datacenter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-987071762%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="set-datacenter.html"><span class="token function">setDatacenter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;name</span></span><span class="token punctuation">)</span></div><div class="brief ">Sets the datacenter name.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-641196254%2FFunctions%2F1737598467" anchor-label="setDebugLogEnabled" id="-641196254%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-debug-log-enabled.html"><span>set</span><wbr><span>Debug</span><wbr><span>Log</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-641196254%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="set-debug-log-enabled.html"><span class="token function">setDebugLogEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>boolean&nbsp;debugLoggingEnabled</span></span><span class="token punctuation">)</span></div><div class="brief ">Allows implementers to configure the SDK to produce more verbose logging output.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1074744663%2FFunctions%2F1737598467" anchor-label="setEventLogEnabled" id="-1074744663%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-event-log-enabled.html"><span>set</span><wbr><span>Event</span><wbr><span>Log</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1074744663%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="set-event-log-enabled.html"><span class="token function">setEventLogEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>boolean&nbsp;eventLoggingEnabled</span></span><span class="token punctuation">)</span></div><div class="brief ">Allows implementers to configure the SDK to prevent the default logging of analytics events.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-49128625%2FFunctions%2F1737598467" anchor-label="setSDKListener" id="-49128625%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-s-d-k-listener.html"><span>set</span><wbr><span><span>SDKListener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-49128625%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="set-s-d-k-listener.html"><span class="token function">setSDKListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="-verint-s-d-k-listener/index.html">Core.VerintSDKListener</a>&nbsp;listener</span></span><span class="token punctuation">)</span></div><div class="brief ">Set the Verint SDK Listener This method sets the callback which notifies when the SDK started or failed to start</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="634934921%2FFunctions%2F1737598467" anchor-label="setSkipPoolingCheck" id="634934921%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-skip-pooling-check.html"><span>set</span><wbr><span>Skip</span><wbr><span>Pooling</span><wbr><span><span>Check</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="634934921%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="set-skip-pooling-check.html"><span class="token function">setSkipPoolingCheck</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span>boolean&nbsp;skipPoolingCheck</span></span><span class="token punctuation">)</span></div><div class="brief ">Allows implementers to configure the SDK to skip the pooling check.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1201848441%2FFunctions%2F1737598467" anchor-label="setUserId" id="-1201848441%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-user-id.html"><span>set</span><wbr><span>User</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1201848441%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="set-user-id.html"><span class="token function">setUserId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;userId</span></span><span class="token punctuation">)</span></div><div class="brief ">Sets a user identifier.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-519168974%2FFunctions%2F1737598467" anchor-label="shouldSkipPoolingCheck" id="-519168974%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="should-skip-pooling-check.html"><span>should</span><wbr><span>Skip</span><wbr><span>Pooling</span><wbr><span><span>Check</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-519168974%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean&nbsp;<a href="should-skip-pooling-check.html"><span class="token function">shouldSkipPoolingCheck</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Check if the pooling check is disabled</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-647791636%2FFunctions%2F1737598467" anchor-label="start" id="-647791636%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start.html"><span><span>start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-647791636%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application</span></span><span class="token punctuation">)</span></div><div class="brief ">Start the Verint SDK.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1397884908%2FFunctions%2F1737598467" anchor-label="startWithConfiguration" id="-1397884908%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-with-configuration.html"><span>start</span><wbr><span>With</span><wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1397884908%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="start-with-configuration.html"><span class="token function">startWithConfiguration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;filename</span></span><span class="token punctuation">)</span></div><div class="brief ">Starts the SDK using a custom configuration file name.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-865125716%2FFunctions%2F1737598467" anchor-label="startWithConfigurationJSON" id="-865125716%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-with-configuration-j-s-o-n.html"><span>start</span><wbr><span>With</span><wbr><span>Configuration</span><wbr><span><span>JSON</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-865125716%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="start-with-configuration-j-s-o-n.html"><span class="token function">startWithConfigurationJSON</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;configJSON</span></span><span class="token punctuation">)</span></div><div class="brief ">Starts the SDK using a custom configuration JSON string.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1122726351%2FFunctions%2F1737598467" anchor-label="startWithConfigurationUrl" id="1122726351%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-with-configuration-url.html"><span>start</span><wbr><span>With</span><wbr><span>Configuration</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1122726351%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="start-with-configuration-url.html"><span class="token function">startWithConfigurationUrl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;url</span></span><span class="token punctuation">)</span></div><div class="brief ">Starts the SDK with a custom configuration from a remote URL.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-609878926%2FFunctions%2F1737598467" anchor-label="startWithSiteKey" id="-609878926%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-with-site-key.html"><span>start</span><wbr><span>With</span><wbr><span>Site</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-609878926%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="start-with-site-key.html"><span class="token function">startWithSiteKey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;siteKey</span></span><span class="token punctuation">)</span></div><div class="brief ">Starts the SDK with a configuration from the Configurator.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-981675858%2FFunctions%2F1737598467" anchor-label="unifySamplingForWebView" id="-981675858%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unify-sampling-for-web-view.html"><span>unify</span><wbr><span>Sampling</span><wbr><span>For</span><wbr><span>Web</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-981675858%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span>void&nbsp;<a href="unify-sampling-for-web-view.html"><span class="token function">unifySamplingForWebView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>&nbsp;webView</span></span><span class="token punctuation">)</span></div><div class="brief ">Connects the story engine to the given web view for unified sampling.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-518539497%2FFunctions%2F1737598467" anchor-label="updateConfig" id="-518539497%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="update-config.html"><span>update</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-518539497%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/Configuration///PointingToDeclaration/">Configuration</span>&nbsp;<a href="update-config.html"><span class="token function">updateConfig</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;configJSON</span></span><span class="token punctuation">)</span></div><div class="brief ">Updates the SDK with a custom configuration JSON string.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="834816798%2FFunctions%2F1737598467" anchor-label="useLocalConfig" id="834816798%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="use-local-config.html"><span>use</span><wbr><span>Local</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="834816798%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">static </span><span data-unresolved-link="com.verint.xm.sdk.common.configuration/Configuration///PointingToDeclaration/">Configuration</span>&nbsp;<a href="use-local-config.html"><span class="token function">useLocalConfig</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>&nbsp;application</span></span><span class="token punctuation">)</span></div><div class="brief ">Updates the current persistenceSerializer to use a local configuration file.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-365420279%2FFunctions%2F1737598467" anchor-label="validateConfig" id="-365420279%2FFunctions%2F1737598467" data-filterable-set=":sdk:core/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:core/main" data-filterable-set=":sdk:core/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="validate-config.html"><span>validate</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-365420279%2FFunctions%2F1737598467"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:core/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>boolean&nbsp;<a href="validate-config.html"><span class="token function">validateConfig</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;json</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
