@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":sdk:core/main":[],":sdk:surveymanagement/main":[],":sdk:predictive/main":[]}'
